@@ -1,0 +1,274 @@
+[
+ {
+  "kanji": "顧みる",
+  "sentence": "過去を[[顧みる]]。",
+  "reading": "かえりみる",
+  "meaning": "to look back on, to review",
+  "type": "kun",
+  "hint": "The 'kaeri' part hints at returning or looking back.",
+  "compounds": [
+   "顧慮 (koryo) — consideration",
+   "軽視 (keishi) — disregard"
+  ],
+  "distractors": [
+   "かきみる",
+   "みかえる",
+   "おもかえる"
+  ]
+ },
+ {
+  "kanji": "危惧",
+  "sentence": "最悪を[[危惧]]する。",
+  "reading": "きぐ",
+  "meaning": "fear, anxiety, apprehension",
+  "type": "on",
+  "hint": "The 'ki' sound is common in words related to danger or risk.",
+  "compounds": [
+   "危険 (kiken) — danger",
+   "危うい (ayaui) — dangerous"
+  ],
+  "distractors": [
+   "きく",
+   "しんぱい",
+   "きゆう"
+  ]
+ },
+ {
+  "kanji": "疎外",
+  "sentence": "集団から[[疎外]]される。",
+  "reading": "そがい",
+  "meaning": "exclusion, alienation, isolation",
+  "type": "on",
+  "hint": "The 'so' sound is similar to 'sore' (that), implying being pushed away.",
+  "compounds": [
+   "疎通 (sotsu) — communication",
+   "疎遠 (soen) — estrangement"
+  ],
+  "distractors": [
+   "しょうがい",
+   "そが",
+   "そがいし"
+  ]
+ },
+ {
+  "kanji": "憧れる",
+  "sentence": "都会に[[憧れる]]。",
+  "reading": "あこがれる",
+  "meaning": "to yearn for, to admire, to long for",
+  "type": "kun",
+  "hint": "Imagine 'a, ko! Ga!' as a sound of admiration.",
+  "compounds": [
+   "憧憬 (shokei) — admiration",
+   "憧憬感 (shokeikan) — feeling of admiration"
+  ],
+  "distractors": [
+   "あこがる",
+   "あこがえる",
+   "あおがれる"
+  ]
+ },
+ {
+  "kanji": "憤慨",
+  "sentence": "不正に[[憤慨]]する。",
+  "reading": "ふんがい",
+  "meaning": "indignation, anger, resentment",
+  "type": "on",
+  "hint": "'Fun' can sound like a grunt of anger.",
+  "compounds": [
+   "憤り (ikidoori) — anger",
+   "不満 (fuman) — dissatisfaction"
+  ],
+  "distractors": [
+   "ふんがいし",
+   "がいふん",
+   "ふんま"
+  ]
+ },
+ {
+  "kanji": "折衷",
+  "sentence": "意見を[[折衷]]する。",
+  "reading": "せっちゅう",
+  "meaning": "compromise, eclecticism, reconciliation",
+  "type": "on",
+  "hint": "The 'setchu' sounds like 'setting' things together in the middle.",
+  "compounds": [
+   "折衷案 (secchu-an) — compromise plan",
+   "折衷主義 (secchu-shugi) — eclecticism"
+  ],
+  "distractors": [
+   "おりちゅう",
+   "せっしゅう",
+   "さっちゅう"
+  ]
+ },
+ {
+  "kanji": "暫定",
+  "sentence": "[[暫定]]的な処置。",
+  "reading": "ざんてい",
+  "meaning": "temporary, provisional, interim",
+  "type": "on",
+  "hint": "'Zan' relates to 'temporary' or 'interim' measures.",
+  "compounds": [
+   "暫定措置 (zantei-sochi) — provisional measure",
+   "暫時 (zanjii) — for a while"
+  ],
+  "distractors": [
+   "さんてい",
+   "ざんけい",
+   "さいてい"
+  ]
+ },
+ {
+  "kanji": "免れる",
+  "sentence": "危険から[[免れる]]。",
+  "reading": "まぬかれる",
+  "meaning": "to escape, to be exempted from, to avoid",
+  "type": "kun",
+  "hint": "The 'manuka' sound suggests narrowly getting away from something.",
+  "compounds": [
+   "免除 (menjo) — exemption",
+   "免れる (men) — to be exempt"
+  ],
+  "distractors": [
+   "まぬく",
+   "まぬがれる",
+   "まんがる"
+  ]
+ },
+ {
+  "kanji": "滞る",
+  "sentence": "事務処理が[[滞る]]。",
+  "reading": "とどこおる",
+  "meaning": "to be delayed, to be stagnant",
+  "type": "kun",
+  "hint": "The kun'yomi 'todo' often relates to stopping or pausing, and 'kooru' connects to being stuck or frozen.",
+  "compounds": [
+   "停滞 (teitai) — stagnation",
+   "滞納 (tainō) — non-payment"
+  ],
+  "distractors": [
+   "とどこえる",
+   "たいこおる",
+   "じゅうたいする"
+  ]
+ },
+ {
+  "kanji": "便宜",
+  "sentence": "お客様の[[便宜]]を図る。",
+  "reading": "べんぎ",
+  "meaning": "convenience, facility",
+  "type": "on",
+  "hint": "Both characters use their common on'yomi readings, 'ben' and 'gi', which are often found in words related to practicality.",
+  "compounds": [
+   "便宜上 (bengijō) — for convenience",
+   "不便 (fuben) — inconvenience"
+  ],
+  "distractors": [
+   "べんい",
+   "びんぎ",
+   "べんき"
+  ]
+ },
+ {
+  "kanji": "芳しい",
+  "sentence": "彼の評判は[[芳しくない]]。",
+  "reading": "かんばしい",
+  "meaning": "fragrant, good (often used in negative contexts, e.g., not good)",
+  "type": "kun",
+  "hint": "The kun'yomi 'kanba' gives the sense of fragrance or pleasantness, often appearing with an '-shii' ending for adjectives.",
+  "compounds": [
+   "芳香 (hōkō) — aroma",
+   "芳名 (hōmei) — good name"
+  ],
+  "distractors": [
+   "ほうしい",
+   "かおりしい",
+   "かんばわしい"
+  ]
+ },
+ {
+  "kanji": "露骨",
+  "sentence": "彼の言動は[[露骨]]だ。",
+  "reading": "ろこつ",
+  "meaning": "frank, blunt, undisguised",
+  "type": "on",
+  "hint": "Both characters take their common on'yomi readings, 'ro' and 'kotsu', which together imply something exposed or bare.",
+  "compounds": [
+   "露出 (roshutsu) — exposure",
+   "骨格 (kokkaku) — skeleton"
+  ],
+  "distractors": [
+   "つゆこつ",
+   "ろうこつ",
+   "ろぼつ"
+  ]
+ },
+ {
+  "kanji": "蔑視",
+  "sentence": "人種[[蔑視]]は許されない。",
+  "reading": "べっし",
+  "meaning": "contempt, scorn",
+  "type": "on",
+  "hint": "Both characters use their common on'yomi readings, 'betsu' and 'shi', with 'betsu' often indicating separation or discrimination, and 'shi' for looking.",
+  "compounds": [
+   "軽蔑 (keibetsu) — contempt",
+   "無視 (mushi) — disregard"
+  ],
+  "distractors": [
+   "ばくし",
+   "べし",
+   "めっし"
+  ]
+ },
+ {
+  "kanji": "疎外",
+  "sentence": "彼は集団から[[疎外]]された。",
+  "reading": "そがい",
+  "meaning": "alienation, exclusion",
+  "type": "on",
+  "hint": "Both characters take their common on'yomi readings, 'so' and 'gai', with 'so' suggesting distance or neglect, and 'gai' indicating outside.",
+  "compounds": [
+   "疎遠 (soen) — estranged",
+   "阻害 (sogai) — obstruction"
+  ],
+  "distractors": [
+   "しょがい",
+   "そかい",
+   "そえ"
+  ]
+ },
+ {
+  "kanji": "妨げる",
+  "sentence": "計画の実行を[[妨げる]]。",
+  "reading": "さまたげる",
+  "meaning": "to hinder, to obstruct",
+  "type": "kun",
+  "hint": "The kun'yomi 'samata' conveys the idea of blocking or hindering, often paired with the verb ending '-geru'.",
+  "compounds": [
+   "妨害 (bōgai) — obstruction",
+   "妨げ (samatage) — hindrance"
+  ],
+  "distractors": [
+   "ぼうげる",
+   "さまたる",
+   "ほうげる"
+  ]
+ },
+ {
+  "kanji": "匿名",
+  "sentence": "[[匿名]]でコメントする。",
+  "reading": "とくめい",
+  "meaning": "anonymity",
+  "type": "on",
+  "hint": "Both characters use their common on'yomi readings, 'toku' for special/hidden, and 'mei' for name, indicating a hidden name.",
+  "compounds": [
+   "匿名性 (tokumeisei) — anonymity (quality)",
+   "記名 (kimei) — signature"
+  ],
+  "distractors": [
+   "どくめい",
+   "とくみょう",
+   "とうめい"
+  ]
+ }
+]
