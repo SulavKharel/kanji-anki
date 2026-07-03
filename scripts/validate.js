@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Feedback loop for the harness (see HARNESS.md).
-// Encodes the L3 invariants from harness/rules/data.md and architecture.md R1.
+// Encodes the L3 invariants from .claude/rules/data.md and architecture.md R1.
 // Run with: npm test        (must finish in a few seconds — keep it fast)
 
 const fs = require("fs");

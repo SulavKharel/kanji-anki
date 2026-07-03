@@ -11,9 +11,23 @@ npm install
 # Run the dev server (GEMINI_API_KEY is OPTIONAL)
 npm start
 # → http://localhost:3000
+
+# Harness feedback loop — run before finishing ANY task
+npm test
 ```
 
-There are no tests or linting configured.
+## Harness (read this first)
+
+This project uses harness engineering (see `HARNESS.md` for the full map):
+
+- **Session start**: read `memory/progress.md` (state + decision log).
+- **Rules**: `.claude/rules/architecture.md` and `.claude/rules/data.md`
+  are binding constraints, not suggestions.
+- **Procedures**: adding bank questions → `.claude/skills/add-bank-question/SKILL.md`;
+  finishing any change → `.claude/skills/release-check/SKILL.md`.
+- **Before reporting done**: `npm test` must pass (validates data invariants,
+  syntax, and the offline smoke test).
+- **Session end**: update `memory/progress.md`.
 
 ## Architecture
 

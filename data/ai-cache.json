@@ -270,5 +270,277 @@
    "とくみょう",
    "とうめい"
   ]
+ },
+ {
+  "kanji": "芳しい",
+  "sentence": "その花の香りは[[芳しい]]。",
+  "reading": "かんばしい",
+  "meaning": "fragrant, sweet-smelling; favorable",
+  "type": "kun",
+  "hint": "Remember that 芳しい (kaNbashii) is a descriptive adjective for pleasant scents, often used figuratively for a good reputation.",
+  "compounds": [
+   "芳香 (ほうこう) — aroma",
+   "芳名 (ほうめい) — good name/reputation"
+  ],
+  "distractors": [
+   "かおりしい",
+   "ほうしい",
+   "かがしい"
+  ]
+ },
+ {
+  "kanji": "妥協",
+  "sentence": "彼は決して[[妥協]]しない。",
+  "reading": "だきょう",
+  "meaning": "compromise",
+  "type": "on",
+  "hint": "The 'da' in 妥協 (dakyou) comes from the idea of being 'docile' or 'agreeable', leading to a compromise.",
+  "compounds": [
+   "妥当 (だとう) — appropriate, valid",
+   "妥結 (だけつ) — settlement, agreement"
+  ],
+  "distractors": [
+   "たきょう",
+   "だこう",
+   "だきゅう"
+  ]
+ },
+ {
+  "kanji": "澄む",
+  "sentence": "空気が[[澄む]]と星が見える。",
+  "reading": "すむ",
+  "meaning": "to become clear, transparent",
+  "type": "kun",
+  "hint": "Think of 'su' as 'super clear' when remembering 澄む (sumu) for clarity.",
+  "compounds": [
+   "澄ます (すます) — to clear (liquid); to listen intently",
+   "清澄 (せいちょう) — clear, pure"
+  ],
+  "distractors": [
+   "きよむ",
+   "ちょうむ",
+   "とむ"
+  ]
+ },
+ {
+  "kanji": "逸脱",
+  "sentence": "彼は規則から[[逸脱]]した。",
+  "reading": "いつだつ",
+  "meaning": "deviation, departure from",
+  "type": "on",
+  "hint": "The 'itsu' in 逸脱 (itsudatsu) hints at 'escape' or 'deviate', while 'datsu' means 'to break free'.",
+  "compounds": [
+   "逸話 (いつわ) — anecdote",
+   "脱線 (だっせん) — derailment, digression"
+  ],
+  "distractors": [
+   "いちだつ",
+   "いつてつ",
+   "いつたつ"
+  ]
+ },
+ {
+  "kanji": "妨げる",
+  "sentence": "集中を[[妨げる]]な。",
+  "reading": "さまたげる",
+  "meaning": "to obstruct, hinder",
+  "type": "kun",
+  "hint": "The 'sama' in 妨げる (samatageru) can sound like 'sama-sama' (polite address), but here it means to 'block' or 'impede' someone's progress.",
+  "compounds": [
+   "妨害 (ぼうがい) — obstruction, hindrance",
+   "妨げ (さまたげ) — impediment"
+  ],
+  "distractors": [
+   "ぼうげる",
+   "さまたる",
+   "さまたがる"
+  ]
+ },
+ {
+  "kanji": "陥る",
+  "sentence": "彼は困難に[[陥る]]。",
+  "reading": "おちいる",
+  "meaning": "to fall into (a trap, difficulty); to sink into",
+  "type": "kun",
+  "hint": "Remember that 陥る (ochiiru) means to 'fall into' something, often a negative situation, like 'oops, I fell in'.",
+  "compounds": [
+   "陥れる (おとしいれる) — to trap, to ensnare",
+   "陥落 (かんらく) — fall, surrender"
+  ],
+  "distractors": [
+   "かんじる",
+   "おちる",
+   "おちいれる"
+  ]
+ },
+ {
+  "kanji": "懸念",
+  "sentence": "将来への[[懸念]]がある。",
+  "reading": "けねん",
+  "meaning": "concern, apprehension",
+  "type": "on",
+  "hint": "The 'ken' in 懸念 (kenen) relates to 'hanging' or 'suspense', reflecting a 'hanging concern'.",
+  "compounds": [
+   "懸賞 (けんしょう) — prize, reward",
+   "念願 (ねんがん) — one's dearest wish"
+  ],
+  "distractors": [
+   "かねん",
+   "けんねん",
+   "けいねん"
+  ]
+ },
+ {
+  "kanji": "遮る",
+  "sentence": "光を[[遮る]]カーテン。",
+  "reading": "さえぎる",
+  "meaning": "to obstruct, interrupt, block",
+  "type": "kun",
+  "hint": "The 'sae' in 遮る (saegiru) can be linked to 'saying no' or 'stopping' something from passing through.",
+  "compounds": [
+   "遮断 (しゃだん) — cutoff, isolation",
+   "遮蔽 (しゃへい) — cover, screen"
+  ],
+  "distractors": [
+   "じゃぎる",
+   "さえきる",
+   "しゃぎる"
+  ]
+ },
+ {
+  "kanji": "慕う",
+  "sentence": "彼女は亡き父を[[慕う]]。",
+  "reading": "したう",
+  "meaning": "to long for, to adore",
+  "type": "kun",
+  "hint": "The character 慕 looks like a tombstone (墓) with a heart (心) below, implying longing for someone deceased. The 'し' sound can be linked to '死' (shi - death).",
+  "compounds": [
+   "慕情 (bojō) — yearning for love",
+   "羨慕 (senbo) — envy, admiration"
+  ],
+  "distractors": [
+   "まとう",
+   "したえる",
+   "ともなう"
+  ]
+ },
+ {
+  "kanji": "蔑視",
+  "sentence": "彼は彼女を[[蔑視]]した。",
+  "reading": "べっし",
+  "meaning": "contempt, scorn",
+  "type": "on",
+  "hint": "蔑 (betsu) sounds like 'bet' in 'betrayal,' which often involves scorn. 視 (shi) means 'to see.' So, 'to see with scorn.'",
+  "compounds": [
+   "軽蔑 (keibetsu) — scorn, contempt",
+   "蔑む (sagesumu) — to scorn, to despise"
+  ],
+  "distractors": [
+   "けっし",
+   "めっし",
+   "ばっし"
+  ]
+ },
+ {
+  "kanji": "憩い",
+  "sentence": "ここは心の[[憩い]]の場だ。",
+  "reading": "いこい",
+  "meaning": "rest, relaxation",
+  "type": "kun",
+  "hint": "憩 has the radical 舌 (shita - tongue) and 自 (ji - self), suggesting a 'self-indulgent' rest. 'いこい' sounds like '憩う' (ikou - to rest).",
+  "compounds": [
+   "休憩 (kyūkei) — rest, break",
+   "憩う (ikou) — to rest"
+  ],
+  "distractors": [
+   "やすみ",
+   "いき",
+   "きこい"
+  ]
+ },
+ {
+  "kanji": "葛藤",
+  "sentence": "心の[[葛藤]]に苦しむ。",
+  "reading": "かっとう",
+  "meaning": "conflict, dilemma, struggle",
+  "type": "on",
+  "hint": "葛 (katsu) and 藤 (tō) both refer to types of climbing vines, symbolizing entanglement and struggle. 'カットウ' can sound like 'cut through' the entanglement.",
+  "compounds": [
+   "葛 (kuzu) — kudzu vine",
+   "藤 (fuji) — wisteria"
+  ],
+  "distractors": [
+   "かずとう",
+   "けっとう",
+   "がっとう"
+  ]
+ },
+ {
+  "kanji": "相殺",
+  "sentence": "損益は[[相殺]]された。",
+  "reading": "そうさつ",
+  "meaning": "offset, cancel out",
+  "type": "on",
+  "hint": "相 (sō) means 'mutual,' and 殺 (satsu) means 'kill' or 'cancel.' Think of mutually canceling each other out. Be careful with the reading of 殺.",
+  "compounds": [
+   "相殺し合う (sōsasai au) — to cancel each other out",
+   "殺す (korosu) — to kill"
+  ],
+  "distractors": [
+   "そうさい",
+   "そうしょう",
+   "あいさつ"
+  ]
+ },
+ {
+  "kanji": "斬新",
+  "sentence": "彼の発想は[[斬新]]だ。",
+  "reading": "ざんしん",
+  "meaning": "novel, original, innovative",
+  "type": "on",
+  "hint": "斬 (zan) means 'cut' or 'slay,' and 新 (shin) means 'new.' It implies cutting into something new or creating something groundbreaking.",
+  "compounds": [
+   "斬る (kiru) — to cut, to slay",
+   "新しい (atarashii) — new"
+  ],
+  "distractors": [
+   "さんしん",
+   "ぜんしん",
+   "きんしん"
+  ]
+ },
+ {
+  "kanji": "和らぐ",
+  "sentence": "痛みが[[和らぐ]]。",
+  "reading": "やわらぐ",
+  "meaning": "to soften, to subside, to abate",
+  "type": "kun",
+  "hint": "和 (wa) often implies harmony, peace, or softness. 'やわらぐ' sounds like 'soften' or 'become gentle' (from 優しい - yasashii).",
+  "compounds": [
+   "和やか (nagoyaka) — gentle, mild",
+   "緩和 (kanwa) — alleviation, mitigation"
+  ],
+  "distractors": [
+   "なごらぐ",
+   "わらぐ",
+   "まろらぐ"
+  ]
+ },
+ {
+  "kanji": "憶測",
+  "sentence": "それは単なる[[憶測]]だ。",
+  "reading": "おくそく",
+  "meaning": "speculation, guess",
+  "type": "on",
+  "hint": "憶 (oku) means 'memory' or 'recollect,' and 測 (soku) means 'measure' or 'conjecture.' It's about 'measuring' based on 'recollection' or limited information to make a guess.",
+  "compounds": [
+   "記憶 (kioku) — memory",
+   "推測 (suisoku) — guess, conjecture"
+  ],
+  "distractors": [
+   "きおく",
+   "よくそく",
+   "おくさく"
+  ]
  }
 ]

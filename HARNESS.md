@@ -20,8 +20,8 @@ incidents, which is exactly how rules should be written:
 
 | Rule file | Core invariant | Born from |
 |---|---|---|
-| `rules/architecture.md` | Gemini must NEVER block the quiz; the app works fully offline | The rate-limit incident that broke question loading |
-| `rules/data.md` | Question/card schema invariants (3 distractors, `[[target]]` markup, hiragana readings, no duplicates) | Hand-writing 112 bank entries |
+| `.claude/rules/architecture.md` | Gemini must NEVER block the quiz; the app works fully offline | The rate-limit incident that broke question loading |
+| `.claude/rules/data.md` | Question/card schema invariants (3 distractors, `[[target]]` markup, hiragana readings, no duplicates) | Hand-writing 112 bank entries |
 
 A rule that never prevented a real mistake is decoration. When you add a rule,
 write *why* next to it.
@@ -31,8 +31,8 @@ write *why* next to it.
 Standardized procedures, so "add a question" is done the same way every time
 instead of however the agent (or you) improvises that day:
 
-- `skills/add-bank-question/SKILL.md` — how to add curated questions safely
-- `skills/release-check/SKILL.md` — pre-commit checklist for any change
+- `.claude/skills/add-bank-question/SKILL.md` — how to add curated questions safely
+- `.claude/skills/release-check/SKILL.md` — pre-commit checklist for any change
 
 Add a new skill when you notice you've explained the same procedure twice.
 
@@ -82,6 +82,7 @@ Use the 3-strikes rule from the article:
 1. **L1 — Documented**: the rule exists in `.claude/rules/`. *(first violation)*
 2. **L2 — AI-verified**: CLAUDE.md tells the agent to self-check against the rule before finishing. *(same violation 3×)*
 3. **L3 — Tool-verified**: add a check to `scripts/validate.js` so `npm test` fails on violation. *(violations slip past L2)*
+   (skills reference: `.claude/skills/release-check/SKILL.md` step 5 triggers this escalation)
 4. **L4 — Hook-enforced**: the check runs automatically on every edit. *(business-critical invariant)*
 
 Example already at L3: "distractors must be exactly 3 and never contain the
@@ -103,7 +104,7 @@ kanji_anki/
 ├── memory/
 │   └── progress.md              # [Memory] state + decision log
 └── scripts/
-    └── validate.js              # [Feedback] npm test
+    └── validate.js              # [Feedback] npm test — run this constantly
 ```
 
 ## Practice plan (your dojo curriculum)
@@ -124,6 +125,6 @@ kanji_anki/
 ## Maintenance duties (harnesses rot)
 
 - When behavior and rules disagree, fix one of them the same day.
-- Every ~90 days, reread `.claude/rules/` and delete rules that no longer
+- Every ~90 days, reread the rules and delete any that no longer
   correspond to reality (stale rules teach agents to ignore all rules).
 - Keep `npm test` under ~10 seconds; a slow feedback loop stops being used.
