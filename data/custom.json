@@ -5,5 +5,12 @@
   "sentence": "[[汎用]]",
   "meaning": "general, usually used in webpages or tempaltes",
   "custom": true
+ },
+ {
+  "kanji": "原稿",
+  "reading": "げんこう",
+  "sentence": "例：英語の[[原稿]]はまだ決まっていない。",
+  "meaning": "Manuscript",
+  "custom": true
  }
 ]
