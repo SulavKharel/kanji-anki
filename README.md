@@ -59,7 +59,26 @@ unavailable, the local bank keeps serving.
 Click **＋ カード追加 / My cards** under the title to add your own kanji.
 Kanji and reading (hiragana) are required; example sentence and meaning are
 optional. Custom cards join the adaptive rotation like any other question
-(wrong answers bring them back sooner) and are saved in `data/custom.json`.
+(wrong answers bring them back sooner) and are saved in your browser
+(`localStorage`, key `n1kq_custom_v1`) alongside your learning stats. On first
+run the browser seeds itself from `data/custom.json`, so cards committed to the
+repo become your starting set.
+
+## Deploying (use it on your phone)
+
+The quiz needs no server at runtime — selection, stats and custom cards all run
+in the browser — so it deploys as a static site.
+
+Pushing to `master` triggers `.github/workflows/deploy.yml`, which runs
+`npm test` and then publishes `public/` plus `data/bank.json` to GitHub Pages.
+Enable it once at **Settings → Pages → Source: GitHub Actions**.
+
+The deployed site is a PWA: open it on your phone and use *Add to Home Screen*
+to install it. After the first visit it works with no signal — a service worker
+caches the app shell and the question bank.
+
+Note that your learning history is per-device, since it lives in `localStorage`.
+Studying on your phone and your laptop keeps two independent schedules.
 
 ## Features
 - 112 curated N1 questions built in (readings, hints, compounds, distractors)

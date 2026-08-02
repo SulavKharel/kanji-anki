@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="漢字 N1 ドリル">
+  <rect width="512" height="512" fill="#1a1a2e"/>
+  <!-- maskable safe zone: keep artwork inside the central 80% -->
+  <circle cx="256" cy="256" r="176" fill="none" stroke="#b8860b" stroke-width="10" opacity="0.55"/>
+  <text x="256" y="256" fill="#f7f4ef"
+        font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','MS Mincho',serif"
+        font-size="230" font-weight="700"
+        text-anchor="middle" dominant-baseline="central">漢</text>
+  <rect x="196" y="404" width="120" height="12" rx="6" fill="#c0392b"/>
+</svg>

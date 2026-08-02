@@ -3,15 +3,20 @@
 Agents: read this at session start; update it at session end.
 Decision log is append-only — reversals get a new entry, never an edit.
 
-## Current state (2026-07-03)
+## Current state (2026-08-02)
 
 - Implemented: offline question bank (112 items), adaptive SRS engine
   (localStorage), in-session repeat of misses, Anki export, custom card
   manager (add/list/delete), Gemini background top-up with model fallback +
   10-minute timer, pool-status footer, harness (rules/skills/memory/validator).
+- Implemented 2026-08-02: static deployment to GitHub Pages (PWA, installable
+  on phone, offline via service worker). SPA now reads data/*.json directly
+  instead of /api/bank; custom cards moved to localStorage.
 - Working on: nothing in flight.
 - Not started: import Anki deck as custom cards; per-kanji stats view;
   hooks (deliberately deferred — see HARNESS.md).
+- Watch: PNG app icons not yet generated (only icon.svg) — iOS home-screen
+  icon falls back to a page screenshot until a PNG apple-touch-icon exists.
 
 ## Decision log
 
@@ -39,6 +44,29 @@ Decision log is append-only — reversals get a new entry, never an edit.
 - 2026-07-03 (later): Renamed harness/ → .claude/ per user request (done via
   shell; file tools can't write dot-prefixed paths). All references in
   CLAUDE.md, HARNESS.md, skills, and validate.js updated.
+- 2026-08-02: Deploy target is a static build on GitHub Pages, not a hosted
+  Node server. (Why: R4 already put all selection and stats in the browser, so
+  the server was only a file server. Static means free hosting, no cold start
+  on mobile, and R1's offline guarantee becomes literal.)
+- 2026-08-02: SPA loads `data/bank.json` + optional `data/ai-cache.json` via
+  *relative* paths instead of `/api/bank`. server.js now also serves `/data`
+  statically so local dev exercises the identical code path. `/api/bank`
+  is retained for the R1 smoke test but is no longer used by the frontend.
+  (Why: one code path for dev and prod; relative paths survive the
+  `/kanji-anki/` Pages subpath with no build-time config.)
+- 2026-08-02: REVERSES the 2026-07-03 custom-cards decision. Custom cards now
+  live in localStorage under `n1kq_custom_v1`, seeded once from
+  data/custom.json for migration. The POST/GET/DELETE `/api/custom` endpoints
+  and data/custom.json remain but are no longer the source of truth.
+  (Why: a static site has no writable server. Accepted cost: cards no longer
+  survive a browser-storage clear — mitigated by the fact that stats never
+  did either, and both are now clearable/exportable together.)
+- 2026-08-02: PWA (manifest + service worker, stale-while-revalidate) added as
+  two new files in public/, accepting a stretch of R5's "two files + data".
+  (Why: browsers require manifest and service worker to be separate
+  top-level files; they cannot be inlined into index.html.)
+- 2026-08-02: The Pages workflow runs `npm test` before publishing.
+  (Why: makes the harness validator a deploy gate, not just a local habit.)
 
 ## Known issues / watch list
 

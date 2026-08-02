@@ -1,0 +1,60 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deploys race; always finish the newest one.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      # Harness gate (HARNESS.md): data invariants + offline smoke test.
+      # A broken bank.json must never reach the deployed site.
+      - name: Run validator
+        run: npm test
+
+      - name: Assemble static site
+        run: |
+          mkdir -p _site/data
+          cp -r public/. _site/
+          cp data/bank.json _site/data/bank.json
+          # custom.json seeds first-run browsers; ai-cache.json is optional.
+          cp data/custom.json _site/data/custom.json 2>/dev/null || echo '[]' > _site/data/custom.json
+          cp data/ai-cache.json _site/data/ai-cache.json 2>/dev/null || true
+          ls -R _site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

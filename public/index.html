@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>漢字 N1 ドリル</title>
+<meta name="description" content="Adaptive JLPT N1 kanji reading drill with spaced repetition. Works offline.">
+<meta name="theme-color" content="#1a1a2e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="N1 漢字">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@400;500;600&display=swap');
 
@@ -237,13 +246,15 @@
 
 <script>
 // ══════════════════════════════════════════════════════════════════════
-//  All questions come from the local bank (/api/bank) — no live AI calls,
-//  so the quiz always works. Adaptive selection + spaced repetition run
-//  entirely in the browser using localStorage.
+//  All questions come from local JSON under data/ — no live AI calls and
+//  no server required, so the quiz always works (including as a static
+//  site or fully offline). Adaptive selection, spaced repetition and the
+//  user's own cards all live in the browser via localStorage.
 // ══════════════════════════════════════════════════════════════════════
 
 const QUIZ_SIZE = 8;
 const STATS_KEY = 'n1kq_stats_v1';
+const CUSTOM_KEY = 'n1kq_custom_v1';
 // Spaced-repetition intervals (days) indexed by correct-streak
 const SRS_DAYS = [0, 1, 3, 7, 14, 30, 60];
 const DAY = 24 * 60 * 60 * 1000;
@@ -363,22 +374,62 @@ function tagFor(kanji) {
   return '';
 }
 
+// ── Question pool loading ─────────────────────────────────────────────
+// Paths are relative so the app works at a site root (localhost:3000) or
+// under a subpath (https://user.github.io/kanji-anki/) with no config.
+async function loadJSON(path) {
+  try {
+    const res = await fetch(path);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch { return null; }
+}
+
+function addToPool(q) {
+  if (!bankByKanji.has(q.kanji)) bankByKanji.set(q.kanji, []);
+  bankByKanji.get(q.kanji).push(q);
+}
+
+async function loadPool() {
+  const bank = await loadJSON('data/bank.json');
+  if (!Array.isArray(bank) || !bank.length) throw new Error('Could not load data/bank.json');
+
+  // ai-cache.json is machine-managed and absent from the static build — optional.
+  const ai = (await loadJSON('data/ai-cache.json')) || [];
+  const aiList = Array.isArray(ai) ? ai : [];
+
+  await seedCustomOnce();
+  const custom = loadCustom();
+
+  const all = [...bank, ...custom, ...aiList];
+  all.forEach(addToPool);
+  return { questions: all, aiCount: aiList.length, customCount: custom.length };
+}
+
+// ── Custom cards (browser-local) ──────────────────────────────────────
+function loadCustom() {
+  try {
+    const v = JSON.parse(localStorage.getItem(CUSTOM_KEY));
+    return Array.isArray(v) ? v : [];
+  } catch { return []; }
+}
+function saveCustom(cards) { localStorage.setItem(CUSTOM_KEY, JSON.stringify(cards)); }
+
+// One-time migration: adopt any cards that were previously stored server-side
+// in data/custom.json. After this the browser copy is the source of truth.
+async function seedCustomOnce() {
+  if (localStorage.getItem(CUSTOM_KEY) !== null) return;
+  const seed = await loadJSON('data/custom.json');
+  saveCustom(Array.isArray(seed) ? seed : []);
+}
+
 // ── Init / Restart ────────────────────────────────────────────────────
 async function initQuiz() {
   questions = []; current = 0; score = 0; missed = []; ankiLines = []; answered = false;
   showLoading('Preparing your questions...');
 
   try {
-    if (bankByKanji.size === 0) {
-      const res = await fetch('/api/bank');
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      for (const q of data.questions) {
-        if (!bankByKanji.has(q.kanji)) bankByKanji.set(q.kanji, []);
-        bankByKanji.get(q.kanji).push(q);
-      }
-      updatePoolInfo(data);
-    }
+    if (bankByKanji.size === 0) updatePoolInfo(await loadPool());
     const kanjiList = pickQuizKanji();
     questions = kanjiList.map(k => ({ ...questionFor(k), isRepeat: false }));
     hideLoading();
@@ -423,12 +474,7 @@ function toggleCardScreen() {
   }
 }
 
-async function refreshCustomList() {
-  try {
-    const res = await fetch('/api/custom');
-    renderCustomList((await res.json()).cards);
-  } catch {}
-}
+function refreshCustomList() { renderCustomList(loadCustom()); }
 
 function renderCustomList(cards) {
   document.getElementById('customCount').textContent = cards.length;
@@ -443,24 +489,32 @@ function renderCustomList(cards) {
     : '<p style="font-size:0.8rem;color:var(--mid)">No custom cards yet.</p>';
 }
 
-async function addCard() {
+function addCard() {
   const err = document.getElementById('cErr');
   err.style.display = 'none';
-  const body = {
-    kanji: document.getElementById('cKanji').value,
-    reading: document.getElementById('cReading').value,
-    sentence: document.getElementById('cSentence').value,
-    meaning: document.getElementById('cMeaning').value
-  };
+  const val = id => document.getElementById(id).value.trim();
+  const kanji = val('cKanji'), reading = val('cReading');
+  const sentence = val('cSentence'), meaning = val('cMeaning');
+  const cards = loadCustom();
+
   try {
-    const res = await fetch('/api/custom', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
-    renderCustomList(data.cards);
+    if (!kanji || !reading) throw new Error('kanji and reading are required');
+    if (!/^[ぁ-んー]+$/.test(reading)) throw new Error('reading must be hiragana');
+    if (cards.some(c => c.kanji === kanji)) throw new Error(`「${kanji}」 is already in your cards`);
+
+    // If no sentence given, show the word alone; [[target]] markup still applies.
+    let s = sentence
+      ? (sentence.includes('[[') ? sentence : sentence.replace(kanji, `[[${kanji}]]`))
+      : `[[${kanji}]]`;
+    // If the sentence didn't contain the kanji, fall back to appending it.
+    if (!s.includes('[[')) s = `${sentence}　→ [[${kanji}]]`;
+
+    const card = { kanji, reading, sentence: s, meaning, custom: true };
+    cards.push(card);
+    saveCustom(cards);
+    addToPool(card); // usable immediately, no reload
+
+    renderCustomList(cards);
     ['cKanji','cReading','cSentence','cMeaning'].forEach(id =>
       document.getElementById(id).value = '');
     document.getElementById('cKanji').focus();
@@ -470,11 +524,12 @@ async function addCard() {
   }
 }
 
-async function deleteCard(kanji) {
-  try {
-    const res = await fetch('/api/custom/' + encodeURIComponent(kanji), { method: 'DELETE' });
-    renderCustomList((await res.json()).cards);
-  } catch {}
+function deleteCard(kanji) {
+  const cards = loadCustom().filter(c => c.kanji !== kanji);
+  saveCustom(cards);
+  const kept = (bankByKanji.get(kanji) || []).filter(v => !v.custom);
+  kept.length ? bankByKanji.set(kanji, kept) : bankByKanji.delete(kanji);
+  renderCustomList(cards);
 }
 
 // ── Loading helpers ───────────────────────────────────────────────────
@@ -660,6 +715,14 @@ function downloadAnki() {
   a.href = URL.createObjectURL(blob);
   a.download = 'n1_kanji_missed.txt';
   a.click();
+}
+
+// Offline support / installable app. Registered relative to this page so it
+// works both at a site root and under a GitHub Pages subpath.
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
 }
 
 // Start the first quiz

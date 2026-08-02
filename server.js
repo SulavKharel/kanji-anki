@@ -162,8 +162,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
+// The frontend loads data/*.json directly (see public/index.html), so it runs
+// identically here and on the static GitHub Pages build. Serving data/ keeps
+// local dev on exactly the same code path as production.
+app.use("/data", express.static(path.join(__dirname, "data")));
 
-// Full merged question bank. The frontend does adaptive selection locally.
+// Full merged question bank. Retained for the R1 offline smoke test and as a
+// convenience endpoint; the SPA no longer depends on it.
 app.get("/api/bank", (req, res) => {
   res.json({
     questions: [...bank, ...customCards, ...aiCache],
