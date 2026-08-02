@@ -7,6 +7,13 @@
 node_modules/
 dist/
 
+# Secrets
+.env
+.env.local
+
+# Machine-managed AI cache (safe to delete / regenerated at runtime)
+data/ai-cache.json
+
 # Compiled Java class files
 *.class
 
