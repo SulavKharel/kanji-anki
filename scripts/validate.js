@@ -96,7 +96,9 @@ function checkSyntax() {
 // ── R1: offline smoke test — server must serve questions with NO key ─
 function smokeTest() {
   return new Promise(resolve => {
-    const env = { ...process.env, PORT: "3999" };
+    // KANJI_NO_ENV_FILE stops server.js reading a local .env, so the test
+    // really runs keyless even on a machine that has one.
+    const env = { ...process.env, PORT: "3999", KANJI_NO_ENV_FILE: "1" };
     delete env.GEMINI_API_KEY;
     const srv = spawn(process.execPath, [path.join(ROOT, "server.js")], { env });
     let done = false;

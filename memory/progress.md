@@ -3,7 +3,14 @@
 Agents: read this at session start; update it at session end.
 Decision log is append-only — reversals get a new entry, never an edit.
 
-## Current state (2026-08-02)
+## Current state (2026-08-05)
+
+- Implemented 2026-08-05: optional AI top-up now works on the public static
+  build — a Gemini key pasted into the settings panel is stored per-browser and
+  drives `browserTopup()`; local dev can use a gitignored `.env` instead of
+  PowerShell exports.
+
+## Previous state (2026-08-02)
 
 - Implemented: offline question bank (112 items), adaptive SRS engine
   (localStorage), in-session repeat of misses, Anki export, custom card
@@ -68,8 +75,52 @@ Decision log is append-only — reversals get a new entry, never an edit.
 - 2026-08-02: The Pages workflow runs `npm test` before publishing.
   (Why: makes the harness validator a deploy gate, not just a local habit.)
 
+- 2026-08-05: The owner's Gemini key will NOT be embedded in the app. The
+  deployment is static (GitHub Pages), so any bundled key is readable by every
+  visitor and its quota is spendable by them. Rejected alternative: a
+  serverless proxy holding the key — deferred, since it reintroduces a server,
+  a bill, and an abuse surface for an optional enhancer. Revisit only if
+  shared AI questions become a core feature.
+- 2026-08-05: AI top-up now also runs client-side (`browserTopup()` in
+  index.html), keyed by a per-browser key in `n1kq_gemini_key_v1`, caching to
+  `n1kq_aicache_v1` (cap 500, 10-min throttle, same prompt/validation as the
+  server). (Why: on the static build there is no server, so the server-side
+  top-up only ever benefited local dev. R1 still holds — the call is
+  fire-and-forget and the quiz never awaits it.)
+- 2026-08-05: server.js reads a gitignored `.env` via a ~10-line inline parser
+  rather than adding `dotenv`. Real env vars take precedence and
+  `KANJI_NO_ENV_FILE=1` bypasses it, which validate.js now sets so the R1
+  smoke test stays genuinely keyless. (Why: removes the PowerShell step
+  without a new dependency — R5.)
+
 ## Known issues / watch list
 
+- 2026-08-05: model names are DISCOVERED at runtime (`discoverModels()` calls
+  ListModels, filters to generateContent + flash tiers, caches for a week in
+  `n1kq_models_v1` and drops the cache whenever every model fails). The static
+  list is fallback only and leads with `gemini-flash-latest`. (Why: the
+  hard-coded 1.5/2.0/2.5 list was entirely shut down by Google within weeks;
+  a fixed list is a slow-motion outage. Also: only the *last* model's error
+  was surfaced, which made a 5-model failure look like a 1.5 problem — the
+  loop now reports all of them.)
+- 2026-08-05: generation now uses `responseMimeType: application/json` +
+  `responseSchema` (QUESTION_SCHEMA, mirrored in server.js and index.html)
+  instead of trusting the prompt's "return only JSON" instruction, which
+  produced unparseable batches. A 400 falls back to plain text once, since not
+  every model accepts a schema. `parseQuestions()` additionally salvages
+  individual balanced `{...}` blocks when the whole reply won't parse, so one
+  malformed item costs one question rather than the batch. The old
+  `endsWith("]")` truncation guard is gone — salvage supersedes it.
+- 2026-08-05: dropped `temperature` from generationConfig (deprecated by
+  Google) and raised maxOutputTokens 4000 → 8192; response text is now joined
+  from all non-thought parts. (Why: reasoning models spend budget before
+  answering and can return a thought part first, yielding empty output.)
+- 2026-08-05: the in-app key field must NOT prefix-match on `AIza` — Google
+  also issues keys starting `AQ.`, and the first version of the panel rejected
+  a valid one. Validation is now length/whitespace only; the API decides.
+- 2026-08-05: `npm test` was NOT run in the session that added the in-app key
+  panel (no shell available) — run it before pushing. Also unverified live:
+  the browser → Gemini call (CORS/quota behaviour from a Pages origin).
 - README "Free tier limits" claims may be stale — verify against current
   Google pricing page before quoting numbers.
 - data/ai-cache.json quality depends on validQuestion(); D3 content quality

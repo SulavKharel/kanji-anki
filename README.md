@@ -28,22 +28,35 @@ An optional Gemini key adds fresh AI-generated sentences in the background.
 
 ### Optional: AI question top-up
 
-Get a free key at https://aistudio.google.com/apikey, then set it before starting:
+Get a free key at https://aistudio.google.com/apikey. There are two ways to use
+it — no PowerShell required either way.
 
-PowerShell:
-```powershell
-$env:GEMINI_API_KEY="AIza..."
+**In the app (works on the deployed site and on your phone).**
+Open **＋ カード追加・設定 / Cards & settings** and paste the key into the
+*AI question top-up* box. It is saved in that browser's `localStorage`
+(`n1kq_gemini_key_v1`) and used to generate new sentences in the background —
+at most one call per 10 minutes, capped at 500 stored questions
+(`n1kq_aicache_v1`). **Remove key & AI questions** clears both.
+
+**Locally via `.env`.** Copy `.env.example` to `.env` and put the key there:
+
+```
+GEMINI_API_KEY=AIza...
 ```
 
-Mac/Linux:
-```bash
-export GEMINI_API_KEY=AIza...
-```
+`server.js` reads it at startup (`.env` is gitignored, and a real environment
+variable still wins). Generated questions land in `data/ai-cache.json`.
 
-The server quietly generates new sentence variants in the background (at most
-one API call per 10 minutes) and saves them to `data/ai-cache.json`, so the
-question pool grows over time. Rate limits never block the quiz — if Gemini is
-unavailable, the local bank keeps serving.
+Either way, rate limits never block the quiz — if Gemini is unavailable, the
+local bank keeps serving.
+
+#### Why the key isn't shipped with the app
+
+The deployed drill is a static site: anything it can read, a visitor can read
+too. A key baked into the build would be scraped from the page source and spend
+the owner's quota, so each person supplies their own — or nobody does, and the
+built-in bank runs exactly as before. (Sharing one key would need a server-side
+proxy holding the secret, which the static deployment deliberately doesn't have.)
 
 ## How the adaptive engine works
 

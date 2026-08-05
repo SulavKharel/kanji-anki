@@ -4,7 +4,7 @@
 // is fetched in the background for next time.
 //
 // Bump CACHE when shipping a change you want users to pick up promptly.
-const CACHE = 'n1kq-v1';
+const CACHE = 'n1kq-v4';
 
 // Relative so this works at a site root and under a /repo-name/ subpath.
 // data/ai-cache.json is deliberately absent — it is machine-managed and may

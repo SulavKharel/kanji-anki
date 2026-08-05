@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # Install dependencies
 npm install
 
-# Run the dev server (GEMINI_API_KEY is OPTIONAL)
+# Run the dev server (GEMINI_API_KEY is OPTIONAL; read from .env if present)
 npm start
 # → http://localhost:3000
 
@@ -48,7 +48,9 @@ pool grows over time. Created automatically; safe to delete.
 cards get auto-generated distractors client-side (`autoDistractors()` borrows
 similar-length readings from the pool).
 
-**`server.js`** — Express server:
+**`server.js`** — Express server (local dev only; production is static):
+- Loads `.env` at startup with a dependency-free parser. Real env vars win;
+  `KANJI_NO_ENV_FILE=1` disables it (the R1 smoke test sets this).
 - `GET /api/bank` returns the merged bank + AI cache. The frontend does all
   question selection locally.
 - `backgroundTopup()` — fire-and-forget Gemini call (throttled to one per
@@ -68,6 +70,13 @@ similar-length readings from the pool).
   session (bank + AI cache may hold several per kanji).
 - In-session repeat: missed kanji are re-asked at the end with a different
   variant (`handleNext()`), no network needed.
+- Optional AI top-up, browser-side: a Gemini key pasted in the settings panel
+  is stored in `localStorage` (`n1kq_gemini_key_v1`) and used by
+  `browserTopup()` — a mirror of the server's `backgroundTopup()` (same
+  prompt, model fallback, `validQuestion()` filter, 10-min throttle, 500-item
+  cap) writing to `n1kq_aicache_v1`. Never awaited by the quiz path. No key is
+  ever shipped in the build: the deployment is static, so a bundled key would
+  be publicly readable.
 - `showResults()` renders session score, all-time mastery panel
   (studied/mastered/weak), and Anki `.txt` export (tab-separated, Basic
   notetype, deck "N1 漢字").

@@ -163,7 +163,7 @@
 <header>
   <h1>漢字 N1 ドリル</h1>
   <p>adaptive · on'yomi / kun'yomi in context · spaced repetition</p>
-  <button class="nav-btn" id="cardsToggle" onclick="toggleCardScreen()">＋ カード追加 / My cards</button>
+  <button class="nav-btn" id="cardsToggle" onclick="toggleCardScreen()">＋ カード追加・設定 / Cards &amp; settings</button>
 </header>
 
 <div class="progress-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
@@ -213,6 +213,25 @@
     <div class="missed-h">Your cards (<span id="customCount">0</span>)</div>
     <div id="customList"><p style="font-size:0.8rem;color:var(--mid)">No custom cards yet.</p></div>
   </div>
+  <div class="card">
+    <div class="missed-h">✦ AI question top-up (optional)</div>
+    <p style="font-size:0.8rem;color:var(--mid);margin-bottom:9px">
+      Paste your own free Gemini key and the drill quietly generates new N1
+      sentences for kanji you already study. The key is stored only in this
+      browser (never uploaded anywhere) and the quiz works exactly the same
+      without one. Get a free key at
+      <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a>.
+    </p>
+    <div class="form-row">
+      <label>Gemini API key</label>
+      <input id="aiKey" type="password" placeholder="AIza... / AQ...." autocomplete="off" spellcheck="false">
+    </div>
+    <div class="form-err" id="aiErr"></div>
+    <button class="dl-btn" style="margin-top:2px" onclick="saveKeyFromInput()">保存 / Save key</button>
+    <button class="restart-btn" style="margin-top:8px" onclick="manualTopup()">✦ 今すぐ生成 / Generate now</button>
+    <p id="aiStatus" style="font-size:0.78rem;color:var(--mid);margin-top:9px"></p>
+    <button class="reset-link" onclick="clearAiData()">remove key & AI questions</button>
+  </div>
   <div class="card" style="padding:18px">
     <button class="restart-btn" onclick="toggleCardScreen()">← クイズに戻る</button>
   </div>
@@ -246,15 +265,24 @@
 
 <script>
 // ══════════════════════════════════════════════════════════════════════
-//  All questions come from local JSON under data/ — no live AI calls and
-//  no server required, so the quiz always works (including as a static
-//  site or fully offline). Adaptive selection, spaced repetition and the
-//  user's own cards all live in the browser via localStorage.
+//  All questions come from local JSON under data/ — no server required, so
+//  the quiz always works (including as a static site or fully offline).
+//  Adaptive selection, spaced repetition and the user's own cards all live
+//  in the browser via localStorage. If (and only if) the visitor saves their
+//  own Gemini key in settings, extra questions are generated in the
+//  background and cached locally — always optional, never awaited.
 // ══════════════════════════════════════════════════════════════════════
 
 const QUIZ_SIZE = 8;
 const STATS_KEY = 'n1kq_stats_v1';
 const CUSTOM_KEY = 'n1kq_custom_v1';
+// Optional AI top-up, entirely browser-local. The key is the visitor's own and
+// never leaves their device; nothing here is required for the quiz to run.
+const AIKEY_KEY = 'n1kq_gemini_key_v1';
+const AICACHE_KEY = 'n1kq_aicache_v1';
+const AILAST_KEY = 'n1kq_ai_last_v1';
+const AI_CACHE_MAX = 500;
+const AI_COOLDOWN_MS = 10 * 60 * 1000;
 // Spaced-repetition intervals (days) indexed by correct-streak
 const SRS_DAYS = [0, 1, 3, 7, 14, 30, 60];
 const DAY = 24 * 60 * 60 * 1000;
@@ -396,7 +424,10 @@ async function loadPool() {
 
   // ai-cache.json is machine-managed and absent from the static build — optional.
   const ai = (await loadJSON('data/ai-cache.json')) || [];
-  const aiList = Array.isArray(ai) ? ai : [];
+  const fileAi = Array.isArray(ai) ? ai : [];
+  // Questions this browser generated itself from the visitor's own key.
+  const localAi = loadAiCache();
+  const aiList = [...fileAi, ...localAi];
 
   await seedCustomOnce();
   const custom = loadCustom();
@@ -423,6 +454,285 @@ async function seedCustomOnce() {
   saveCustom(Array.isArray(seed) ? seed : []);
 }
 
+// ── Optional AI top-up (browser-local, fire-and-forget) ───────────────
+// Mirrors backgroundTopup() in server.js, but runs in the visitor's browser
+// with the visitor's own key so it also works on the static build. Nothing in
+// the quiz path ever awaits this: if the key is missing, the request fails or
+// the device is offline, the local bank keeps serving unchanged (rule R1).
+
+// Google retires model names on its own schedule (1.5 and 2.0 are already gone),
+// so the list is DISCOVERED from the key at runtime via ListModels and cached
+// for a week. These are only the fallback if discovery itself fails — and
+// `gemini-flash-latest` is an alias Google hot-swaps, so it outlives the rest.
+const FALLBACK_MODELS = [
+  'gemini-flash-latest',
+  'gemini-3.5-flash-lite',
+  'gemini-3.6-flash',
+  'gemini-2.5-flash'
+];
+const MODELS_KEY = 'n1kq_models_v1';
+const MODELS_TTL = 7 * 24 * 60 * 60 * 1000;
+
+// Cheapest/most generous free quota first: *-lite, then flash, preview last.
+function modelRank(n) {
+  return (/lite/.test(n) ? 0 : 4) + (/preview|exp/.test(n) ? 10 : 0);
+}
+
+async function discoverModels(apiKey) {
+  try {
+    const c = JSON.parse(localStorage.getItem(MODELS_KEY) || 'null');
+    if (c && Array.isArray(c.models) && c.models.length && Date.now() - c.at < MODELS_TTL) return c.models;
+  } catch { /* fall through to a fresh lookup */ }
+
+  try {
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?pageSize=200&key=${encodeURIComponent(apiKey)}`);
+    if (!res.ok) return FALLBACK_MODELS;
+    const data = await res.json();
+    const names = (data.models || [])
+      .filter(m => (m.supportedGenerationMethods || []).includes('generateContent'))
+      .map(m => String(m.name || '').replace(/^models\//, ''))
+      // Text-generating flash tiers only — skip image/audio/embedding variants.
+      .filter(n => /flash/.test(n) && !/(image|tts|audio|live|embedding|robotics|computer-use|translate)/.test(n))
+      .sort((a, b) => modelRank(a) - modelRank(b))
+      .slice(0, 5);
+    if (!names.length) return FALLBACK_MODELS;
+    localStorage.setItem(MODELS_KEY, JSON.stringify({ at: Date.now(), models: names }));
+    return names;
+  } catch { return FALLBACK_MODELS; }
+}
+
+const AI_SYSTEM_PROMPT = `You are a JLPT N1 Japanese teacher. Return ONLY a valid JSON array — no markdown, no backticks, no extra text before or after.
+Each element must have exactly these keys:
+- kanji: string (the word being tested)
+- sentence: string (natural Japanese N1-level sentence; wrap the target in [[double brackets]] e.g. "[[覆す]]")
+- reading: string (correct hiragana reading)
+- meaning: string (English meaning)
+- type: "on" or "kun"
+- hint: string (one-sentence memory tip about the reading pattern)
+- compounds: array of 2-3 strings like "覆面 (fukumen) — mask"
+- distractors: array of exactly 3 plausible WRONG hiragana readings (believable misreadings, never the correct answer)
+Keep sentences short (under 25 characters). Return all items in a single complete JSON array.`;
+
+let topupRunning = false;
+
+function loadKey() { return localStorage.getItem(AIKEY_KEY) || ''; }
+function saveKey(k) { localStorage.setItem(AIKEY_KEY, k); }
+
+function loadAiCache() {
+  try {
+    const v = JSON.parse(localStorage.getItem(AICACHE_KEY));
+    return Array.isArray(v) ? v : [];
+  } catch { return []; }
+}
+function saveAiCache(list) {
+  try { localStorage.setItem(AICACHE_KEY, JSON.stringify(list)); }
+  catch { /* quota full — keep what is already stored */ }
+}
+
+// Schema-enforced output: the model is constrained to this shape rather than
+// asked nicely for JSON in the prompt, which is what produced malformed
+// batches ("Expected ',' or '}' ...").
+const QUESTION_SCHEMA = {
+  type: 'ARRAY',
+  items: {
+    type: 'OBJECT',
+    properties: {
+      kanji: { type: 'STRING' },
+      sentence: { type: 'STRING' },
+      reading: { type: 'STRING' },
+      meaning: { type: 'STRING' },
+      type: { type: 'STRING', enum: ['on', 'kun'] },
+      hint: { type: 'STRING' },
+      compounds: { type: 'ARRAY', items: { type: 'STRING' } },
+      distractors: { type: 'ARRAY', items: { type: 'STRING' } }
+    },
+    required: ['kanji', 'sentence', 'reading', 'meaning', 'type', 'hint', 'compounds', 'distractors'],
+    propertyOrdering: ['kanji', 'sentence', 'reading', 'meaning', 'type', 'hint', 'compounds', 'distractors']
+  }
+};
+
+// Belt and braces: if the reply still won't parse as a whole (truncation, a
+// stray character in one item), scan out balanced top-level {...} blocks and
+// parse them individually — one bad item then costs one question, not the
+// entire batch.
+function parseQuestions(text) {
+  const clean = text.replace(/```json|```/g, '').trim();
+  try {
+    const arr = JSON.parse(clean);
+    if (Array.isArray(arr)) return arr;
+    if (arr && typeof arr === 'object') return [arr];
+  } catch { /* fall through to salvage */ }
+
+  const out = [];
+  let depth = 0, start = -1, inStr = false, esc = false;
+  for (let i = 0; i < clean.length; i++) {
+    const c = clean[i];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (c === '\\') esc = true;
+      else if (c === '"') inStr = false;
+      continue;
+    }
+    if (c === '"') inStr = true;
+    else if (c === '{') { if (depth++ === 0) start = i; }
+    else if (c === '}' && depth > 0 && --depth === 0 && start >= 0) {
+      try { out.push(JSON.parse(clean.slice(start, i + 1))); } catch { /* skip this one */ }
+      start = -1;
+    }
+  }
+  return out;
+}
+
+// Same shape check as validQuestion() in server.js (data rule D1).
+function validQuestion(q) {
+  return q && typeof q.kanji === 'string' && typeof q.sentence === 'string' &&
+    /\[\[.+\]\]/.test(q.sentence) && typeof q.reading === 'string' &&
+    typeof q.meaning === 'string' && (q.type === 'on' || q.type === 'kun') &&
+    typeof q.hint === 'string' && Array.isArray(q.compounds) &&
+    Array.isArray(q.distractors) && q.distractors.length === 3 &&
+    !q.distractors.includes(q.reading);
+}
+
+async function callGemini(apiKey, model, userMsg, structured = true) {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`;
+  // No temperature/top_p: deprecated, and variety already comes from rotating
+  // which kanji each batch asks about. Headroom on tokens because reasoning
+  // models spend some of the budget before answering.
+  const generationConfig = structured
+    ? { maxOutputTokens: 8192, responseMimeType: 'application/json', responseSchema: QUESTION_SCHEMA }
+    : { maxOutputTokens: 8192 };
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      systemInstruction: { parts: [{ text: AI_SYSTEM_PROMPT }] },
+      contents: [{ role: 'user', parts: [{ text: userMsg }] }],
+      generationConfig
+    })
+  });
+  // Not every model accepts a response schema — fall back to plain text once.
+  if (structured && res.status === 400) return callGemini(apiKey, model, userMsg, false);
+  if (res.status === 429) throw new Error('rate limited');
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error?.message || `Gemini error ${res.status}`);
+  const cand = data.candidates?.[0];
+  // Reasoning models emit thought parts alongside the answer — keep the answer.
+  const text = (cand?.content?.parts || [])
+    .filter(p => typeof p.text === 'string' && !p.thought)
+    .map(p => p.text).join('');
+  if (!text) throw new Error(cand?.finishReason === 'MAX_TOKENS'
+    ? 'response hit the token limit'
+    : `empty response (${cand?.finishReason || 'no candidates'})`);
+  return text;
+}
+
+function aiStatus(msg) {
+  const el = document.getElementById('aiStatus');
+  if (el) el.textContent = msg;
+}
+
+// force=true skips the 10-minute throttle (used by the "Generate now" button).
+async function browserTopup(force = false) {
+  const apiKey = loadKey();
+  if (!apiKey || topupRunning) return;
+  const last = Number(localStorage.getItem(AILAST_KEY) || 0);
+  if (!force && Date.now() - last < AI_COOLDOWN_MS) return;
+
+  let cache = loadAiCache();
+  if (cache.length >= AI_CACHE_MAX) {
+    if (force) aiStatus(`AI pool is full (${cache.length} stored) — nothing more to generate.`);
+    return;
+  }
+
+  topupRunning = true;
+  localStorage.setItem(AILAST_KEY, String(Date.now()));
+  aiStatus('✦ generating new sentences...');
+
+  try {
+    // Prefer kanji the learner is actually struggling with, then anything else.
+    const stats = loadStats();
+    const pool = [...bankByKanji.keys()];
+    const weak = pool.filter(k => stats[k] && stats[k].wrong > 0);
+    const kanji = [...shuffle(weak).slice(0, 4), ...shuffle(pool).slice(0, 8)]
+      .filter((k, i, a) => a.indexOf(k) === i).slice(0, 8);
+    if (!kanji.length) throw new Error('no kanji loaded yet');
+
+    const models = await discoverModels(apiKey);
+    const ask = `Create DIFFERENT quiz questions for these kanji — new sentences, vary the context. Kanji: ${kanji.join('、')}`;
+
+    let text = null;
+    const errs = [];
+    for (const model of models) {
+      try { text = await callGemini(apiKey, model, ask); break; }
+      catch (e) { errs.push(`${model}: ${e.message}`); }
+    }
+    if (text === null) {
+      // A stale cached model list is the likeliest cause — drop it so the next
+      // attempt rediscovers what the key can actually reach.
+      localStorage.removeItem(MODELS_KEY);
+      console.warn('[ai top-up] all models failed:', errs);
+      throw new Error(errs.slice(0, 2).join(' / ') || 'all models failed');
+    }
+
+    const parsed = parseQuestions(text);
+    const items = parsed.filter(validQuestion);
+    if (!items.length) throw new Error(parsed.length
+      ? `${parsed.length} questions returned but none passed validation`
+      : 'could not read the reply as questions');
+
+    cache = [...loadAiCache(), ...items].slice(-AI_CACHE_MAX);
+    saveAiCache(cache);
+    items.forEach(addToPool); // usable in the next quiz, no reload needed
+    aiStatus(`✦ +${items.length} new questions (${cache.length} stored on this device).`);
+  } catch (e) {
+    aiStatus(`skipped: ${e.message} — the quiz is unaffected.`);
+  } finally {
+    topupRunning = false;
+  }
+}
+
+function saveKeyFromInput() {
+  const err = document.getElementById('aiErr');
+  const key = document.getElementById('aiKey').value.trim();
+  err.style.display = 'none';
+  // Deliberately loose: Google issues keys in more than one format (AIza…,
+  // AQ.…, and whatever comes next). Only obvious paste errors are rejected —
+  // Gemini itself is the real judge of whether a key works.
+  if (key && (key.length < 20 || /\s/.test(key))) {
+    err.textContent = "that doesn't look like a complete key — check for a truncated or partial paste";
+    err.style.display = 'block';
+    return;
+  }
+  saveKey(key);
+  aiStatus(key ? 'Key saved in this browser. Generating your first batch...' : 'Key removed.');
+  if (key) browserTopup(true);
+}
+
+function manualTopup() {
+  if (!loadKey()) { aiStatus('Save a key first.'); return; }
+  browserTopup(true);
+}
+
+function clearAiData() {
+  if (!confirm('Remove your saved key and all AI-generated questions from this browser?')) return;
+  localStorage.removeItem(AIKEY_KEY);
+  localStorage.removeItem(AICACHE_KEY);
+  localStorage.removeItem(AILAST_KEY);
+  localStorage.removeItem(MODELS_KEY);
+  document.getElementById('aiKey').value = '';
+  aiStatus('Key and AI questions removed.');
+}
+
+function refreshAiPanel() {
+  const input = document.getElementById('aiKey');
+  const key = loadKey();
+  input.value = key;
+  const n = loadAiCache().length;
+  aiStatus(key
+    ? `Key saved · ${n} AI question${n === 1 ? '' : 's'} stored on this device.`
+    : 'No key saved — the drill runs on its built-in bank.');
+}
+
 // ── Init / Restart ────────────────────────────────────────────────────
 async function initQuiz() {
   questions = []; current = 0; score = 0; missed = []; ankiLines = []; answered = false;
@@ -434,6 +744,7 @@ async function initQuiz() {
     questions = kanjiList.map(k => ({ ...questionFor(k), isRepeat: false }));
     hideLoading();
     renderQ();
+    browserTopup(); // fire-and-forget; never awaited, never blocks the quiz
   } catch (e) {
     document.getElementById('loadMsg').innerHTML = `<span style="color:#c0392b">⚠ ${e.message}</span>`;
     clearInterval(loadAnim);
@@ -469,6 +780,7 @@ function toggleCardScreen() {
     document.getElementById('quizCard').style.display = 'none';
     document.getElementById('resultsScreen').style.display = 'none';
     refreshCustomList();
+    refreshAiPanel();
   } else {
     restartQuiz(); // rebuild quiz so new cards are included
   }
