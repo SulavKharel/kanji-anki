@@ -135,6 +135,17 @@
   footer { margin-top: auto; padding-top: 26px; font-size: 0.72rem; color: var(--mid); text-align: center; }
   footer .ai-on { color: var(--gold); font-weight: 600; }
 
+  /* Level selector */
+  .level-row { display: inline-flex; gap: 6px; margin-top: 12px; background: #f0ece4; border: 1px solid var(--border); border-radius: 22px; padding: 4px; }
+  .level-btn {
+    font-family: 'Noto Serif JP', serif; font-size: 0.82rem; font-weight: 600;
+    border: none; background: transparent; color: var(--mid);
+    padding: 5px 13px; border-radius: 18px; cursor: pointer; transition: all 0.12s;
+  }
+  .level-btn:hover:not(.active) { color: var(--ink); }
+  .level-btn.active { background: var(--red); color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.15); }
+  .level-hint { font-size: 0.72rem; color: var(--mid); margin-top: 6px; }
+
   /* Card manager */
   .nav-btn {
     background: none; border: 1.5px solid var(--border); border-radius: 20px;
@@ -161,9 +172,11 @@
 <body>
 
 <header>
-  <h1>漢字 N1 ドリル</h1>
+  <h1 id="headerTitle">漢字 N1 ドリル</h1>
   <p>adaptive · on'yomi / kun'yomi in context · spaced repetition</p>
-  <button class="nav-btn" id="cardsToggle" onclick="toggleCardScreen()">＋ カード追加・設定 / Cards &amp; settings</button>
+  <div class="level-row" id="levelRow" role="tablist" aria-label="JLPT level"></div>
+  <div class="level-hint" id="levelHint"></div>
+  <div><button class="nav-btn" id="cardsToggle" onclick="toggleCardScreen()">＋ カード追加・設定 / Cards &amp; settings</button></div>
 </header>
 
 <div class="progress-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
@@ -189,7 +202,7 @@
 <!-- Card manager -->
 <div id="cardScreen">
   <div class="card">
-    <div class="missed-h">＋ Add your own kanji card</div>
+    <div class="missed-h">＋ Add your own kanji card <span id="addCardLevel"></span></div>
     <div class="form-row">
       <label>漢字 <span class="req">*必須</span></label>
       <input id="cKanji" placeholder="例: 邁進" maxlength="12">
@@ -216,8 +229,9 @@
   <div class="card">
     <div class="missed-h">✦ AI question top-up (optional)</div>
     <p style="font-size:0.8rem;color:var(--mid);margin-bottom:9px">
-      Paste your own free Gemini key and the drill quietly generates new N1
-      sentences for kanji you already study. The key is stored only in this
+      Paste your own free Gemini key and the drill quietly generates new
+      sentences (at your selected JLPT level) for kanji you already study. The
+      key is stored only in this
       browser (never uploaded anywhere) and the quiz works exactly the same
       without one. Get a free key at
       <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a>.
@@ -276,6 +290,18 @@
 const QUIZ_SIZE = 8;
 const STATS_KEY = 'n1kq_stats_v1';
 const CUSTOM_KEY = 'n1kq_custom_v1';
+// JLPT levels, easiest → hardest. The quiz is scoped to one level at a time:
+// selection, stats display, custom cards and AI top-up all respect it.
+const LEVELS = ['N5', 'N4', 'N3', 'N2', 'N1'];
+const LEVEL_KEY = 'n1kq_level_v1';
+const DEFAULT_LEVEL = 'N5';
+function currentLevel() {
+  const v = localStorage.getItem(LEVEL_KEY);
+  return LEVELS.includes(v) ? v : DEFAULT_LEVEL;
+}
+function setLevel(lv) {
+  if (LEVELS.includes(lv)) localStorage.setItem(LEVEL_KEY, lv);
+}
 // Optional AI top-up, entirely browser-local. The key is the visitor's own and
 // never leaves their device; nothing here is required for the quiz to run.
 const AIKEY_KEY = 'n1kq_gemini_key_v1';
@@ -289,6 +315,7 @@ const DAY = 24 * 60 * 60 * 1000;
 
 // ── State ─────────────────────────────────────────────────────────────
 let bankByKanji = new Map();   // kanji -> [question variants]
+let kanjiLevel = new Map();    // kanji -> level (N5..N1); missing → N1
 let questions = [], current = 0, score = 0;
 let missed = [], ankiLines = [], answered = false;
 let loadAnim;
@@ -343,7 +370,7 @@ function resetStats() {
 //           3) fill with least-recently-seen review
 function pickQuizKanji() {
   const stats = loadStats();
-  const all = [...bankByKanji.keys()];
+  const all = kanjiForLevel();   // only the selected JLPT level
   const now = Date.now();
 
   const due = [], unseen = [], rest = [];
@@ -373,12 +400,16 @@ function pickQuizKanji() {
 // Custom cards have no hand-written distractors — borrow plausible wrong
 // readings from other cards in the pool (similar length first).
 function autoDistractors(q) {
-  const pool = [];
-  for (const variants of bankByKanji.values()) {
+  const level = q.level || currentLevel();
+  const sameLevel = [], other = [];
+  for (const [k, variants] of bankByKanji.entries()) {
+    const bucket = (kanjiLevel.get(k) || 'N1') === level ? sameLevel : other;
     for (const v of variants) {
-      if (v.reading !== q.reading) pool.push(v.reading, ...(v.distractors || []));
+      if (v.reading !== q.reading) bucket.push(v.reading, ...(v.distractors || []));
     }
   }
+  // Prefer misreadings drawn from the same level; widen the net only if needed.
+  const pool = sameLevel.length >= 12 ? sameLevel : [...sameLevel, ...other];
   const unique = [...new Set(pool)].filter(r => r !== q.reading);
   unique.sort((a, b) =>
     Math.abs(a.length - q.reading.length) - Math.abs(b.length - q.reading.length));
@@ -416,6 +447,14 @@ async function loadJSON(path) {
 function addToPool(q) {
   if (!bankByKanji.has(q.kanji)) bankByKanji.set(q.kanji, []);
   bankByKanji.get(q.kanji).push(q);
+  // Legacy bank items and AI questions may have no level — treat those as N1
+  // (the drill was N1-only before levels existed).
+  kanjiLevel.set(q.kanji, q.level || 'N1');
+}
+
+// Kanji belonging to the level currently being drilled.
+function kanjiForLevel(level = currentLevel()) {
+  return [...bankByKanji.keys()].filter(k => (kanjiLevel.get(k) || 'N1') === level);
 }
 
 async function loadPool() {
@@ -427,7 +466,8 @@ async function loadPool() {
   const fileAi = Array.isArray(ai) ? ai : [];
   // Questions this browser generated itself from the visitor's own key.
   const localAi = loadAiCache();
-  const aiList = [...fileAi, ...localAi];
+  // Tag AI-generated questions so the pool footer can count them per level.
+  const aiList = [...fileAi, ...localAi].map(q => ({ ...q, _ai: true }));
 
   await seedCustomOnce();
   const custom = loadCustom();
@@ -501,10 +541,13 @@ async function discoverModels(apiKey) {
   } catch { return FALLBACK_MODELS; }
 }
 
-const AI_SYSTEM_PROMPT = `You are a JLPT N1 Japanese teacher. Return ONLY a valid JSON array — no markdown, no backticks, no extra text before or after.
+// System prompt is parameterised by JLPT level so top-up questions match the
+// difficulty of the level being drilled (N5 easiest, N1 hardest).
+function aiSystemPrompt(level) {
+  return `You are a JLPT ${level} Japanese teacher. Return ONLY a valid JSON array — no markdown, no backticks, no extra text before or after.
 Each element must have exactly these keys:
-- kanji: string (the word being tested)
-- sentence: string (natural Japanese N1-level sentence; wrap the target in [[double brackets]] e.g. "[[覆す]]")
+- kanji: string (the word being tested; keep it at JLPT ${level} difficulty)
+- sentence: string (natural Japanese sentence at JLPT ${level} level; wrap the target in [[double brackets]] e.g. "[[覆す]]")
 - reading: string (correct hiragana reading)
 - meaning: string (English meaning)
 - type: "on" or "kun"
@@ -512,6 +555,7 @@ Each element must have exactly these keys:
 - compounds: array of 2-3 strings like "覆面 (fukumen) — mask"
 - distractors: array of exactly 3 plausible WRONG hiragana readings (believable misreadings, never the correct answer)
 Keep sentences short (under 25 characters). Return all items in a single complete JSON array.`;
+}
 
 let topupRunning = false;
 
@@ -593,7 +637,7 @@ function validQuestion(q) {
     !q.distractors.includes(q.reading);
 }
 
-async function callGemini(apiKey, model, userMsg, structured = true) {
+async function callGemini(apiKey, model, userMsg, systemPrompt, structured = true) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`;
   // No temperature/top_p: deprecated, and variety already comes from rotating
   // which kanji each batch asks about. Headroom on tokens because reasoning
@@ -605,13 +649,13 @@ async function callGemini(apiKey, model, userMsg, structured = true) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      systemInstruction: { parts: [{ text: AI_SYSTEM_PROMPT }] },
+      systemInstruction: { parts: [{ text: systemPrompt }] },
       contents: [{ role: 'user', parts: [{ text: userMsg }] }],
       generationConfig
     })
   });
   // Not every model accepts a response schema — fall back to plain text once.
-  if (structured && res.status === 400) return callGemini(apiKey, model, userMsg, false);
+  if (structured && res.status === 400) return callGemini(apiKey, model, userMsg, systemPrompt, false);
   if (res.status === 429) throw new Error('rate limited');
   const data = await res.json().catch(() => ({}));
   if (!res.ok) throw new Error(data.error?.message || `Gemini error ${res.status}`);
@@ -648,22 +692,25 @@ async function browserTopup(force = false) {
   localStorage.setItem(AILAST_KEY, String(Date.now()));
   aiStatus('✦ generating new sentences...');
 
+  const level = currentLevel();
   try {
-    // Prefer kanji the learner is actually struggling with, then anything else.
+    // Prefer kanji the learner is actually struggling with, then anything else —
+    // both scoped to the level being drilled, so new questions stay on-level.
     const stats = loadStats();
-    const pool = [...bankByKanji.keys()];
+    const pool = kanjiForLevel(level);
     const weak = pool.filter(k => stats[k] && stats[k].wrong > 0);
     const kanji = [...shuffle(weak).slice(0, 4), ...shuffle(pool).slice(0, 8)]
       .filter((k, i, a) => a.indexOf(k) === i).slice(0, 8);
     if (!kanji.length) throw new Error('no kanji loaded yet');
 
     const models = await discoverModels(apiKey);
-    const ask = `Create DIFFERENT quiz questions for these kanji — new sentences, vary the context. Kanji: ${kanji.join('、')}`;
+    const prompt = aiSystemPrompt(level);
+    const ask = `Create DIFFERENT ${level}-level quiz questions for these kanji — new sentences, vary the context. Kanji: ${kanji.join('、')}`;
 
     let text = null;
     const errs = [];
     for (const model of models) {
-      try { text = await callGemini(apiKey, model, ask); break; }
+      try { text = await callGemini(apiKey, model, ask, prompt); break; }
       catch (e) { errs.push(`${model}: ${e.message}`); }
     }
     if (text === null) {
@@ -675,7 +722,9 @@ async function browserTopup(force = false) {
     }
 
     const parsed = parseQuestions(text);
-    const items = parsed.filter(validQuestion);
+    // Tag every generated question with the level it was made for so it only
+    // ever appears in that level's quiz.
+    const items = parsed.filter(validQuestion).map(q => ({ ...q, level }));
     if (!items.length) throw new Error(parsed.length
       ? `${parsed.length} questions returned but none passed validation`
       : 'could not read the reply as questions');
@@ -739,7 +788,8 @@ async function initQuiz() {
   showLoading('Preparing your questions...');
 
   try {
-    if (bankByKanji.size === 0) updatePoolInfo(await loadPool());
+    if (bankByKanji.size === 0) await loadPool();
+    updatePoolInfo();
     const kanjiList = pickQuizKanji();
     questions = kanjiList.map(k => ({ ...questionFor(k), isRepeat: false }));
     hideLoading();
@@ -754,17 +804,58 @@ async function initQuiz() {
 function restartQuiz() {
   document.getElementById('resultsScreen').style.display = 'none';
   bankByKanji.clear(); // re-fetch so background AI top-ups show up
+  kanjiLevel.clear();
   initQuiz();
 }
 
-function updatePoolInfo(data) {
-  const custom = data.customCount || 0;
-  const builtIn = data.questions.length - data.aiCount - custom;
+// ── Level selector ────────────────────────────────────────────────────
+const LEVEL_DESC = {
+  N5: 'beginner — easiest',
+  N4: 'elementary',
+  N3: 'intermediate',
+  N2: 'upper-intermediate',
+  N1: 'advanced — hardest'
+};
+
+function renderLevelSelector() {
+  const row = document.getElementById('levelRow');
+  const active = currentLevel();
+  row.innerHTML = LEVELS.map(lv =>
+    `<button class="level-btn${lv === active ? ' active' : ''}" role="tab"
+       aria-selected="${lv === active}" onclick="chooseLevel('${lv}')">${lv}</button>`
+  ).join('');
+  document.getElementById('levelHint').textContent = `${active} · ${LEVEL_DESC[active]}`;
+  document.getElementById('headerTitle').textContent = `漢字 ${active} ドリル`;
+}
+
+function chooseLevel(lv) {
+  if (lv === currentLevel()) return;
+  setLevel(lv);
+  renderLevelSelector();
+  // Leave the settings screen if it is open, then rebuild the quiz for the
+  // newly selected level (the pool already holds every level in memory).
+  cardScreenOpen = false;
+  document.getElementById('cardScreen').style.display = 'none';
+  restartQuiz();
+}
+
+// Footer counts are for the level currently being drilled.
+function updatePoolInfo() {
+  const lv = currentLevel();
+  let builtIn = 0, custom = 0, ai = 0;
+  for (const [k, variants] of bankByKanji.entries()) {
+    if ((kanjiLevel.get(k) || 'N1') !== lv) continue;
+    for (const v of variants) {
+      if (v.custom) custom++;
+      else if (v._ai) ai++;
+      else builtIn++;
+    }
+  }
   document.getElementById('poolInfo').innerHTML =
-    `質問プール: ${builtIn} built-in` +
+    `${lv} プール: ${builtIn} built-in` +
     (custom > 0 ? ` + ${custom} yours` : '') +
-    (data.aiCount > 0
-      ? ` + <span class="ai-on">✦ ${data.aiCount} AI-generated</span>`
+    (ai > 0
+      ? ` + <span class="ai-on">✦ ${ai} AI-generated</span>`
       : ' · AI: none yet');
 }
 
@@ -786,7 +877,11 @@ function toggleCardScreen() {
   }
 }
 
-function refreshCustomList() { renderCustomList(loadCustom()); }
+function refreshCustomList() {
+  const tag = document.getElementById('addCardLevel');
+  if (tag) tag.innerHTML = `<span class="badge">→ ${currentLevel()}</span>`;
+  renderCustomList(loadCustom());
+}
 
 function renderCustomList(cards) {
   document.getElementById('customCount').textContent = cards.length;
@@ -794,7 +889,8 @@ function renderCustomList(cards) {
     ? cards.map(c => `
         <div class="custom-item">
           <div class="custom-k">${c.kanji}</div>
-          <div class="custom-info"><strong>${c.reading}</strong>${c.meaning ? ' · ' + c.meaning : ''}<br>
+          <div class="custom-info"><strong>${c.reading}</strong>${c.meaning ? ' · ' + c.meaning : ''}
+            <span class="badge">${c.level || 'N1'}</span><br>
             <span style="font-size:0.74rem">${c.sentence.replace(/\[\[|\]\]/g, '')}</span></div>
           <button class="custom-del" title="delete" onclick="deleteCard('${c.kanji}')">✕</button>
         </div>`).join('')
@@ -821,7 +917,7 @@ function addCard() {
     // If the sentence didn't contain the kanji, fall back to appending it.
     if (!s.includes('[[')) s = `${sentence}　→ [[${kanji}]]`;
 
-    const card = { kanji, reading, sentence: s, meaning, custom: true };
+    const card = { kanji, reading, sentence: s, meaning, custom: true, level: currentLevel() };
     cards.push(card);
     saveCustom(cards);
     addToPool(card); // usable immediately, no reload
@@ -992,14 +1088,15 @@ function showResults() {
     document.getElementById('ankiBox').style.display = 'block';
   }
 
-  // All-time mastery panel
+  // All-time mastery panel — scoped to the level being drilled.
   const stats = loadStats();
-  const tracked = Object.keys(stats);
+  const levelKanji = new Set(kanjiForLevel());
+  const tracked = Object.keys(stats).filter(k => levelKanji.has(k));
   const mastered = tracked.filter(k => stats[k].streak >= 3);
   const weak = tracked
     .filter(k => stats[k].wrong > 0 && stats[k].streak < 2)
     .sort((a, b) => (stats[b].wrong / stats[b].seen) - (stats[a].wrong / stats[a].seen));
-  const totalBank = bankByKanji.size;
+  const totalBank = levelKanji.size;
 
   document.getElementById('masteryRow').innerHTML = `
     <div class="mastery-cell"><div class="num">${tracked.length}<span style="font-size:0.8rem;color:var(--mid)">/${totalBank}</span></div><div class="lbl">Studied</div></div>
@@ -1021,11 +1118,12 @@ function buildAnkiLine(q) {
 }
 
 function downloadAnki() {
-  const header = '#separator:tab\n#html:false\n#notetype:Basic\n#deck:N1 漢字\n';
+  const lv = currentLevel();
+  const header = `#separator:tab\n#html:false\n#notetype:Basic\n#deck:${lv} 漢字\n`;
   const blob = new Blob([header + window._ankiExport.join('\n')], { type: 'text/plain;charset=utf-8' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'n1_kanji_missed.txt';
+  a.download = `${lv.toLowerCase()}_kanji_missed.txt`;
   a.click();
 }
 
@@ -1038,6 +1136,7 @@ if ('serviceWorker' in navigator && location.protocol !== 'file:') {
 }
 
 // Start the first quiz
+renderLevelSelector();
 initQuiz();
 </script>
 </body>

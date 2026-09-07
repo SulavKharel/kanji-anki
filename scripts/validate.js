@@ -14,15 +14,25 @@ function fail(msg) { failures++; console.error("  ✗ " + msg); }
 function pass(msg) { console.log("  ✓ " + msg); }
 
 const HIRAGANA = /^[ぁ-んー]+$/;
+const LEVELS = ["N5", "N4", "N3", "N2", "N1"];
 
 // ── D1: bank.json + ai-cache.json schema ─────────────────────────────
+// `seen` is a Map<level, Set<kanji>> so uniqueness is enforced PER LEVEL —
+// the same word may legitimately appear in the merged bank tagged for
+// different JLPT levels, but never twice within one level.
 function checkQuestion(q, i, src, seen) {
   const id = `${src}[${i}] ${q && q.kanji ? q.kanji : "?"}`;
   if (!q || typeof q !== "object") return fail(`${id}: not an object`);
   if (!q.kanji || typeof q.kanji !== "string") fail(`${id}: bad kanji`);
+  // level is optional on machine-generated ai-cache.json (defaults to N1 in
+  // the frontend), but when present it must name a real level.
+  if (q.level !== undefined && !LEVELS.includes(q.level))
+    fail(`${id}: level must be one of ${LEVELS.join("/")} (got ${q.level})`);
   if (seen) {
-    if (seen.has(q.kanji)) fail(`${id}: duplicate kanji in ${src}`);
-    seen.add(q.kanji);
+    const lvl = q.level || "N1";
+    const set = seen.get(lvl) || (seen.set(lvl, new Set()), seen.get(lvl));
+    if (set.has(q.kanji)) fail(`${id}: duplicate kanji in ${src} (level ${lvl})`);
+    set.add(q.kanji);
   }
   const marks = (q.sentence || "").match(/\[\[.+?\]\]/g) || [];
   if (marks.length !== 1) fail(`${id}: sentence must contain [[target]] exactly once (found ${marks.length})`);
@@ -51,7 +61,7 @@ function checkBankFile(file, requireUnique) {
   try { items = JSON.parse(fs.readFileSync(p, "utf8")); }
   catch (e) { return fail(`data/${file}: invalid JSON (${e.message})`); }
   if (!Array.isArray(items)) return fail(`data/${file}: not an array`);
-  const seen = requireUnique ? new Set() : null;
+  const seen = requireUnique ? new Map() : null;
   const before = failures;
   items.forEach((q, i) => checkQuestion(q, i, file, seen));
   if (failures === before) pass(`data/${file}: ${items.length} items valid`);

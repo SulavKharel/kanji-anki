@@ -34,16 +34,28 @@ This project uses harness engineering (see `HARNESS.md` for the full map):
 The app works fully offline from a local question bank. Gemini is an optional
 background enhancer, never a dependency — rate limits must never block the quiz.
 
-**`data/bank.json`** — 112 curated N1 questions. Schema per item: `kanji`,
+**`data/bank.json`** — 313 curated questions spanning JLPT levels N5→N1 (N5
+easiest, N1 hardest). Schema per item: `kanji`, `level` (`"N5"`…`"N1"`),
 `sentence` (with `[[target]]` markup), `reading` (hiragana), `meaning`, `type`
 (`"on"`/`"kun"`), `hint`, `compounds` (2-3 strings), `distractors` (exactly 3
-wrong readings).
+wrong readings). Each level ships with ~50 seed questions (N1 has more, ~112);
+`kanji` is unique *within a level*, so the same word may legitimately appear at
+two levels.
+
+**Levels.** The learner picks a level in the header (`n1kq_level_v1` in
+localStorage, default `N5`). The quiz is scoped to that level: `pickQuizKanji()`,
+the mastery panel, the pool footer, the Anki deck name, custom cards, and the
+AI top-up all filter to it. `kanjiLevel` (a `Map<kanji, level>`) records each
+word's level; items with no `level` (legacy bank entries, old AI cache, cards
+made before levels existed) are treated as `N1`.
 
 **`data/ai-cache.json`** — Gemini-generated question variants, persisted so the
 pool grows over time. Created automatically; safe to delete.
 
 **`data/custom.json`** — user-added cards (`kanji` + `reading` required,
-`sentence`/`meaning` optional, flagged `custom: true`). Managed via
+`sentence`/`meaning` optional, optional `level` defaulting to `N1`, flagged
+`custom: true`). New cards added in-app are stamped with the active level.
+Managed via
 `POST /api/custom`, `GET /api/custom`, `DELETE /api/custom/:kanji`. Custom
 cards get auto-generated distractors client-side (`autoDistractors()` borrows
 similar-length readings from the pool).
@@ -64,8 +76,12 @@ similar-length readings from the pool).
   `{ seen, wrong, streak, due, last }`. `recordAnswer()` updates them;
   correct answers schedule the kanji out by `SRS_DAYS[streak]` days, wrong
   answers reset the streak and mark it due now.
-- `pickQuizKanji()` builds each quiz: due/weak kanji (worst accuracy first),
-  then unseen kanji, then least-recently-seen reviews. `QUIZ_SIZE = 8`.
+- `pickQuizKanji()` builds each quiz *from the selected level only*: due/weak
+  kanji (worst accuracy first), then unseen kanji, then least-recently-seen
+  reviews. `QUIZ_SIZE = 8`. As the learner gets kanji wrong, they resurface
+  (in-session repeats + immediate due-again scheduling) and the optional AI
+  top-up generates more on-level questions prioritising the weak kanji, so the
+  effective pool grows with mistakes.
 - `questionFor(kanji, exclude)` picks a sentence variant not yet used this
   session (bank + AI cache may hold several per kanji).
 - In-session repeat: missed kanji are re-asked at the end with a different

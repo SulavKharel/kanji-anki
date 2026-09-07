@@ -3,7 +3,23 @@
 Agents: read this at session start; update it at session end.
 Decision log is append-only — reversals get a new entry, never an edit.
 
-## Current state (2026-08-05)
+## Current state (2026-09-07)
+
+- Implemented 2026-09-07: **JLPT level support N5→N1.** `data/bank.json` grew
+  from 112 (all N1) to 313 items, each now carrying a `level` field; N5/N4/N3/N2
+  each seeded with ~50 curated questions (N5 51, N4/N3/N2 50, N1 112). A level
+  selector in the header (`n1kq_level_v1`, default N5) scopes the whole quiz:
+  `pickQuizKanji()`, mastery panel, pool footer, Anki deck name, custom cards
+  and AI top-up all filter to the active level via a `kanjiLevel` map. AI
+  top-up prompt is now parameterised by level (frontend + server). Validator
+  enforces per-level uniqueness and a valid `level`. `npm test` green (313
+  bank items valid; offline smoke test 391 questions). Verified in-browser:
+  level switch reloads on-level questions, answer/feedback flow intact.
+- Watch: legacy items without a `level` (old ai-cache.json entries, the 2
+  data/custom.json cards, any pre-existing localStorage stats/cards) are
+  treated as N1 — expected, but means old AI cache only ever surfaces under N1.
+
+## Previous state (2026-08-05)
 
 - Implemented 2026-08-05: optional AI top-up now works on the public static
   build — a Gemini key pasted into the settings panel is stored per-browser and
@@ -92,6 +108,22 @@ Decision log is append-only — reversals get a new entry, never an edit.
   `KANJI_NO_ENV_FILE=1` bypasses it, which validate.js now sets so the R1
   smoke test stays genuinely keyless. (Why: removes the PowerShell step
   without a new dependency — R5.)
+
+- 2026-09-07: Added a `level` field to the question schema rather than splitting
+  into per-level files (`bank-n5.json` …). (Why: keeps R5's "two files + data"
+  and R3's single hand-editable curated bank; uniqueness moved to per-level so
+  the merged file stays valid. Cost: one large bank.json.)
+- 2026-09-07: Quiz is single-level at a time, selected in-header and persisted
+  in `n1kq_stats`-style key `n1kq_level_v1` (default N5). Stats stay keyed by
+  kanji globally (words don't collide across the curated levels), but every
+  *display/selection* path filters by the active level. (Why: matches the
+  request — pick N5–N1, difficulty follows the level; N1 hardest.)
+- 2026-09-07: "Questions keep increasing as you get things wrong" is delivered
+  by the existing adaptive machinery, now level-scoped: wrong answers reset the
+  SRS streak + mark due-now, missed kanji repeat in-session, and the optional
+  AI top-up generates more on-level questions prioritising weak kanji. No new
+  storage mechanism was added. (Why: reuse R1-safe fire-and-forget top-up
+  instead of a bespoke generator.)
 
 ## Known issues / watch list
 

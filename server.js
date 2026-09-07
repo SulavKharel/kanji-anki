@@ -75,10 +75,13 @@ function shuffle(arr) {
 }
 
 // ── Gemini background top-up (never blocks a request) ─────────────────
-const SYSTEM_PROMPT = `You are a JLPT N1 Japanese teacher. Return ONLY a valid JSON array — no markdown, no backticks, no extra text before or after.
+// Parameterised by JLPT level so generated questions match the difficulty of
+// the kanji being asked about (N5 easiest → N1 hardest).
+function systemPrompt(level) {
+  return `You are a JLPT ${level} Japanese teacher. Return ONLY a valid JSON array — no markdown, no backticks, no extra text before or after.
 Each element must have exactly these keys:
-- kanji: string (the word being tested)
-- sentence: string (natural Japanese N1-level sentence; wrap the target in [[double brackets]] e.g. "[[覆す]]")
+- kanji: string (the word being tested; keep it at JLPT ${level} difficulty)
+- sentence: string (natural Japanese sentence at JLPT ${level} level; wrap the target in [[double brackets]] e.g. "[[覆す]]")
 - reading: string (correct hiragana reading)
 - meaning: string (English meaning)
 - type: "on" or "kun"
@@ -86,6 +89,7 @@ Each element must have exactly these keys:
 - compounds: array of 2-3 strings like "覆面 (fukumen) — mask"
 - distractors: array of exactly 3 plausible WRONG hiragana readings (believable misreadings, never the correct answer)
 Keep sentences short (under 25 characters). Return all items in a single complete JSON array.`;
+}
 
 // Constrain the model to the shape instead of asking for JSON in the prompt.
 const QUESTION_SCHEMA = {
@@ -161,10 +165,10 @@ const GEMINI_MODELS = [
   "gemini-2.5-flash"
 ];
 
-async function callGemini(apiKey, model, userMsg, structured = true) {
+async function callGemini(apiKey, model, userMsg, sysPrompt, structured = true) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
   const payload = {
-    systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+    systemInstruction: { parts: [{ text: sysPrompt }] },
     contents: [{ role: "user", parts: [{ text: userMsg }] }],
     // temperature/top_p are deprecated; token headroom for reasoning models.
     generationConfig: structured
@@ -177,7 +181,7 @@ async function callGemini(apiKey, model, userMsg, structured = true) {
     body: JSON.stringify(payload)
   });
   // Not every model accepts a response schema — fall back to plain text once.
-  if (structured && response.status === 400) return callGemini(apiKey, model, userMsg, false);
+  if (structured && response.status === 400) return callGemini(apiKey, model, userMsg, sysPrompt, false);
   if (response.status === 429) throw new Error("rate limited");
   const data = await response.json();
   if (!response.ok) throw new Error(data.error?.message || "Gemini API error");
@@ -200,14 +204,21 @@ function backgroundTopup() {
 
   (async () => {
     try {
-      const kanji = shuffle(bank.map(q => q.kanji)).slice(0, 8);
-      console.log("  [ai top-up] requesting variants for:", kanji.join("、"));
-      const prompt = `Create DIFFERENT quiz questions for these kanji — new sentences, vary the context. Kanji: ${kanji.join("、")}`;
+      // Pick ONE level per batch so the prompt and the generated questions
+      // stay at a single, coherent difficulty. Legacy bank items with no
+      // level are treated as N1.
+      const levels = [...new Set(bank.map(q => q.level || "N1"))];
+      const level = shuffle(levels)[0];
+      const inLevel = bank.filter(q => (q.level || "N1") === level);
+      const kanji = shuffle(inLevel.map(q => q.kanji)).slice(0, 8);
+      console.log(`  [ai top-up] requesting ${level} variants for:`, kanji.join("、"));
+      const sys = systemPrompt(level);
+      const prompt = `Create DIFFERENT ${level}-level quiz questions for these kanji — new sentences, vary the context. Kanji: ${kanji.join("、")}`;
 
       let text = null, lastErr = null;
       for (const model of GEMINI_MODELS) {
         try {
-          text = await callGemini(apiKey, model, prompt);
+          text = await callGemini(apiKey, model, prompt, sys);
           console.log(`  [ai top-up] ${model} responded`);
           break;
         } catch (e) {
@@ -217,7 +228,8 @@ function backgroundTopup() {
       }
       if (text === null) throw lastErr || new Error("all models failed");
 
-      const items = parseQuestions(text).filter(validQuestion);
+      // Tag each generated question with the batch level.
+      const items = parseQuestions(text).filter(validQuestion).map(q => ({ ...q, level }));
       if (items.length) {
         aiCache.push(...items);
         if (aiCache.length > CACHE_MAX) aiCache = aiCache.slice(-CACHE_MAX);
@@ -299,7 +311,7 @@ app.delete("/api/custom/:kanji", (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`\n✅ N1 Kanji Quiz running at http://localhost:${PORT}`);
+  console.log(`\n✅ Kanji Quiz (N5–N1) running at http://localhost:${PORT}`);
   console.log(`   ${bank.length} built-in questions · ${aiCache.length} AI-cached`);
   console.log(process.env.GEMINI_API_KEY
     ? "   GEMINI_API_KEY set — fresh questions will be added every 10 minutes."

@@ -1,114 +1,5636 @@
 [
-{"kanji":"憂鬱","sentence":"雨の日が続くと[[憂鬱]]になる。","reading":"ゆううつ","meaning":"melancholy, gloom","type":"on","hint":"憂 (grief) + 鬱 (gloom) — both kanji press down heavily; long ゆう then うつ.","compounds":["憂慮 (yuuryo) — concern","鬱病 (utsubyou) — depression"],"distractors":["ゆうこつ","うつゆう","ゆううく"]},
-{"kanji":"顕著","sentence":"効果の差が[[顕著]]に現れた。","reading":"けんちょ","meaning":"remarkable, striking","type":"on","hint":"顕 = けん as in 顕微鏡; 著 here is short ちょ, not ちょう.","compounds":["顕在 (kenzai) — manifest","著名 (chomei) — famous"],"distractors":["けんちょう","げんちょ","けんしょ"]},
-{"kanji":"妨げる","sentence":"騒音が集中を[[妨げる]]。","reading":"さまたげる","meaning":"to hinder, obstruct","type":"kun","hint":"Think さまたげる = putting something 'in the way'; on-reading ぼう appears in 妨害.","compounds":["妨害 (bougai) — obstruction","邪魔 (jama) — hindrance"],"distractors":["ふせげる","またげる","さえぎる"]},
-{"kanji":"覆す","sentence":"その判決を[[覆す]]のは難しい。","reading":"くつがえす","meaning":"to overturn, reverse","type":"kun","hint":"覆 also reads おおう (to cover) — flipping the cover upside down = くつがえす.","compounds":["転覆 (tenpuku) — capsizing","覆面 (fukumen) — mask"],"distractors":["ひるがえす","おおいかえす","くつがす"]},
-{"kanji":"斬新","sentence":"[[斬新]]なデザインが目を引く。","reading":"ざんしん","meaning":"novel, innovative","type":"on","hint":"斬 (slash) + 新 (new) — slashing through the old; ざん like 斬る (きる).","compounds":["斬撃 (zangeki) — slash","革新 (kakushin) — innovation"],"distractors":["さんしん","ざんじん","ぜんしん"]},
-{"kanji":"滞る","sentence":"支払いが[[滞る]]と信用を失う。","reading":"とどこおる","meaning":"to be delayed, stagnate","type":"kun","hint":"Long reading とどこおる mirrors how drawn-out a delay feels; on-reading たい in 停滞.","compounds":["停滞 (teitai) — stagnation","滞在 (taizai) — stay"],"distractors":["とどおる","とどこる","こだわる"]},
-{"kanji":"惨敗","sentence":"決勝で[[惨敗]]を喫した。","reading":"ざんぱい","meaning":"crushing defeat","type":"on","hint":"惨 = ざん (miserable); 敗 becomes ぱい after ん.","compounds":["悲惨 (hisan) — tragic","惨事 (sanji) — disaster"],"distractors":["さんぱい","ざんはい","ざんばい"]},
-{"kanji":"賄う","sentence":"家賃はバイト代で[[賄う]]。","reading":"まかなう","meaning":"to cover (costs), provide","type":"kun","hint":"賄 has 貝 (money) — まかなう is stretching money to cover needs.","compounds":["賄賂 (wairo) — bribe","給与 (kyuuyo) — salary"],"distractors":["やしなう","ともなう","つくろう"]},
-{"kanji":"培う","sentence":"読書で思考力を[[培う]]。","reading":"つちかう","meaning":"to cultivate, foster","type":"kun","hint":"Contains 土 (つち, soil) — nurturing from the ground up.","compounds":["培養 (baiyou) — cultivation","栽培 (saibai) — growing"],"distractors":["やしなう","つくろう","たがやす"]},
-{"kanji":"享受","sentence":"自由を[[享受]]できる社会。","reading":"きょうじゅ","meaning":"to enjoy, be given","type":"on","hint":"享 = きょう (receive); same sound as 教授 but different kanji — watch the trap.","compounds":["享楽 (kyouraku) — pleasure","受容 (juyou) — acceptance"],"distractors":["こうじゅ","きょうじ","くじゅ"]},
-{"kanji":"携わる","sentence":"教育に[[携わる]]仕事がしたい。","reading":"たずさわる","meaning":"to engage in, be involved","type":"kun","hint":"携 = carry in hand (携帯) — たずさわる is having a hand in the work.","compounds":["携帯 (keitai) — carrying/mobile","連携 (renkei) — cooperation"],"distractors":["かかわる","さずかる","たずねる"]},
-{"kanji":"慎重","sentence":"[[慎重]]に判断すべき問題だ。","reading":"しんちょう","meaning":"careful, cautious","type":"on","hint":"慎 = しん (to be careful, 慎む); 重 reads ちょう here as in 貴重.","compounds":["慎む (tsutsushimu) — to refrain","丁重 (teichou) — courteous"],"distractors":["しんじゅう","じんちょう","しんちゅう"]},
-{"kanji":"憤慨","sentence":"不当な扱いに[[憤慨]]した。","reading":"ふんがい","meaning":"indignation, resentment","type":"on","hint":"憤 = ふん (anger boiling up, 憤り); 慨 = がい as in 感慨.","compounds":["憤り (ikidoori) — anger","慨嘆 (gaitan) — lamenting"],"distractors":["ふんかい","ふけがい","ぷんがい"]},
-{"kanji":"逸脱","sentence":"規則から[[逸脱]]した行為。","reading":"いつだつ","meaning":"deviation, departure","type":"on","hint":"逸 = いつ (to stray, 逸れる); 脱 = だつ (escape).","compounds":["逸話 (itsuwa) — anecdote","脱線 (dassen) — derailment"],"distractors":["いちだつ","いつでつ","えつだつ"]},
-{"kanji":"懸念","sentence":"景気の先行きに[[懸念]]が残る。","reading":"けねん","meaning":"concern, worry","type":"on","hint":"懸 drops the ん here — short け, not けん. Worries 'hang' (懸かる) over you.","compounds":["懸案 (kenan) — pending issue","懸命 (kenmei) — earnest"],"distractors":["けんねん","かねん","けんえん"]},
-{"kanji":"払拭","sentence":"不安を[[払拭]]するのは難しい。","reading":"ふっしょく","meaning":"wiping away, dispelling","type":"on","hint":"払 (sweep) + 拭 (wipe, 拭く) — ふつ + しょく contracts to ふっしょく.","compounds":["拭く (fuku) — to wipe","一掃 (issou) — sweep away"],"distractors":["はらしょく","ふっしき","ふつぬぐ"]},
-{"kanji":"翻弄","sentence":"運命に[[翻弄]]される主人公。","reading":"ほんろう","meaning":"to toss about, toy with","type":"on","hint":"翻 = ほん (flip, 翻訳); 弄 = ろう (toy with) — tossed like a leaf in wind.","compounds":["翻訳 (honyaku) — translation","愚弄 (gurou) — mockery"],"distractors":["はんろう","ほんもう","ぼんろう"]},
-{"kanji":"脆弱","sentence":"[[脆弱]]な体制を立て直す。","reading":"ぜいじゃく","meaning":"fragile, vulnerable","type":"on","hint":"脆い (もろい) = brittle; on-reading ぜい — not き (危 trap).","compounds":["脆弱性 (zeijakusei) — vulnerability","脆い (moroi) — brittle"],"distractors":["きじゃく","ぜいにゃく","せいじゃく"]},
-{"kanji":"奔走","sentence":"資金集めに[[奔走]]する。","reading":"ほんそう","meaning":"running about, busying oneself","type":"on","hint":"奔 = ほん (rush, 奔放) + 走 (run) — running in all directions.","compounds":["奔放 (honpou) — uninhibited","走行 (soukou) — running"],"distractors":["はんそう","ほんぞう","ぼんそう"]},
-{"kanji":"疎外","sentence":"集団から[[疎外]]感を覚える。","reading":"そがい","meaning":"alienation, estrangement","type":"on","hint":"疎 = そ (distant, 疎い); paired with 外 = pushed to the outside.","compounds":["疎遠 (soen) — estrangement","阻害 (sogai) — obstruction (homophone!)"],"distractors":["しょがい","そげ","すがい"]},
-{"kanji":"克服","sentence":"苦手意識を[[克服]]した。","reading":"こくふく","meaning":"overcoming, conquering","type":"on","hint":"克 = こく (to overcome); sounds like 'conquer' + 服 (submit).","compounds":["克明 (kokumei) — detailed","征服 (seifuku) — conquest"],"distractors":["かつふく","こくぶく","きょくふく"]},
-{"kanji":"傍聴","sentence":"裁判を[[傍聴]]する市民。","reading":"ぼうちょう","meaning":"attendance (as observer), sitting in","type":"on","hint":"傍 = ぼう (beside, 傍ら) + 聴 (listen) — listening from the side.","compounds":["傍観 (boukan) — looking on","聴衆 (choushuu) — audience"],"distractors":["ほうちょう","ぼうてい","ぼうしょう"]},
-{"kanji":"隔絶","sentence":"外界から[[隔絶]]された村。","reading":"かくぜつ","meaning":"isolation, separation","type":"on","hint":"隔 = かく (separate, 隔てる) + 絶 (cut off) — completely cut apart.","compounds":["隔離 (kakuri) — quarantine","断絶 (danzetsu) — severance"],"distractors":["かくぜち","へだぜつ","かくせつ"]},
-{"kanji":"抹消","sentence":"名簿から名前を[[抹消]]する。","reading":"まっしょう","meaning":"erasure, deletion","type":"on","hint":"抹 = まつ (rub out, as in 抹茶 ground tea) — contracts to まっしょう.","compounds":["抹茶 (matcha) — powdered tea","消去 (shoukyo) — deletion"],"distractors":["ばっしょう","まつけし","まっさつ"]},
-{"kanji":"蔑視","sentence":"他人を[[蔑視]]する態度は醜い。","reading":"べっし","meaning":"contempt, scorn","type":"on","hint":"蔑む (さげすむ) = to despise; on-reading べつ contracts before し.","compounds":["軽蔑 (keibetsu) — contempt","蔑む (sagesumu) — to look down on"],"distractors":["めっし","べつみ","へいし"]},
-{"kanji":"慕う","sentence":"生徒たちは先生を[[慕う]]。","reading":"したう","meaning":"to adore, look up to","type":"kun","hint":"慕 has 心 at the bottom — the heart follows (したう) someone admired.","compounds":["思慕 (shibo) — yearning","慕情 (bojou) — longing"],"distractors":["うやまう","ねがう","とむらう"]},
-{"kanji":"歪む","sentence":"衝撃でフレームが[[歪む]]。","reading":"ゆがむ","meaning":"to warp, distort","type":"kun","hint":"不 + 正 stacked = 'not straight' — ゆがむ.","compounds":["歪曲 (waikyoku) — distortion","歪み (yugami) — warp"],"distractors":["ひずむ","いがむ","たわむ"]},
-{"kanji":"潤う","sentence":"雨で大地が[[潤う]]。","reading":"うるおう","meaning":"to be moistened, enriched","type":"kun","hint":"氵 (water) + 閏 — moisture spreading; うるおう like うるうる eyes.","compounds":["潤沢 (juntaku) — abundant","湿潤 (shitsujun) — humid"],"distractors":["ういおう","うるむ","ぬれおう"]},
-{"kanji":"募る","sentence":"参加者を広く[[募る]]。","reading":"つのる","meaning":"to recruit; to intensify","type":"kun","hint":"募集の募 — つのる also means feelings 'growing stronger' (不安が募る).","compounds":["募集 (boshuu) — recruitment","応募 (oubo) — application"],"distractors":["あつる","つどる","もどる"]},
-{"kanji":"和らぐ","sentence":"薬で痛みが[[和らぐ]]。","reading":"やわらぐ","meaning":"to soften, ease","type":"kun","hint":"和 = harmony; やわらかい (soft) shares the root やわ.","compounds":["緩和 (kanwa) — relaxation","柔らかい (yawarakai) — soft"],"distractors":["なごらぐ","わらぐ","やすらぐ"]},
-{"kanji":"澄む","sentence":"冬は川の水がよく[[澄む]]。","reading":"すむ","meaning":"to become clear","type":"kun","hint":"氵 + 登 — water so clear you see the bottom; same sound as 住む/済む.","compounds":["澄明 (choumei) — clarity","清澄 (seichou) — limpid"],"distractors":["とむ","さえむ","しずむ"]},
-{"kanji":"揺らぐ","sentence":"決意は少しも[[揺らぐ]]ことがない。","reading":"ゆらぐ","meaning":"to sway, waver","type":"kun","hint":"揺れる (ゆれる) family — ゆら like a flame flickering (ゆらゆら).","compounds":["動揺 (douyou) — agitation","揺れる (yureru) — to shake"],"distractors":["ぐらぐ","ゆるらぐ","たじらぐ"]},
-{"kanji":"佇む","sentence":"彼は湖畔に一人[[佇む]]。","reading":"たたずむ","meaning":"to stand still, linger","type":"kun","hint":"亻 (person) + 宁 — a person standing quietly in place: たたずむ.","compounds":["佇まい (tatazumai) — appearance/air","立つ (tatsu) — to stand"],"distractors":["やすむ","たたむ","とどむ"]},
-{"kanji":"滲む","sentence":"インクが紙に[[滲む]]。","reading":"にじむ","meaning":"to blur, ooze","type":"kun","hint":"氵 (water) seeping — にじむ like 虹 (にじ) colors bleeding.","compounds":["浸透 (shintou) — permeation","滲み (nijimi) — blot"],"distractors":["しみむ","そまる","ふちむ"]},
-{"kanji":"曖昧","sentence":"[[曖昧]]な返事でごまかした。","reading":"あいまい","meaning":"vague, ambiguous","type":"on","hint":"Both kanji have 日 obscured — dim and unclear; あい + まい rhyme.","compounds":["曖昧さ (aimaisa) — vagueness","不明瞭 (fumeiryou) — indistinct"],"distractors":["あいみ","あんまい","おうまい"]},
-{"kanji":"該当","sentence":"[[該当]]する項目に印を付ける。","reading":"がいとう","meaning":"corresponding, applicable","type":"on","hint":"該 = がい (that/said item); same sound as 街灯・街頭 — context decides.","compounds":["該博 (gaihaku) — profound (knowledge)","当該 (tougai) — the said"],"distractors":["かくとう","がいどう","きとう"]},
-{"kanji":"陥る","sentence":"経営難に[[陥る]]企業が増えた。","reading":"おちいる","meaning":"to fall into (a bad state)","type":"kun","hint":"落ちて入る → おち+いる = おちいる; on-reading かん in 陥没.","compounds":["陥没 (kanbotsu) — cave-in","欠陥 (kekkan) — defect"],"distractors":["おとしいる","はまる","おちる"]},
-{"kanji":"顧みる","sentence":"過去を[[顧みる]]余裕もない。","reading":"かえりみる","meaning":"to look back on, reflect","type":"kun","hint":"顧 = turn the head back — 帰り見る = かえりみる; 省みる is the intro-spective twin.","compounds":["顧客 (kokyaku) — customer","回顧 (kaiko) — retrospection"],"distractors":["こころみる","かんがみる","もどりみる"]},
-{"kanji":"遮る","sentence":"カーテンで日光を[[遮る]]。","reading":"さえぎる","meaning":"to block, interrupt","type":"kun","hint":"遮断機 (しゃだんき) blocks the crossing — kun reading さえぎる.","compounds":["遮断 (shadan) — blocking","遮蔽 (shahei) — shielding"],"distractors":["はばむ","くぎる","ふさぐ"]},
-{"kanji":"廃れる","sentence":"その流行はすぐに[[廃れる]]。","reading":"すたれる","meaning":"to go out of use, decline","type":"kun","hint":"廃 = discard (廃止) — things thrown away すたれる (fade out).","compounds":["廃止 (haishi) — abolition","荒廃 (kouhai) — devastation"],"distractors":["さびれる","つぶれる","はいれる"]},
-{"kanji":"蘇る","sentence":"当時の記憶が[[蘇る]]。","reading":"よみがえる","meaning":"to revive, be restored","type":"kun","hint":"黄泉 (よみ, the underworld) から帰る → よみがえる — back from the dead.","compounds":["蘇生 (sosei) — resuscitation","復活 (fukkatsu) — revival"],"distractors":["ようみがえる","めざめる","いきかえる"]},
-{"kanji":"憧れる","sentence":"都会の生活に[[憧れる]]。","reading":"あこがれる","meaning":"to yearn for, admire","type":"kun","hint":"忄 (heart) + 童 (child) — a childlike longing: あこがれる.","compounds":["憧憬 (shoukei) — longing","理想 (risou) — ideal"],"distractors":["あがめる","こがれる","あくがれる"]},
-{"kanji":"慰める","sentence":"落ち込む友人を[[慰める]]。","reading":"なぐさめる","meaning":"to comfort, console","type":"kun","hint":"慰安・慰労の慰 — soothing the heart (心): なぐさめる.","compounds":["慰労 (irou) — appreciation of efforts","慰謝料 (isharyou) — consolation money"],"distractors":["いさめる","なだめる","おさめる"]},
-{"kanji":"拒む","sentence":"面会を[[拒む]]理由はない。","reading":"こばむ","meaning":"to refuse, reject","type":"kun","hint":"拒否 (きょひ) の拒 — kun reading こばむ; hand (扌) pushing away.","compounds":["拒否 (kyohi) — refusal","拒絶 (kyozetsu) — rejection"],"distractors":["はばむ","こぼむ","ふせぐ"]},
-{"kanji":"阻む","sentence":"悪天候が登頂を[[阻む]]。","reading":"はばむ","meaning":"to block, thwart","type":"kun","hint":"阻止 (そし) の阻 — はばむ blocks the width (はば) of the path.","compounds":["阻止 (soshi) — prevention","阻害 (sogai) — impediment"],"distractors":["こばむ","さえぎる","のぞむ"]},
-{"kanji":"償う","sentence":"罪を[[償う]]には長い年月が要る。","reading":"つぐなう","meaning":"to atone, compensate","type":"kun","hint":"賠償 (ばいしょう) の償 — 貝 (money) used to make amends: つぐなう.","compounds":["賠償 (baishou) — compensation","弁償 (benshou) — reimbursement"],"distractors":["やしなう","あがなう","おぎなう"]},
-{"kanji":"挑む","sentence":"世界記録に[[挑む]]選手。","reading":"いどむ","meaning":"to challenge, attempt","type":"kun","hint":"挑戦 (ちょうせん) の挑 — kun reading いどむ.","compounds":["挑戦 (chousen) — challenge","挑発 (chouhatsu) — provocation"],"distractors":["のぞむ","はげむ","つかむ"]},
-{"kanji":"施す","sentence":"壁に装飾を[[施す]]。","reading":"ほどこす","meaning":"to apply, give, perform","type":"kun","hint":"施設 (しせつ) の施 — ほどこす is giving out or applying something.","compounds":["施設 (shisetsu) — facility","実施 (jisshi) — implementation"],"distractors":["もよおす","ほどす","おろす"]},
-{"kanji":"貫く","sentence":"初志を最後まで[[貫く]]。","reading":"つらぬく","meaning":"to pierce; carry through","type":"kun","hint":"貫通 (かんつう) の貫 — a rod passing straight through: つらぬく.","compounds":["貫通 (kantsuu) — penetration","一貫 (ikkan) — consistency"],"distractors":["みちびく","ぬらつく","つなぐ"]},
-{"kanji":"免れる","sentence":"辛うじて処分を[[免れる]]。","reading":"まぬかれる","meaning":"to escape, avoid","type":"kun","hint":"免除 (めんじょ) の免 — まぬかれる (also read まぬがれる).","compounds":["免除 (menjo) — exemption","免疫 (men'eki) — immunity"],"distractors":["のがれる","めんれる","まねかれる"]},
-{"kanji":"蓄積","sentence":"疲労が[[蓄積]]している。","reading":"ちくせき","meaning":"accumulation","type":"on","hint":"蓄える (たくわえる) の蓄 = ちく; 積 = せき (pile up, 積む).","compounds":["貯蓄 (chochiku) — savings","積載 (sekisai) — loading"],"distractors":["ちくしゃく","たいせき","ちっせき"]},
-{"kanji":"頻繁","sentence":"[[頻繁]]に連絡を取り合う。","reading":"ひんぱん","meaning":"frequent","type":"on","hint":"頻 = ひん (frequency, 頻度); 繁 becomes ぱん after ん.","compounds":["頻度 (hindo) — frequency","繁忙 (hanbou) — busyness"],"distractors":["ひんはん","びんぱん","ひんばん"]},
-{"kanji":"均衡","sentence":"需要と供給の[[均衡]]を保つ。","reading":"きんこう","meaning":"balance, equilibrium","type":"on","hint":"均 = きん (equal, 平均); 衡 = こう (scales) — balanced scales.","compounds":["平均 (heikin) — average","均等 (kintou) — uniform"],"distractors":["きんしょう","ぎんこう","きんごう"]},
-{"kanji":"貢献","sentence":"地域社会に[[貢献]]する。","reading":"こうけん","meaning":"contribution","type":"on","hint":"貢 = こう (tribute, 貝 = goods offered); 献 = けん (offer, 献血).","compounds":["貢ぐ (mitsugu) — to pay tribute","献身 (kenshin) — devotion"],"distractors":["くけん","こうこん","こうげん"]},
-{"kanji":"妥協","sentence":"安易な[[妥協]]は後悔のもとだ。","reading":"だきょう","meaning":"compromise","type":"on","hint":"妥 = だ (settle, 妥当); 協 = きょう (cooperate) — settling together.","compounds":["妥当 (datou) — appropriate","協調 (kyouchou) — cooperation"],"distractors":["たきょう","だこう","だっきょう"]},
-{"kanji":"把握","sentence":"現状を正確に[[把握]]する。","reading":"はあく","meaning":"grasp, understanding","type":"on","hint":"把 = は (grip) + 握 = あく (握る, to grasp) — gripping the facts.","compounds":["握手 (akushu) — handshake","掌握 (shouaku) — control"],"distractors":["はおく","わあく","はにぎ"]},
-{"kanji":"遂行","sentence":"任務を確実に[[遂行]]する。","reading":"すいこう","meaning":"execution, accomplishment","type":"on","hint":"遂 = すい (accomplish, 遂げる); NOT つい — 遂に (finally) is the kun side.","compounds":["遂げる (togeru) — to achieve","完遂 (kansui) — completion"],"distractors":["ついこう","すいぎょう","そうこう"]},
-{"kanji":"網羅","sentence":"全分野を[[網羅]]した辞典。","reading":"もうら","meaning":"covering everything, comprehensive","type":"on","hint":"網 (net) + 羅 (spread out) — casting a net over everything: もうら.","compounds":["網 (ami) — net","羅列 (raretsu) — enumeration"],"distractors":["あみら","もら","ぼうら"]},
-{"kanji":"匿名","sentence":"[[匿名]]で通報が寄せられた。","reading":"とくめい","meaning":"anonymity","type":"on","hint":"匿 = とく (hide, 隠匿) — hiding the 名 (name).","compounds":["隠匿 (intoku) — concealment","匿う (kakumau) — to shelter"],"distractors":["どくめい","のくめい","とくみょう"]},
-{"kanji":"暴露","sentence":"内部事情を[[暴露]]する記事。","reading":"ばくろ","meaning":"exposure, disclosure","type":"on","hint":"暴 usually reads ぼう (暴力) but here it's ばく — 暴露 is a classic exception.","compounds":["暴く (abaku) — to expose","披露 (hirou) — announcement"],"distractors":["ぼうろ","ばくろう","ぼうろう"]},
-{"kanji":"冒頭","sentence":"[[冒頭]]で結論を述べる。","reading":"ぼうとう","meaning":"opening, beginning","type":"on","hint":"冒 = ぼう (to push forward, 冒険) + 頭 (head) — the very head of a text.","compounds":["冒険 (bouken) — adventure","先頭 (sentou) — front"],"distractors":["もうとう","ぼうず","ぼうがしら"]},
-{"kanji":"折衷","sentence":"和洋[[折衷]]の家に住む。","reading":"せっちゅう","meaning":"compromise, blending","type":"on","hint":"折 = せつ (fold) + 衷 = ちゅう (inner heart) — folding two styles into one.","compounds":["折衝 (sesshou) — negotiation","衷心 (chuushin) — heartfelt"],"distractors":["せつちゅう","おりちゅう","せっしょう"]},
-{"kanji":"拮抗","sentence":"両者の実力は[[拮抗]]している。","reading":"きっこう","meaning":"rivalry, being evenly matched","type":"on","hint":"拮 = きつ + 抗 = こう (resist) — きつこう contracts to きっこう.","compounds":["対抗 (taikou) — opposition","抗争 (kousou) — conflict"],"distractors":["けっこう","きつこう","きっとう"]},
-{"kanji":"葛藤","sentence":"心の中で[[葛藤]]が続いた。","reading":"かっとう","meaning":"conflict (inner), discord","type":"on","hint":"葛 (kudzu vine) + 藤 (wisteria) — two vines tangling: かっとう.","compounds":["葛湯 (kuzuyu) — kudzu drink","藤色 (fujiiro) — light purple"],"distractors":["かつどう","くずふじ","がっとう"]},
-{"kanji":"危惧","sentence":"絶滅が[[危惧]]される動物。","reading":"きぐ","meaning":"fear, apprehension","type":"on","hint":"惧 = ぐ (fear) — short and sharp: きぐ, not きく.","compounds":["危機 (kiki) — crisis","懸念 (kenen) — concern"],"distractors":["きく","きご","あやぐ"]},
-{"kanji":"示唆","sentence":"今後の方向性を[[示唆]]する発言。","reading":"しさ","meaning":"suggestion, hint","type":"on","hint":"唆 = さ (唆す, to instigate) — し+さ, both short vowels.","compounds":["唆す (sosonokasu) — to incite","暗示 (anji) — hint"],"distractors":["じさ","しし","しゅんさ"]},
-{"kanji":"誇張","sentence":"[[誇張]]した表現は信頼を損なう。","reading":"こちょう","meaning":"exaggeration","type":"on","hint":"誇る (ほこる) の誇 = こ; 張 (stretch) — stretching the truth.","compounds":["誇り (hokori) — pride","主張 (shuchou) — assertion"],"distractors":["かちょう","こっちょう","ごちょう"]},
-{"kanji":"緻密","sentence":"[[緻密]]な計画を立てる。","reading":"ちみつ","meaning":"precise, elaborate","type":"on","hint":"緻 = ち (fine, detailed — 糸 thread-fine) + 密 (dense).","compounds":["精緻 (seichi) — exquisite","綿密 (menmitsu) — meticulous"],"distractors":["しみつ","ちみち","きみつ"]},
-{"kanji":"錯覚","sentence":"目の[[錯覚]]を利用した絵。","reading":"さっかく","meaning":"illusion, misconception","type":"on","hint":"錯 = さく (mixed up, 錯乱) — さく+かく contracts to さっかく.","compounds":["錯乱 (sakuran) — derangement","感覚 (kankaku) — sense"],"distractors":["さくかく","しゃっかく","そっかく"]},
-{"kanji":"露骨","sentence":"[[露骨]]に嫌な顔をされた。","reading":"ろこつ","meaning":"blatant, undisguised","type":"on","hint":"露 (exposed) + 骨 (bone) — baring it to the bone: ろこつ.","compounds":["露出 (roshutsu) — exposure","骨子 (kosshi) — framework"],"distractors":["ろうこつ","ろほね","ろっこつ"]},
-{"kanji":"貪欲","sentence":"[[貪欲]]に知識を吸収する。","reading":"どんよく","meaning":"greedy, voracious","type":"on","hint":"貪る (むさぼる) の貪 = どん — devouring desire.","compounds":["貪る (musaboru) — to devour","強欲 (gouyoku) — avarice"],"distractors":["たんよく","どんおく","とんよく"]},
-{"kanji":"憶測","sentence":"[[憶測]]で物を言うべきではない。","reading":"おくそく","meaning":"speculation, guesswork","type":"on","hint":"憶 = おく (remember/think, 記憶) + 測 (measure) — measuring by guess.","compounds":["記憶 (kioku) — memory","推測 (suisoku) — inference"],"distractors":["いそく","おくしょく","よくそく"]},
-{"kanji":"便宜","sentence":"[[便宜]]を図ってもらった。","reading":"べんぎ","meaning":"convenience, accommodation","type":"on","hint":"便 = べん (convenience) + 宜 = ぎ (suitable, 適宜) — voiced ぎ.","compounds":["適宜 (tekigi) — as appropriate","便利 (benri) — convenient"],"distractors":["べんせん","びんぎ","べんき"]},
-{"kanji":"罷免","sentence":"大臣が[[罷免]]された。","reading":"ひめん","meaning":"dismissal (from office)","type":"on","hint":"罷 = ひ (to quit) + 免 (release) — released from duty.","compounds":["免職 (menshoku) — discharge","解任 (kainin) — dismissal"],"distractors":["ばめん","ひまん","はめん"]},
-{"kanji":"頒布","sentence":"資料を無料で[[頒布]]する。","reading":"はんぷ","meaning":"distribution, circulation","type":"on","hint":"頒 = はん (distribute); 布 becomes ぷ after ん.","compounds":["配布 (haifu) — handout","布教 (fukyou) — propagation"],"distractors":["ひんぷ","はんふ","ばんぷ"]},
-{"kanji":"逝去","sentence":"恩師の[[逝去]]を悼む。","reading":"せいきょ","meaning":"death, passing (honorific)","type":"on","hint":"逝 = せい (to pass away, 逝く); 去 = きょ (leave) — departed.","compounds":["逝く (yuku) — to pass away","死去 (shikyo) — death"],"distractors":["せっきょ","しきょ","せいこ"]},
-{"kanji":"遭遇","sentence":"思わぬ事態に[[遭遇]]した。","reading":"そうぐう","meaning":"encounter","type":"on","hint":"遭う (あう, meet with misfortune) + 遇 = ぐう (treatment, 待遇).","compounds":["遭難 (sounan) — disaster/distress","待遇 (taiguu) — treatment"],"distractors":["そうごう","ぞうぐう","そぐう"]},
-{"kanji":"傲慢","sentence":"[[傲慢]]な態度が反感を買う。","reading":"ごうまん","meaning":"arrogant, haughty","type":"on","hint":"傲 = ごう (pride) + 慢 (conceit, 自慢) — a proud heart run wild.","compounds":["傲然 (gouzen) — haughtily","自慢 (jiman) — boasting"],"distractors":["きょうまん","ごうめん","こうまん"]},
-{"kanji":"謙虚","sentence":"[[謙虚]]な姿勢で学び続ける。","reading":"けんきょ","meaning":"humble, modest","type":"on","hint":"謙 = けん (modesty, 謙遜) + 虚 = きょ (empty) — emptying one's ego.","compounds":["謙遜 (kenson) — humility","虚心 (kyoshin) — open mind"],"distractors":["けんそん","げんきょ","けんこ"]},
-{"kanji":"陳腐","sentence":"[[陳腐]]な決まり文句を並べる。","reading":"ちんぷ","meaning":"stale, clichéd","type":"on","hint":"陳 = ちん (old, 陳列 displayed too long) + 腐 (rot) — gone stale.","compounds":["陳列 (chinretsu) — display","腐敗 (fuhai) — decay"],"distractors":["ちんふ","じんぷ","ちんぶ"]},
-{"kanji":"廉価","sentence":"[[廉価]]版が発売された。","reading":"れんか","meaning":"low price, cheap","type":"on","hint":"廉 = れん (cheap/honest, 清廉) + 価 (price).","compounds":["清廉 (seiren) — integrity","安価 (anka) — inexpensive"],"distractors":["けんか","れんけ","やすか"]},
-{"kanji":"暫定","sentence":"[[暫定]]的な措置に過ぎない。","reading":"ざんてい","meaning":"provisional, tentative","type":"on","hint":"暫 = ざん (for a while, 暫く/しばらく) + 定 (fix) — fixed only for now.","compounds":["暫く (shibaraku) — for a while","仮定 (katei) — assumption"],"distractors":["ぜんてい","ざんじょう","さんてい"]},
-{"kanji":"猶予","sentence":"支払いの[[猶予]]を求める。","reading":"ゆうよ","meaning":"postponement, grace period","type":"on","hint":"猶 = ゆう + 予 = よ (beforehand) — extra time granted in advance.","compounds":["執行猶予 (shikkou yuuyo) — suspended sentence","予定 (yotei) — schedule"],"distractors":["ゆよ","ゆうやく","ようよ"]},
-{"kanji":"融通","sentence":"[[融通]]の利かない性格だ。","reading":"ゆうずう","meaning":"flexibility; financing","type":"on","hint":"通 reads ずう here (irregular!) — ゆうつう is the classic wrong answer.","compounds":["金融 (kinyuu) — finance","融合 (yuugou) — fusion"],"distractors":["ゆうつう","ゆうどおり","ゆうづ"]},
-{"kanji":"会釈","sentence":"軽く[[会釈]]して通り過ぎた。","reading":"えしゃく","meaning":"slight bow, nod","type":"on","hint":"会 reads え here (呉音, as in 会得) — えしゃく, not かいしゃく.","compounds":["会得 (etoku) — mastery","釈明 (shakumei) — explanation"],"distractors":["かいしゃく","えせき","あいしゃく"]},
-{"kanji":"相殺","sentence":"損益が[[相殺]]される。","reading":"そうさい","meaning":"offsetting, cancelling out","type":"on","hint":"殺 reads さい here (not さつ!) — mutual cancelling, a famous exception.","compounds":["殺到 (sattou) — rush","減殺 (gensai) — reduction"],"distractors":["そうさつ","あいさつ","そうせつ"]},
-{"kanji":"建立","sentence":"寺院を[[建立]]した武将。","reading":"こんりゅう","meaning":"erection (of temple/monument)","type":"on","hint":"Buddhist reading: 建 = こん, 立 = りゅう — けんりつ is the trap.","compounds":["建築 (kenchiku) — architecture","立像 (ryuuzou) — standing statue"],"distractors":["けんりつ","こんりつ","けんりゅう"]},
-{"kanji":"精進","sentence":"芸の道に[[精進]]する。","reading":"しょうじん","meaning":"devotion, diligence","type":"on","hint":"Buddhist reading: 精 = しょう (not せい) — purifying effort.","compounds":["精進料理 (shoujin ryouri) — vegetarian cuisine","進歩 (shinpo) — progress"],"distractors":["せいしん","しょうしん","せいじん"]},
-{"kanji":"成就","sentence":"長年の夢が[[成就]]した。","reading":"じょうじゅ","meaning":"fulfillment, attainment","type":"on","hint":"Buddhist reading: 成 = じょう, 就 = じゅ — せいしゅう is the trap.","compounds":["就任 (shuunin) — inauguration","達成 (tassei) — achievement"],"distractors":["せいじゅ","じょうしゅう","せいしゅう"]},
-{"kanji":"執着","sentence":"過去に[[執着]]しない生き方。","reading":"しゅうちゃく","meaning":"attachment, obsession","type":"on","hint":"執 reads しゅう here (not しつ) — the mind clinging on.","compounds":["執念 (shuunen) — tenacity","執筆 (shippitsu) — writing"],"distractors":["しっちゃく","しゅちゃく","しゅうじゃく"]},
-{"kanji":"風情","sentence":"古い町並みに[[風情]]がある。","reading":"ふぜい","meaning":"charm, elegance, air","type":"on","hint":"情 reads ぜい here (irregular) — ふうじょう is the trap.","compounds":["情緒 (joucho) — atmosphere/emotion","風流 (fuuryuu) — refined taste"],"distractors":["ふうじょう","ふじょう","かぜなさけ"]},
-{"kanji":"名残","sentence":"夏の[[名残]]を惜しむ。","reading":"なごり","meaning":"remnants, lingering traces","type":"kun","hint":"Jukujikun — from 波残り (what waves leave behind): なごり.","compounds":["名残惜しい (nagorioshii) — reluctant to part","余韻 (yoin) — lingering note"],"distractors":["めいざん","なざん","なのこり"]},
-{"kanji":"生粋","sentence":"[[生粋]]の江戸っ子だ。","reading":"きっすい","meaning":"pure, genuine (born and bred)","type":"on","hint":"生 = き (pure, as in 生糸) + 粋 = すい → きっすい.","compounds":["粋 (iki) — chic","純粋 (junsui) — pure"],"distractors":["せいすい","なまいき","きすい"]},
-{"kanji":"玄人","sentence":"[[玄人]]はだしの腕前だ。","reading":"くろうと","meaning":"expert, professional","type":"kun","hint":"玄 (dark/deep) = くろ — the 'dark-robed' master; opposite of 素人.","compounds":["玄関 (genkan) — entrance","素人 (shirouto) — amateur"],"distractors":["げんじん","くろひと","くろじん"]},
-{"kanji":"素人","sentence":"[[素人]]には難しい作業だ。","reading":"しろうと","meaning":"amateur, layperson","type":"kun","hint":"素 (plain/white) = しろ — the 'white-robed' novice; pair with 玄人.","compounds":["素材 (sozai) — material","玄人 (kurouto) — expert"],"distractors":["そじん","しろひと","すにん"]},
-{"kanji":"為替","sentence":"[[為替]]レートが変動した。","reading":"かわせ","meaning":"exchange (currency)","type":"kun","hint":"Jukujikun — from 交わす (kawasu, to exchange): かわせ.","compounds":["為替相場 (kawase souba) — exchange rate","両替 (ryougae) — money changing"],"distractors":["いたい","ためがえ","かえたい"]},
-{"kanji":"老舗","sentence":"創業二百年の[[老舗]]旅館。","reading":"しにせ","meaning":"long-established shop","type":"kun","hint":"Jukujikun — from 仕似せる (to imitate the family trade): しにせ.","compounds":["店舗 (tenpo) — shop","老朽 (roukyuu) — decrepit"],"distractors":["ろうほ","おいみせ","ろうてん"]},
-{"kanji":"吹雪","sentence":"[[吹雪]]で視界が真っ白になる。","reading":"ふぶき","meaning":"blizzard","type":"kun","hint":"Jukujikun — 吹く (blow) + 雪 (snow) fuse into ふぶき.","compounds":["猛吹雪 (moufubuki) — severe blizzard","雪崩 (nadare) — avalanche"],"distractors":["すいせつ","ふきゆき","ふゆき"]},
-{"kanji":"日和","sentence":"絶好の行楽[[日和]]だ。","reading":"びより","meaning":"ideal weather (for something)","type":"kun","hint":"Jukujikun ひより, voiced to びより in compounds like 行楽日和.","compounds":["小春日和 (koharubiyori) — Indian summer","和む (nagomu) — to calm"],"distractors":["にちわ","ひわ","はより"]},
-{"kanji":"極めて","sentence":"[[極めて]]重要な課題である。","reading":"きわめて","meaning":"extremely","type":"kun","hint":"極める (きわめる) = to master/reach the extreme; on-reading きょく in 極端.","compounds":["極端 (kyokutan) — extreme","究極 (kyuukyoku) — ultimate"],"distractors":["ごくめて","きょくめて","つとめて"]},
-{"kanji":"著しい","sentence":"[[著しい]]進歩を遂げた。","reading":"いちじるしい","meaning":"remarkable, marked","type":"kun","hint":"著 (striking/notable) — long reading いちじるしい; ちょ in 顕著.","compounds":["顕著 (kencho) — striking","著者 (chosha) — author"],"distractors":["あらわしい","いちじるしるしい","しるしい"]},
-{"kanji":"甚だしい","sentence":"誤解も[[甚だしい]]。","reading":"はなはだしい","meaning":"extreme, gross","type":"kun","hint":"甚 = intense; はなはだ (exceedingly) + しい; on-reading じん in 甚大.","compounds":["甚大 (jindai) — enormous","激甚 (gekijin) — severe"],"distractors":["おびただしい","ひどだしい","はばただしい"]},
-{"kanji":"煩わしい","sentence":"[[煩わしい]]手続きを省く。","reading":"わずらわしい","meaning":"troublesome, annoying","type":"kun","hint":"煩う (わずらう, to be troubled) + しい; on-reading はん in 煩雑.","compounds":["煩雑 (hanzatsu) — complicated","面倒 (mendou) — bother"],"distractors":["けがらわしい","まぎらわしい","うるさわしい"]},
-{"kanji":"紛らわしい","sentence":"[[紛らわしい]]名前の駅が多い。","reading":"まぎらわしい","meaning":"confusing, misleading","type":"kun","hint":"紛れる (まぎれる, to be mixed up) + らわしい; on-reading ふん in 紛争.","compounds":["紛争 (funsou) — dispute","紛失 (funshitsu) — loss"],"distractors":["わずらわしい","みだらわしい","こんらわしい"]},
-{"kanji":"潔い","sentence":"[[潔い]]態度で謝罪した。","reading":"いさぎよい","meaning":"graceful, manly, unregretful","type":"kun","hint":"潔 (pure, 清潔) — いさぎよい is accepting defeat cleanly.","compounds":["清潔 (seiketsu) — clean","簡潔 (kanketsu) — concise"],"distractors":["きよい","いさましい","こころよい"]},
-{"kanji":"速やか","sentence":"[[速やか]]に避難してください。","reading":"すみやか","meaning":"prompt, speedy","type":"kun","hint":"速い (はやい) but the な-adjective is すみやか — irregular kun.","compounds":["迅速 (jinsoku) — rapid","速度 (sokudo) — speed"],"distractors":["はやか","そくやか","すこやか"]},
-{"kanji":"芳しい","sentence":"[[芳しい]]成果は得られなかった。","reading":"かんばしい","meaning":"favorable; fragrant","type":"kun","hint":"芳 (fragrant, ほう) — かんばしい; often used in the negative (芳しくない).","compounds":["芳香 (houkou) — fragrance","芳名 (houmei) — your name (honorific)"],"distractors":["こうばしい","よろしい","かぐわしい"]},
-{"kanji":"拙い","sentence":"[[拙い]]文章で恐縮です。","reading":"つたない","meaning":"clumsy, unskillful","type":"kun","hint":"拙 (clumsy, 稚拙) — humble word: つたない.","compounds":["稚拙 (chisetsu) — crude","拙者 (sessha) — I (samurai)"],"distractors":["まずい","せつない","つらない"]},
-{"kanji":"覆う","sentence":"雲が空一面を[[覆う]]。","reading":"おおう","meaning":"to cover","type":"kun","hint":"Same kanji as 覆す (くつがえす) — おおう is the 'cover' reading.","compounds":["覆面 (fukumen) — mask","被覆 (hifuku) — coating"],"distractors":["くつがえう","かばう","おそう"]},
-{"kanji":"唆す","sentence":"犯行を[[唆す]]のも罪になる。","reading":"そそのかす","meaning":"to instigate, tempt","type":"kun","hint":"示唆 (しさ) の唆 — whispering someone into action: そそのかす.","compounds":["示唆 (shisa) — suggestion","教唆 (kyousa) — incitement"],"distractors":["うながす","けしかす","ささやかす"]},
-{"kanji":"頷く","sentence":"彼は黙って[[頷く]]だけだった。","reading":"うなずく","meaning":"to nod","type":"kun","hint":"頁 (head) radical — dropping the head forward: うなずく.","compounds":["首肯 (shukou) — assent","相槌 (aizuchi) — agreeable responses"],"distractors":["うつむく","ひざまずく","うなだれく"]},
-{"kanji":"憩い","sentence":"公園は市民の[[憩い]]の場だ。","reading":"いこい","meaning":"rest, relaxation","type":"kun","hint":"憩う (いこう) = to rest; 休憩 (きゅうけい) shares the kanji.","compounds":["休憩 (kyuukei) — break","安らぎ (yasuragi) — peace"],"distractors":["やすらい","いきごい","けいい"]}
+ {
+  "kanji": "学校",
+  "level": "N5",
+  "sentence": "毎朝[[学校]]まで歩く。",
+  "reading": "がっこう",
+  "meaning": "school",
+  "type": "on",
+  "hint": "学 (gaku) drops to がっ before 校 (kou) — small っ then long こう.",
+  "compounds": [
+   "高校 (koukou) — high school",
+   "校長 (kouchou) — principal"
+  ],
+  "distractors": [
+   "がくこう",
+   "がっこ",
+   "かっこう"
+  ]
+ },
+ {
+  "kanji": "先生",
+  "level": "N5",
+  "sentence": "[[先生]]に質問する。",
+  "reading": "せんせい",
+  "meaning": "teacher",
+  "type": "on",
+  "hint": "先 (sen) + 生 (sei) — both long vowels, せんせい.",
+  "compounds": [
+   "先週 (senshuu) — last week",
+   "学生 (gakusei) — student"
+  ],
+  "distractors": [
+   "せんせん",
+   "せんじょう",
+   "さきせい"
+  ]
+ },
+ {
+  "kanji": "学生",
+  "level": "N5",
+  "sentence": "彼はまだ[[学生]]だ。",
+  "reading": "がくせい",
+  "meaning": "student",
+  "type": "on",
+  "hint": "学 (gaku) + 生 (sei) — here 生 is せい, not なま.",
+  "compounds": [
+   "学校 (gakkou) — school",
+   "大学 (daigaku) — university"
+  ],
+  "distractors": [
+   "がくしょう",
+   "がくせ",
+   "かくせい"
+  ]
+ },
+ {
+  "kanji": "会社",
+  "level": "N5",
+  "sentence": "父は[[会社]]に勤めている。",
+  "reading": "かいしゃ",
+  "meaning": "company",
+  "type": "on",
+  "hint": "会 (kai) + 社 (sha) — かいしゃ, not the reversed しゃかい.",
+  "compounds": [
+   "社会 (shakai) — society",
+   "社長 (shachou) — company president"
+  ],
+  "distractors": [
+   "しゃかい",
+   "かいしゃく",
+   "えしゃ"
+  ]
+ },
+ {
+  "kanji": "電車",
+  "level": "N5",
+  "sentence": "[[電車]]で会社へ行く。",
+  "reading": "でんしゃ",
+  "meaning": "train",
+  "type": "on",
+  "hint": "電 (den) + 車 (sha) — the on-reading しゃ, not the kun くるま.",
+  "compounds": [
+   "電気 (denki) — electricity",
+   "自動車 (jidousha) — automobile"
+  ],
+  "distractors": [
+   "でんくるま",
+   "でんじゃ",
+   "てんしゃ"
+  ]
+ },
+ {
+  "kanji": "電話",
+  "level": "N5",
+  "sentence": "友だちに[[電話]]をかける。",
+  "reading": "でんわ",
+  "meaning": "telephone",
+  "type": "on",
+  "hint": "電 (den) + 話 (wa) — 話 is わ here, not はなし.",
+  "compounds": [
+   "電気 (denki) — electricity",
+   "会話 (kaiwa) — conversation"
+  ],
+  "distractors": [
+   "でんは",
+   "でんはなし",
+   "てんわ"
+  ]
+ },
+ {
+  "kanji": "時間",
+  "level": "N5",
+  "sentence": "[[時間]]がありません。",
+  "reading": "じかん",
+  "meaning": "time",
+  "type": "on",
+  "hint": "時 (ji) + 間 (kan) — じかん, not the kun とき/あいだ.",
+  "compounds": [
+   "時計 (tokei) — clock",
+   "人間 (ningen) — human"
+  ],
+  "distractors": [
+   "ときま",
+   "じま",
+   "しかん"
+  ]
+ },
+ {
+  "kanji": "毎日",
+  "level": "N5",
+  "sentence": "[[毎日]]日本語を勉強する。",
+  "reading": "まいにち",
+  "meaning": "every day",
+  "type": "on",
+  "hint": "毎 (mai) + 日 (nichi) — 日 is にち here.",
+  "compounds": [
+   "毎週 (maishuu) — every week",
+   "毎年 (maitoshi) — every year"
+  ],
+  "distractors": [
+   "まいび",
+   "まいひ",
+   "めいにち"
+  ]
+ },
+ {
+  "kanji": "大学",
+  "level": "N5",
+  "sentence": "来年[[大学]]に入る。",
+  "reading": "だいがく",
+  "meaning": "university",
+  "type": "on",
+  "hint": "大 (dai) + 学 (gaku) — 大 is だい here, not おお.",
+  "compounds": [
+   "大人 (otona) — adult",
+   "学生 (gakusei) — student"
+  ],
+  "distractors": [
+   "たいがく",
+   "おおがく",
+   "だいがっ"
+  ]
+ },
+ {
+  "kanji": "新聞",
+  "level": "N5",
+  "sentence": "朝は[[新聞]]を読む。",
+  "reading": "しんぶん",
+  "meaning": "newspaper",
+  "type": "on",
+  "hint": "新 (shin) + 聞 (bun) — 聞 is ぶん here, not きく.",
+  "compounds": [
+   "新年 (shinnen) — new year",
+   "見聞 (kenbun) — knowledge"
+  ],
+  "distractors": [
+   "しんもん",
+   "しんぶ",
+   "あたらしぶん"
+  ]
+ },
+ {
+  "kanji": "天気",
+  "level": "N5",
+  "sentence": "今日は[[天気]]がいい。",
+  "reading": "てんき",
+  "meaning": "weather",
+  "type": "on",
+  "hint": "天 (ten) + 気 (ki) — short てんき.",
+  "compounds": [
+   "天国 (tengoku) — heaven",
+   "気分 (kibun) — mood"
+  ],
+  "distractors": [
+   "てんぎ",
+   "でんき",
+   "あまき"
+  ]
+ },
+ {
+  "kanji": "銀行",
+  "level": "N5",
+  "sentence": "[[銀行]]でお金をおろす。",
+  "reading": "ぎんこう",
+  "meaning": "bank",
+  "type": "on",
+  "hint": "銀 (gin) + 行 (kou) — 行 is こう here, not いく.",
+  "compounds": [
+   "銀色 (giniro) — silver color",
+   "旅行 (ryokou) — travel"
+  ],
+  "distractors": [
+   "ぎんぎょう",
+   "きんこう",
+   "ぎんいく"
+  ]
+ },
+ {
+  "kanji": "病院",
+  "level": "N5",
+  "sentence": "熱が出て[[病院]]へ行く。",
+  "reading": "びょういん",
+  "meaning": "hospital",
+  "type": "on",
+  "hint": "病 (byou) + 院 (in) — long びょう then いん.",
+  "compounds": [
+   "病気 (byouki) — illness",
+   "入院 (nyuuin) — hospitalization"
+  ],
+  "distractors": [
+   "びよういん",
+   "びょいん",
+   "へいいん"
+  ]
+ },
+ {
+  "kanji": "図書館",
+  "level": "N5",
+  "sentence": "[[図書館]]で本を借りる。",
+  "reading": "としょかん",
+  "meaning": "library",
+  "type": "on",
+  "hint": "図 (to) + 書 (sho) + 館 (kan) — としょかん.",
+  "compounds": [
+   "地図 (chizu) — map",
+   "書店 (shoten) — bookstore"
+  ],
+  "distractors": [
+   "ずしょかん",
+   "としょうかん",
+   "ときょかん"
+  ]
+ },
+ {
+  "kanji": "飛行機",
+  "level": "N5",
+  "sentence": "[[飛行機]]で国へ帰る。",
+  "reading": "ひこうき",
+  "meaning": "airplane",
+  "type": "on",
+  "hint": "飛 (hi) + 行 (kou) + 機 (ki) — ひこうき.",
+  "compounds": [
+   "飛行 (hikou) — flight",
+   "機械 (kikai) — machine"
+  ],
+  "distractors": [
+   "ひぎょうき",
+   "とびこうき",
+   "ひこき"
+  ]
+ },
+ {
+  "kanji": "自転車",
+  "level": "N5",
+  "sentence": "[[自転車]]で駅まで行く。",
+  "reading": "じてんしゃ",
+  "meaning": "bicycle",
+  "type": "on",
+  "hint": "自 (ji) + 転 (ten) + 車 (sha) — じてんしゃ.",
+  "compounds": [
+   "自分 (jibun) — oneself",
+   "回転 (kaiten) — rotation"
+  ],
+  "distractors": [
+   "じてんくるま",
+   "してんしゃ",
+   "じでんしゃ"
+  ]
+ },
+ {
+  "kanji": "家族",
+  "level": "N5",
+  "sentence": "[[家族]]と写真を撮る。",
+  "reading": "かぞく",
+  "meaning": "family",
+  "type": "on",
+  "hint": "家 (ka) + 族 (zoku) — 族 voices to ぞく.",
+  "compounds": [
+   "家庭 (katei) — household",
+   "民族 (minzoku) — ethnic group"
+  ],
+  "distractors": [
+   "かそく",
+   "いえぞく",
+   "けぞく"
+  ]
+ },
+ {
+  "kanji": "両親",
+  "level": "N5",
+  "sentence": "[[両親]]は元気です。",
+  "reading": "りょうしん",
+  "meaning": "parents",
+  "type": "on",
+  "hint": "両 (ryou) + 親 (shin) — 親 is しん here, not おや.",
+  "compounds": [
+   "両方 (ryouhou) — both",
+   "親切 (shinsetsu) — kindness"
+  ],
+  "distractors": [
+   "りょうおや",
+   "りょしん",
+   "りょうじん"
+  ]
+ },
+ {
+  "kanji": "教室",
+  "level": "N5",
+  "sentence": "[[教室]]に生徒がいる。",
+  "reading": "きょうしつ",
+  "meaning": "classroom",
+  "type": "on",
+  "hint": "教 (kyou) + 室 (shitsu) — long きょう then しつ.",
+  "compounds": [
+   "教科書 (kyoukasho) — textbook",
+   "室内 (shitsunai) — indoors"
+  ],
+  "distractors": [
+   "きょしつ",
+   "きょうしち",
+   "おしえしつ"
+  ]
+ },
+ {
+  "kanji": "質問",
+  "level": "N5",
+  "sentence": "先生に[[質問]]する。",
+  "reading": "しつもん",
+  "meaning": "question",
+  "type": "on",
+  "hint": "質 (shitsu) + 問 (mon) — 問 is もん, not とう.",
+  "compounds": [
+   "問題 (mondai) — problem",
+   "性質 (seishitsu) — nature"
+  ],
+  "distractors": [
+   "しつとい",
+   "しちもん",
+   "しつぶん"
+  ]
+ },
+ {
+  "kanji": "宿題",
+  "level": "N5",
+  "sentence": "[[宿題]]をもう終えた。",
+  "reading": "しゅくだい",
+  "meaning": "homework",
+  "type": "on",
+  "hint": "宿 (shuku) + 題 (dai) — 題 voices to だい.",
+  "compounds": [
+   "宿泊 (shukuhaku) — lodging",
+   "問題 (mondai) — problem"
+  ],
+  "distractors": [
+   "しゅくたい",
+   "やどだい",
+   "しゅうだい"
+  ]
+ },
+ {
+  "kanji": "勉強",
+  "level": "N5",
+  "sentence": "図書館で[[勉強]]する。",
+  "reading": "べんきょう",
+  "meaning": "study",
+  "type": "on",
+  "hint": "勉 (ben) + 強 (kyou) — 強 is きょう here, not つよい.",
+  "compounds": [
+   "勉学 (bengaku) — study",
+   "強力 (kyouryoku) — powerful"
+  ],
+  "distractors": [
+   "べんつよ",
+   "べんきょ",
+   "めんきょう"
+  ]
+ },
+ {
+  "kanji": "練習",
+  "level": "N5",
+  "sentence": "毎日ピアノを[[練習]]する。",
+  "reading": "れんしゅう",
+  "meaning": "practice",
+  "type": "on",
+  "hint": "練 (ren) + 習 (shuu) — 習 is しゅう, not ならう.",
+  "compounds": [
+   "習慣 (shuukan) — habit",
+   "訓練 (kunren) — training"
+  ],
+  "distractors": [
+   "れんならい",
+   "れんしゅ",
+   "れんじゅう"
+  ]
+ },
+ {
+  "kanji": "旅行",
+  "level": "N5",
+  "sentence": "夏休みに[[旅行]]する。",
+  "reading": "りょこう",
+  "meaning": "travel, trip",
+  "type": "on",
+  "hint": "旅 (ryo) + 行 (kou) — 行 is こう here.",
+  "compounds": [
+   "旅館 (ryokan) — inn",
+   "銀行 (ginkou) — bank"
+  ],
+  "distractors": [
+   "りょぎょう",
+   "たびこう",
+   "りょうこう"
+  ]
+ },
+ {
+  "kanji": "音楽",
+  "level": "N5",
+  "sentence": "[[音楽]]を聞くのが好きだ。",
+  "reading": "おんがく",
+  "meaning": "music",
+  "type": "on",
+  "hint": "音 (on) + 楽 (gaku) — 楽 is がく here, not たのしい.",
+  "compounds": [
+   "音声 (onsei) — voice",
+   "楽器 (gakki) — instrument"
+  ],
+  "distractors": [
+   "おとがく",
+   "おんらく",
+   "いんがく"
+  ]
+ },
+ {
+  "kanji": "映画",
+  "level": "N5",
+  "sentence": "週末に[[映画]]を見る。",
+  "reading": "えいが",
+  "meaning": "movie",
+  "type": "on",
+  "hint": "映 (ei) + 画 (ga) — long えい then が.",
+  "compounds": [
+   "映像 (eizou) — image",
+   "画面 (gamen) — screen"
+  ],
+  "distractors": [
+   "えいかく",
+   "えが",
+   "えいが く"
+  ]
+ },
+ {
+  "kanji": "料理",
+  "level": "N5",
+  "sentence": "母の[[料理]]はおいしい。",
+  "reading": "りょうり",
+  "meaning": "cooking, dish",
+  "type": "on",
+  "hint": "料 (ryou) + 理 (ri) — long りょう then り.",
+  "compounds": [
+   "料金 (ryoukin) — fee",
+   "理由 (riyuu) — reason"
+  ],
+  "distractors": [
+   "りょり",
+   "りょうじ",
+   "れいり"
+  ]
+ },
+ {
+  "kanji": "元気",
+  "level": "N5",
+  "sentence": "祖母はとても[[元気]]だ。",
+  "reading": "げんき",
+  "meaning": "healthy, energetic",
+  "type": "on",
+  "hint": "元 (gen) + 気 (ki) — げんき.",
+  "compounds": [
+   "元日 (ganjitsu) — New Year's Day",
+   "気持ち (kimochi) — feeling"
+  ],
+  "distractors": [
+   "がんき",
+   "げんぎ",
+   "もとき"
+  ]
+ },
+ {
+  "kanji": "有名",
+  "level": "N5",
+  "sentence": "ここは[[有名]]な店だ。",
+  "reading": "ゆうめい",
+  "meaning": "famous",
+  "type": "on",
+  "hint": "有 (yuu) + 名 (mei) — 名 is めい here, not なまえ.",
+  "compounds": [
+   "有料 (yuuryou) — paid",
+   "名前 (namae) — name"
+  ],
+  "distractors": [
+   "ゆうな",
+   "ありめい",
+   "ゆめい"
+  ]
+ },
+ {
+  "kanji": "親切",
+  "level": "N5",
+  "sentence": "店員が[[親切]]だった。",
+  "reading": "しんせつ",
+  "meaning": "kind",
+  "type": "on",
+  "hint": "親 (shin) + 切 (setsu) — 切 is せつ, not きる.",
+  "compounds": [
+   "親友 (shinyuu) — best friend",
+   "大切 (taisetsu) — important"
+  ],
+  "distractors": [
+   "しんきり",
+   "おやせつ",
+   "しんぜつ"
+  ]
+ },
+ {
+  "kanji": "便利",
+  "level": "N5",
+  "sentence": "このアプリは[[便利]]だ。",
+  "reading": "べんり",
+  "meaning": "convenient",
+  "type": "on",
+  "hint": "便 (ben) + 利 (ri) — べんり.",
+  "compounds": [
+   "郵便 (yuubin) — mail",
+   "利用 (riyou) — use"
+  ],
+  "distractors": [
+   "びんり",
+   "べんとし",
+   "へんり"
+  ]
+ },
+ {
+  "kanji": "大切",
+  "level": "N5",
+  "sentence": "健康が一番[[大切]]だ。",
+  "reading": "たいせつ",
+  "meaning": "important, precious",
+  "type": "on",
+  "hint": "大 (tai) + 切 (setsu) — 大 is たい, 切 is せつ.",
+  "compounds": [
+   "大事 (daiji) — important",
+   "親切 (shinsetsu) — kindness"
+  ],
+  "distractors": [
+   "だいせつ",
+   "おおきり",
+   "たいぎり"
+  ]
+ },
+ {
+  "kanji": "意味",
+  "level": "N5",
+  "sentence": "言葉の[[意味]]を調べる。",
+  "reading": "いみ",
+  "meaning": "meaning",
+  "type": "on",
+  "hint": "意 (i) + 味 (mi) — 味 is み here, not あじ.",
+  "compounds": [
+   "意見 (iken) — opinion",
+   "興味 (kyoumi) — interest"
+  ],
+  "distractors": [
+   "いあじ",
+   "いび",
+   "おきみ"
+  ]
+ },
+ {
+  "kanji": "世界",
+  "level": "N5",
+  "sentence": "[[世界]]は広い。",
+  "reading": "せかい",
+  "meaning": "world",
+  "type": "on",
+  "hint": "世 (se) + 界 (kai) — せかい.",
+  "compounds": [
+   "世紀 (seiki) — century",
+   "限界 (genkai) — limit"
+  ],
+  "distractors": [
+   "せいかい",
+   "よかい",
+   "せっかい"
+  ]
+ },
+ {
+  "kanji": "地図",
+  "level": "N5",
+  "sentence": "[[地図]]で道を探す。",
+  "reading": "ちず",
+  "meaning": "map",
+  "type": "on",
+  "hint": "地 (chi) + 図 (zu) — 図 voices to ず here.",
+  "compounds": [
+   "地下 (chika) — underground",
+   "図書 (tosho) — books"
+  ],
+  "distractors": [
+   "ちと",
+   "じず",
+   "ちゅうず"
+  ]
+ },
+ {
+  "kanji": "動物",
+  "level": "N5",
+  "sentence": "[[動物]]園に行きたい。",
+  "reading": "どうぶつ",
+  "meaning": "animal",
+  "type": "on",
+  "hint": "動 (dou) + 物 (butsu) — 物 is ぶつ, not もの.",
+  "compounds": [
+   "運動 (undou) — exercise",
+   "植物 (shokubutsu) — plant"
+  ],
+  "distractors": [
+   "どうもの",
+   "どぶつ",
+   "どうもつ"
+  ]
+ },
+ {
+  "kanji": "写真",
+  "level": "N5",
+  "sentence": "旅行の[[写真]]を見せる。",
+  "reading": "しゃしん",
+  "meaning": "photograph",
+  "type": "on",
+  "hint": "写 (sha) + 真 (shin) — しゃしん.",
+  "compounds": [
+   "写生 (shasei) — sketching",
+   "真実 (shinjitsu) — truth"
+  ],
+  "distractors": [
+   "しゃじん",
+   "うつしん",
+   "しゃっしん"
+  ]
+ },
+ {
+  "kanji": "辞書",
+  "level": "N5",
+  "sentence": "[[辞書]]で漢字を引く。",
+  "reading": "じしょ",
+  "meaning": "dictionary",
+  "type": "on",
+  "hint": "辞 (ji) + 書 (sho) — じしょ.",
+  "compounds": [
+   "辞典 (jiten) — dictionary",
+   "書道 (shodou) — calligraphy"
+  ],
+  "distractors": [
+   "じかき",
+   "ししょ",
+   "じしょう"
+  ]
+ },
+ {
+  "kanji": "問題",
+  "level": "N5",
+  "sentence": "この[[問題]]は難しい。",
+  "reading": "もんだい",
+  "meaning": "problem, question",
+  "type": "on",
+  "hint": "問 (mon) + 題 (dai) — 題 voices to だい.",
+  "compounds": [
+   "質問 (shitsumon) — question",
+   "話題 (wadai) — topic"
+  ],
+  "distractors": [
+   "もんたい",
+   "といだい",
+   "もんてい"
+  ]
+ },
+ {
+  "kanji": "野菜",
+  "level": "N5",
+  "sentence": "毎日[[野菜]]を食べる。",
+  "reading": "やさい",
+  "meaning": "vegetable",
+  "type": "on",
+  "hint": "野 (ya) + 菜 (sai) — やさい.",
+  "compounds": [
+   "野球 (yakyuu) — baseball",
+   "菜園 (saien) — vegetable garden"
+  ],
+  "distractors": [
+   "のさい",
+   "やざい",
+   "やせい"
+  ]
+ },
+ {
+  "kanji": "牛乳",
+  "level": "N5",
+  "sentence": "朝は[[牛乳]]を飲む。",
+  "reading": "ぎゅうにゅう",
+  "meaning": "milk",
+  "type": "on",
+  "hint": "牛 (gyuu) + 乳 (nyuu) — two long vowels.",
+  "compounds": [
+   "牛肉 (gyuuniku) — beef",
+   "乳製品 (nyuuseihin) — dairy"
+  ],
+  "distractors": [
+   "うしにゅう",
+   "ぎゅにゅう",
+   "ぎゅうにゅ"
+  ]
+ },
+ {
+  "kanji": "買い物",
+  "level": "N5",
+  "sentence": "母と[[買い物]]に行く。",
+  "reading": "かいもの",
+  "meaning": "shopping",
+  "type": "kun",
+  "hint": "kun compound: 買い (kai) + 物 (mono).",
+  "compounds": [
+   "買う (kau) — to buy",
+   "食べ物 (tabemono) — food"
+  ],
+  "distractors": [
+   "ばいもの",
+   "かいぶつ",
+   "かいもつ"
+  ]
+ },
+ {
+  "kanji": "食べ物",
+  "level": "N5",
+  "sentence": "好きな[[食べ物]]は何ですか。",
+  "reading": "たべもの",
+  "meaning": "food",
+  "type": "kun",
+  "hint": "kun compound: 食べ (tabe) + 物 (mono).",
+  "compounds": [
+   "食べる (taberu) — to eat",
+   "飲み物 (nomimono) — drink"
+  ],
+  "distractors": [
+   "しょくもの",
+   "たべぶつ",
+   "たべもつ"
+  ]
+ },
+ {
+  "kanji": "飲み物",
+  "level": "N5",
+  "sentence": "冷たい[[飲み物]]がほしい。",
+  "reading": "のみもの",
+  "meaning": "drink, beverage",
+  "type": "kun",
+  "hint": "kun compound: 飲み (nomi) + 物 (mono).",
+  "compounds": [
+   "飲む (nomu) — to drink",
+   "食べ物 (tabemono) — food"
+  ],
+  "distractors": [
+   "いんもの",
+   "のみぶつ",
+   "のむもの"
+  ]
+ },
+ {
+  "kanji": "名前",
+  "level": "N5",
+  "sentence": "ここに[[名前]]を書く。",
+  "reading": "なまえ",
+  "meaning": "name",
+  "type": "kun",
+  "hint": "kun: 名 (na) + 前 (mae) — なまえ.",
+  "compounds": [
+   "前 (mae) — front",
+   "名札 (nafuda) — name tag"
+  ],
+  "distractors": [
+   "めいぜん",
+   "なまい",
+   "なぜん"
+  ]
+ },
+ {
+  "kanji": "手紙",
+  "level": "N5",
+  "sentence": "友だちに[[手紙]]を書く。",
+  "reading": "てがみ",
+  "meaning": "letter",
+  "type": "kun",
+  "hint": "kun: 手 (te) + 紙 (kami→gami) — 紙 voices to がみ.",
+  "compounds": [
+   "手 (te) — hand",
+   "紙 (kami) — paper"
+  ],
+  "distractors": [
+   "てかみ",
+   "しゅし",
+   "てし"
+  ]
+ },
+ {
+  "kanji": "言葉",
+  "level": "N5",
+  "sentence": "やさしい[[言葉]]を使う。",
+  "reading": "ことば",
+  "meaning": "word, language",
+  "type": "kun",
+  "hint": "kun: 言 (koto) + 葉 (ha→ba) — 葉 voices to ば.",
+  "compounds": [
+   "言う (iu) — to say",
+   "話し言葉 (hanashikotoba) — spoken language"
+  ],
+  "distractors": [
+   "げんば",
+   "ことは",
+   "ごんば"
+  ]
+ },
+ {
+  "kanji": "答え",
+  "level": "N5",
+  "sentence": "その[[答え]]は正しい。",
+  "reading": "こたえ",
+  "meaning": "answer",
+  "type": "kun",
+  "hint": "kun reading of 答 with okurigana え — こたえ.",
+  "compounds": [
+   "答える (kotaeru) — to answer",
+   "解答 (kaitou) — answer"
+  ],
+  "distractors": [
+   "こだえ",
+   "とうえ",
+   "こたい"
+  ]
+ },
+ {
+  "kanji": "近く",
+  "level": "N5",
+  "sentence": "駅の[[近く]]に住む。",
+  "reading": "ちかく",
+  "meaning": "nearby",
+  "type": "kun",
+  "hint": "kun reading of 近 with okurigana く — ちかく.",
+  "compounds": [
+   "近所 (kinjo) — neighborhood",
+   "近い (chikai) — near"
+  ],
+  "distractors": [
+   "きんく",
+   "ちがく",
+   "ちかい"
+  ]
+ },
+ {
+  "kanji": "力",
+  "level": "N5",
+  "sentence": "彼は[[力]]が強い。",
+  "reading": "ちから",
+  "meaning": "power, strength",
+  "type": "kun",
+  "hint": "kun reading of 力 — ちから (on-reading is りょく).",
+  "compounds": [
+   "力持ち (chikaramochi) — strong person",
+   "全力 (zenryoku) — full power"
+  ],
+  "distractors": [
+   "りょく",
+   "ちがら",
+   "ちかり"
+  ]
+ },
+ {
+  "kanji": "空",
+  "level": "N5",
+  "sentence": "[[空]]が青い。",
+  "reading": "そら",
+  "meaning": "sky",
+  "type": "kun",
+  "hint": "kun reading of 空 — そら (on-reading is くう).",
+  "compounds": [
+   "青空 (aozora) — blue sky",
+   "空気 (kuuki) — air"
+  ],
+  "distractors": [
+   "くう",
+   "から",
+   "そろ"
+  ]
+ },
+ {
+  "kanji": "説明",
+  "level": "N4",
+  "sentence": "使い方を[[説明]]する。",
+  "reading": "せつめい",
+  "meaning": "explanation",
+  "type": "on",
+  "hint": "説 (setsu) + 明 (mei) — 明 is めい here, not あかるい.",
+  "compounds": [
+   "小説 (shousetsu) — novel",
+   "明日 (myounichi) — tomorrow"
+  ],
+  "distractors": [
+   "せつみょう",
+   "せつめ",
+   "せっけい"
+  ]
+ },
+ {
+  "kanji": "経験",
+  "level": "N4",
+  "sentence": "貴重な[[経験]]をした。",
+  "reading": "けいけん",
+  "meaning": "experience",
+  "type": "on",
+  "hint": "経 (kei) + 験 (ken) — けいけん.",
+  "compounds": [
+   "経済 (keizai) — economy",
+   "試験 (shiken) — exam"
+  ],
+  "distractors": [
+   "きょうけん",
+   "けいげん",
+   "けいこう"
+  ]
+ },
+ {
+  "kanji": "生活",
+  "level": "N4",
+  "sentence": "都会の[[生活]]は忙しい。",
+  "reading": "せいかつ",
+  "meaning": "daily life",
+  "type": "on",
+  "hint": "生 (sei) + 活 (katsu) — 生 is せい here.",
+  "compounds": [
+   "活動 (katsudou) — activity",
+   "学生 (gakusei) — student"
+  ],
+  "distractors": [
+   "せいかち",
+   "しょうかつ",
+   "せいわつ"
+  ]
+ },
+ {
+  "kanji": "文化",
+  "level": "N4",
+  "sentence": "日本の[[文化]]に興味がある。",
+  "reading": "ぶんか",
+  "meaning": "culture",
+  "type": "on",
+  "hint": "文 (bun) + 化 (ka) — ぶんか.",
+  "compounds": [
+   "文章 (bunshou) — sentence",
+   "変化 (henka) — change"
+  ],
+  "distractors": [
+   "もんか",
+   "ぶんげ",
+   "ぶんばけ"
+  ]
+ },
+ {
+  "kanji": "経済",
+  "level": "N4",
+  "sentence": "日本の[[経済]]を学ぶ。",
+  "reading": "けいざい",
+  "meaning": "economy",
+  "type": "on",
+  "hint": "経 (kei) + 済 (zai) — 済 voices to ざい.",
+  "compounds": [
+   "経営 (keiei) — management",
+   "返済 (hensai) — repayment"
+  ],
+  "distractors": [
+   "けいさい",
+   "きょうざい",
+   "けざい"
+  ]
+ },
+ {
+  "kanji": "政治",
+  "level": "N4",
+  "sentence": "[[政治]]のニュースを見る。",
+  "reading": "せいじ",
+  "meaning": "politics",
+  "type": "on",
+  "hint": "政 (sei) + 治 (ji) — 治 is じ here, not なおす.",
+  "compounds": [
+   "政府 (seifu) — government",
+   "治療 (chiryou) — treatment"
+  ],
+  "distractors": [
+   "せいち",
+   "しょうじ",
+   "せいじゃ"
+  ]
+ },
+ {
+  "kanji": "社会",
+  "level": "N4",
+  "sentence": "[[社会]]に出て働く。",
+  "reading": "しゃかい",
+  "meaning": "society",
+  "type": "on",
+  "hint": "社 (sha) + 会 (kai) — しゃかい, the reverse of かいしゃ.",
+  "compounds": [
+   "会社 (kaisha) — company",
+   "社員 (shain) — employee"
+  ],
+  "distractors": [
+   "しゃえ",
+   "かいしゃ",
+   "しゃがい"
+  ]
+ },
+ {
+  "kanji": "教育",
+  "level": "N4",
+  "sentence": "子どもの[[教育]]は大切だ。",
+  "reading": "きょういく",
+  "meaning": "education",
+  "type": "on",
+  "hint": "教 (kyou) + 育 (iku) — 育 is いく here, not そだてる.",
+  "compounds": [
+   "教室 (kyoushitsu) — classroom",
+   "体育 (taiiku) — physical education"
+  ],
+  "distractors": [
+   "きょうそだ",
+   "きょいく",
+   "こういく"
+  ]
+ },
+ {
+  "kanji": "研究",
+  "level": "N4",
+  "sentence": "大学で[[研究]]を続ける。",
+  "reading": "けんきゅう",
+  "meaning": "research",
+  "type": "on",
+  "hint": "研 (ken) + 究 (kyuu) — けんきゅう.",
+  "compounds": [
+   "研修 (kenshuu) — training",
+   "追究 (tsuikyuu) — investigation"
+  ],
+  "distractors": [
+   "けんきゅ",
+   "けんぐう",
+   "げんきゅう"
+  ]
+ },
+ {
+  "kanji": "運動",
+  "level": "N4",
+  "sentence": "毎朝[[運動]]をする。",
+  "reading": "うんどう",
+  "meaning": "exercise, movement",
+  "type": "on",
+  "hint": "運 (un) + 動 (dou) — 動 is どう here, not うごく.",
+  "compounds": [
+   "運転 (unten) — driving",
+   "動物 (doubutsu) — animal"
+  ],
+  "distractors": [
+   "うんうご",
+   "うんどく",
+   "うんとう"
+  ]
+ },
+ {
+  "kanji": "準備",
+  "level": "N4",
+  "sentence": "旅行の[[準備]]をする。",
+  "reading": "じゅんび",
+  "meaning": "preparation",
+  "type": "on",
+  "hint": "準 (jun) + 備 (bi) — じゅんび.",
+  "compounds": [
+   "準決勝 (junkesshou) — semifinal",
+   "設備 (setsubi) — facilities"
+  ],
+  "distractors": [
+   "じゅんぴ",
+   "しゅんび",
+   "じゅんそなえ"
+  ]
+ },
+ {
+  "kanji": "会議",
+  "level": "N4",
+  "sentence": "午後に[[会議]]がある。",
+  "reading": "かいぎ",
+  "meaning": "meeting, conference",
+  "type": "on",
+  "hint": "会 (kai) + 議 (gi) — かいぎ.",
+  "compounds": [
+   "議論 (giron) — debate",
+   "国会 (kokkai) — parliament"
+  ],
+  "distractors": [
+   "かいき",
+   "えぎ",
+   "かいぎん"
+  ]
+ },
+ {
+  "kanji": "約束",
+  "level": "N4",
+  "sentence": "友だちと[[約束]]する。",
+  "reading": "やくそく",
+  "meaning": "promise",
+  "type": "on",
+  "hint": "約 (yaku) + 束 (soku) — 束 is そく here, not たば.",
+  "compounds": [
+   "予約 (yoyaku) — reservation",
+   "結束 (kessoku) — unity"
+  ],
+  "distractors": [
+   "やくたば",
+   "やくぞく",
+   "やそく"
+  ]
+ },
+ {
+  "kanji": "計画",
+  "level": "N4",
+  "sentence": "夏の[[計画]]を立てる。",
+  "reading": "けいかく",
+  "meaning": "plan",
+  "type": "on",
+  "hint": "計 (kei) + 画 (kaku) — 画 is かく here, not が.",
+  "compounds": [
+   "計算 (keisan) — calculation",
+   "画家 (gaka) — painter"
+  ],
+  "distractors": [
+   "けいが",
+   "けいかい",
+   "けかく"
+  ]
+ },
+ {
+  "kanji": "経営",
+  "level": "N4",
+  "sentence": "店を[[経営]]している。",
+  "reading": "けいえい",
+  "meaning": "management",
+  "type": "on",
+  "hint": "経 (kei) + 営 (ei) — けいえい.",
+  "compounds": [
+   "経験 (keiken) — experience",
+   "営業 (eigyou) — sales"
+  ],
+  "distractors": [
+   "きょうえい",
+   "けいねい",
+   "けえい"
+  ]
+ },
+ {
+  "kanji": "関係",
+  "level": "N4",
+  "sentence": "二人の[[関係]]は良い。",
+  "reading": "かんけい",
+  "meaning": "relationship",
+  "type": "on",
+  "hint": "関 (kan) + 係 (kei) — 係 is けい here, not かかり.",
+  "compounds": [
+   "関心 (kanshin) — interest",
+   "係員 (kakariin) — attendant"
+  ],
+  "distractors": [
+   "かんかかり",
+   "かんけ",
+   "かんきょう"
+  ]
+ },
+ {
+  "kanji": "説得",
+  "level": "N4",
+  "sentence": "父を[[説得]]した。",
+  "reading": "せっとく",
+  "meaning": "persuasion",
+  "type": "on",
+  "hint": "説 (setsu→set) + 得 (toku) — small っ before とく.",
+  "compounds": [
+   "説明 (setsumei) — explanation",
+   "得意 (tokui) — strong point"
+  ],
+  "distractors": [
+   "せつとく",
+   "せっとう",
+   "せつえ"
+  ]
+ },
+ {
+  "kanji": "予定",
+  "level": "N4",
+  "sentence": "来週の[[予定]]を確認する。",
+  "reading": "よてい",
+  "meaning": "schedule, plan",
+  "type": "on",
+  "hint": "予 (yo) + 定 (tei) — 定 is てい here, not さだめる.",
+  "compounds": [
+   "予約 (yoyaku) — reservation",
+   "決定 (kettei) — decision"
+  ],
+  "distractors": [
+   "よじょう",
+   "よてえ",
+   "ようてい"
+  ]
+ },
+ {
+  "kanji": "招待",
+  "level": "N4",
+  "sentence": "パーティーに[[招待]]する。",
+  "reading": "しょうたい",
+  "meaning": "invitation",
+  "type": "on",
+  "hint": "招 (shou) + 待 (tai) — 待 is たい here, not まつ.",
+  "compounds": [
+   "招待状 (shoutaijou) — invitation card",
+   "待機 (taiki) — standby"
+  ],
+  "distractors": [
+   "しょうまち",
+   "しょたい",
+   "しょうだい"
+  ]
+ },
+ {
+  "kanji": "案内",
+  "level": "N4",
+  "sentence": "会場まで[[案内]]する。",
+  "reading": "あんない",
+  "meaning": "guidance",
+  "type": "on",
+  "hint": "案 (an) + 内 (nai) — 内 is ない here, not うち.",
+  "compounds": [
+   "案 (an) — idea",
+   "内容 (naiyou) — content"
+  ],
+  "distractors": [
+   "あんうち",
+   "あんだい",
+   "あんね"
+  ]
+ },
+ {
+  "kanji": "利用",
+  "level": "N4",
+  "sentence": "図書館を[[利用]]する。",
+  "reading": "りよう",
+  "meaning": "use, utilization",
+  "type": "on",
+  "hint": "利 (ri) + 用 (you) — りよう.",
+  "compounds": [
+   "便利 (benri) — convenient",
+   "用事 (youji) — errand"
+  ],
+  "distractors": [
+   "りゆう",
+   "りよ",
+   "りうん"
+  ]
+ },
+ {
+  "kanji": "注意",
+  "level": "N4",
+  "sentence": "車に[[注意]]しなさい。",
+  "reading": "ちゅうい",
+  "meaning": "caution, attention",
+  "type": "on",
+  "hint": "注 (chuu) + 意 (i) — long ちゅう then い.",
+  "compounds": [
+   "注文 (chuumon) — order",
+   "意見 (iken) — opinion"
+  ],
+  "distractors": [
+   "ちゅい",
+   "ちゅうおき",
+   "しゅうい"
+  ]
+ },
+ {
+  "kanji": "興味",
+  "level": "N4",
+  "sentence": "音楽に[[興味]]がある。",
+  "reading": "きょうみ",
+  "meaning": "interest",
+  "type": "on",
+  "hint": "興 (kyou) + 味 (mi) — 味 is み here, not あじ.",
+  "compounds": [
+   "興奮 (koufun) — excitement",
+   "意味 (imi) — meaning"
+  ],
+  "distractors": [
+   "こうみ",
+   "きょうあじ",
+   "きょみ"
+  ]
+ },
+ {
+  "kanji": "発音",
+  "level": "N4",
+  "sentence": "英語の[[発音]]を直す。",
+  "reading": "はつおん",
+  "meaning": "pronunciation",
+  "type": "on",
+  "hint": "発 (hatsu) + 音 (on) — 音 is おん here, not おと.",
+  "compounds": [
+   "発表 (happyou) — presentation",
+   "音声 (onsei) — voice"
+  ],
+  "distractors": [
+   "はつおと",
+   "はついん",
+   "ほつおん"
+  ]
+ },
+ {
+  "kanji": "自由",
+  "level": "N4",
+  "sentence": "[[自由]]な時間がほしい。",
+  "reading": "じゆう",
+  "meaning": "freedom",
+  "type": "on",
+  "hint": "自 (ji) + 由 (yuu) — じゆう (じ short, ゆう long).",
+  "compounds": [
+   "自分 (jibun) — oneself",
+   "理由 (riyuu) — reason"
+  ],
+  "distractors": [
+   "じゅう",
+   "じよう",
+   "しゆう"
+  ]
+ },
+ {
+  "kanji": "特別",
+  "level": "N4",
+  "sentence": "今日は[[特別]]な日だ。",
+  "reading": "とくべつ",
+  "meaning": "special",
+  "type": "on",
+  "hint": "特 (toku) + 別 (betsu) — 別 voices to べつ.",
+  "compounds": [
+   "特急 (tokkyuu) — express",
+   "別々 (betsubetsu) — separately"
+  ],
+  "distractors": [
+   "とくべち",
+   "どくべつ",
+   "とくわか"
+  ]
+ },
+ {
+  "kanji": "必要",
+  "level": "N4",
+  "sentence": "パスポートが[[必要]]だ。",
+  "reading": "ひつよう",
+  "meaning": "necessary",
+  "type": "on",
+  "hint": "必 (hitsu) + 要 (you) — 要 is よう here.",
+  "compounds": [
+   "必死 (hisshi) — desperate",
+   "重要 (juuyou) — important"
+  ],
+  "distractors": [
+   "ひちよう",
+   "ひつよ",
+   "ひついる"
+  ]
+ },
+ {
+  "kanji": "残念",
+  "level": "N4",
+  "sentence": "負けて[[残念]]だ。",
+  "reading": "ざんねん",
+  "meaning": "regrettable",
+  "type": "on",
+  "hint": "残 (zan) + 念 (nen) — 残 is ざん here, not のこる.",
+  "compounds": [
+   "残業 (zangyou) — overtime",
+   "記念 (kinen) — commemoration"
+  ],
+  "distractors": [
+   "ざんね",
+   "のこねん",
+   "さんねん"
+  ]
+ },
+ {
+  "kanji": "都合",
+  "level": "N4",
+  "sentence": "明日は[[都合]]が悪い。",
+  "reading": "つごう",
+  "meaning": "convenience, circumstances",
+  "type": "on",
+  "hint": "都 (tsu) + 合 (gou) — 合 voices to ごう here.",
+  "compounds": [
+   "都市 (toshi) — city",
+   "合計 (goukei) — total"
+  ],
+  "distractors": [
+   "とごう",
+   "つあい",
+   "つこう"
+  ]
+ },
+ {
+  "kanji": "産業",
+  "level": "N4",
+  "sentence": "自動車[[産業]]が盛んだ。",
+  "reading": "さんぎょう",
+  "meaning": "industry",
+  "type": "on",
+  "hint": "産 (san) + 業 (gyou) — 業 is ぎょう here.",
+  "compounds": [
+   "生産 (seisan) — production",
+   "工業 (kougyou) — manufacturing"
+  ],
+  "distractors": [
+   "さんごう",
+   "さんぎょ",
+   "さんわざ"
+  ]
+ },
+ {
+  "kanji": "変化",
+  "level": "N4",
+  "sentence": "季節の[[変化]]を感じる。",
+  "reading": "へんか",
+  "meaning": "change",
+  "type": "on",
+  "hint": "変 (hen) + 化 (ka) — へんか.",
+  "compounds": [
+   "変更 (henkou) — alteration",
+   "文化 (bunka) — culture"
+  ],
+  "distractors": [
+   "へんばけ",
+   "へんげ",
+   "べんか"
+  ]
+ },
+ {
+  "kanji": "首都",
+  "level": "N4",
+  "sentence": "東京は日本の[[首都]]だ。",
+  "reading": "しゅと",
+  "meaning": "capital city",
+  "type": "on",
+  "hint": "首 (shu) + 都 (to) — 首 is しゅ here, not くび.",
+  "compounds": [
+   "首相 (shushou) — prime minister",
+   "都市 (toshi) — city"
+  ],
+  "distractors": [
+   "くびと",
+   "しゅうと",
+   "しゅつ"
+  ]
+ },
+ {
+  "kanji": "空港",
+  "level": "N4",
+  "sentence": "[[空港]]で友だちを待つ。",
+  "reading": "くうこう",
+  "meaning": "airport",
+  "type": "on",
+  "hint": "空 (kuu) + 港 (kou) — 空 is くう here, not そら.",
+  "compounds": [
+   "空気 (kuuki) — air",
+   "港町 (minatomachi) — port town"
+  ],
+  "distractors": [
+   "そらこう",
+   "くうみなと",
+   "くこう"
+  ]
+ },
+ {
+  "kanji": "港",
+  "level": "N4",
+  "sentence": "船が[[港]]に着く。",
+  "reading": "みなと",
+  "meaning": "harbor, port",
+  "type": "kun",
+  "hint": "kun reading of 港 — みなと (on-reading is こう).",
+  "compounds": [
+   "漁港 (gyokou) — fishing port",
+   "空港 (kuukou) — airport"
+  ],
+  "distractors": [
+   "こう",
+   "みなど",
+   "みずと"
+  ]
+ },
+ {
+  "kanji": "経済的",
+  "level": "N4",
+  "sentence": "とても[[経済的]]な車だ。",
+  "reading": "けいざいてき",
+  "meaning": "economical",
+  "type": "on",
+  "hint": "経済 (keizai) + 的 (teki) — suffix 的.",
+  "compounds": [
+   "経済 (keizai) — economy",
+   "目的 (mokuteki) — purpose"
+  ],
+  "distractors": [
+   "けいざいまと",
+   "きょうざいてき",
+   "けいさいてき"
+  ]
+ },
+ {
+  "kanji": "字",
+  "level": "N4",
+  "sentence": "きれいな[[字]]を書く。",
+  "reading": "じ",
+  "meaning": "character, letter",
+  "type": "on",
+  "hint": "on-reading of 字 — じ.",
+  "compounds": [
+   "漢字 (kanji) — Chinese character",
+   "文字 (moji) — letter"
+  ],
+  "distractors": [
+   "し",
+   "あざ",
+   "じい"
+  ]
+ },
+ {
+  "kanji": "橋",
+  "level": "N4",
+  "sentence": "川に[[橋]]をかける。",
+  "reading": "はし",
+  "meaning": "bridge",
+  "type": "kun",
+  "hint": "kun reading of 橋 — はし (on-reading is きょう).",
+  "compounds": [
+   "歩道橋 (hodoukyou) — footbridge",
+   "石橋 (ishibashi) — stone bridge"
+  ],
+  "distractors": [
+   "きょう",
+   "はじ",
+   "ばし"
+  ]
+ },
+ {
+  "kanji": "美しい",
+  "level": "N4",
+  "sentence": "[[美しい]]景色を見る。",
+  "reading": "うつくしい",
+  "meaning": "beautiful",
+  "type": "kun",
+  "hint": "kun reading of 美 with okurigana しい — うつくしい.",
+  "compounds": [
+   "美人 (bijin) — beautiful person",
+   "美術 (bijutsu) — fine art"
+  ],
+  "distractors": [
+   "びしい",
+   "うつしい",
+   "うるくしい"
+  ]
+ },
+ {
+  "kanji": "泳ぐ",
+  "level": "N4",
+  "sentence": "海で[[泳ぐ]]のが好きだ。",
+  "reading": "およぐ",
+  "meaning": "to swim",
+  "type": "kun",
+  "hint": "kun reading of 泳 with okurigana ぐ — およぐ.",
+  "compounds": [
+   "水泳 (suiei) — swimming",
+   "泳者 (eisha) — swimmer"
+  ],
+  "distractors": [
+   "えいぐ",
+   "およく",
+   "うよぐ"
+  ]
+ },
+ {
+  "kanji": "運ぶ",
+  "level": "N4",
+  "sentence": "荷物を[[運ぶ]]。",
+  "reading": "はこぶ",
+  "meaning": "to carry",
+  "type": "kun",
+  "hint": "kun reading of 運 with okurigana ぶ — はこぶ (on is うん).",
+  "compounds": [
+   "運動 (undou) — exercise",
+   "運転 (unten) — driving"
+  ],
+  "distractors": [
+   "うんぶ",
+   "はこふ",
+   "はごぶ"
+  ]
+ },
+ {
+  "kanji": "笑う",
+  "level": "N4",
+  "sentence": "みんなで[[笑う]]。",
+  "reading": "わらう",
+  "meaning": "to laugh",
+  "type": "kun",
+  "hint": "kun reading of 笑 with okurigana う — わらう.",
+  "compounds": [
+   "笑顔 (egao) — smile",
+   "苦笑 (kushou) — bitter smile"
+  ],
+  "distractors": [
+   "しょうう",
+   "わろう",
+   "はらう"
+  ]
+ },
+ {
+  "kanji": "急ぐ",
+  "level": "N4",
+  "sentence": "駅まで[[急ぐ]]。",
+  "reading": "いそぐ",
+  "meaning": "to hurry",
+  "type": "kun",
+  "hint": "kun reading of 急 with okurigana ぐ — いそぐ (on is きゅう).",
+  "compounds": [
+   "急行 (kyuukou) — express",
+   "特急 (tokkyuu) — limited express"
+  ],
+  "distractors": [
+   "きゅうぐ",
+   "いそく",
+   "おそぐ"
+  ]
+ },
+ {
+  "kanji": "育てる",
+  "level": "N4",
+  "sentence": "花を[[育てる]]。",
+  "reading": "そだてる",
+  "meaning": "to raise, to grow",
+  "type": "kun",
+  "hint": "kun reading of 育 with okurigana てる — そだてる (on is いく).",
+  "compounds": [
+   "教育 (kyouiku) — education",
+   "育児 (ikuji) — childcare"
+  ],
+  "distractors": [
+   "いくてる",
+   "そたてる",
+   "そだける"
+  ]
+ },
+ {
+  "kanji": "調べる",
+  "level": "N4",
+  "sentence": "言葉の意味を[[調べる]]。",
+  "reading": "しらべる",
+  "meaning": "to investigate",
+  "type": "kun",
+  "hint": "kun reading of 調 with okurigana べる — しらべる (on is ちょう).",
+  "compounds": [
+   "調子 (choushi) — condition",
+   "調査 (chousa) — survey"
+  ],
+  "distractors": [
+   "ちょうべる",
+   "しらへる",
+   "しらべ"
+  ]
+ },
+ {
+  "kanji": "選ぶ",
+  "level": "N4",
+  "sentence": "好きな色を[[選ぶ]]。",
+  "reading": "えらぶ",
+  "meaning": "to choose",
+  "type": "kun",
+  "hint": "kun reading of 選 with okurigana ぶ — えらぶ (on is せん).",
+  "compounds": [
+   "選挙 (senkyo) — election",
+   "選手 (senshu) — athlete"
+  ],
+  "distractors": [
+   "せんぶ",
+   "えらふ",
+   "えらむ"
+  ]
+ },
+ {
+  "kanji": "集める",
+  "level": "N4",
+  "sentence": "切手を[[集める]]。",
+  "reading": "あつめる",
+  "meaning": "to collect",
+  "type": "kun",
+  "hint": "kun reading of 集 with okurigana める — あつめる (on is しゅう).",
+  "compounds": [
+   "集合 (shuugou) — gathering",
+   "収集 (shuushuu) — collection"
+  ],
+  "distractors": [
+   "しゅうめる",
+   "あづめる",
+   "あつまる"
+  ]
+ },
+ {
+  "kanji": "答える",
+  "level": "N4",
+  "sentence": "質問に[[答える]]。",
+  "reading": "こたえる",
+  "meaning": "to answer",
+  "type": "kun",
+  "hint": "kun reading of 答 with okurigana える — こたえる (on is とう).",
+  "compounds": [
+   "解答 (kaitou) — answer",
+   "答案 (touan) — answer sheet"
+  ],
+  "distractors": [
+   "とうえる",
+   "こだえる",
+   "こたる"
+  ]
+ },
+ {
+  "kanji": "考える",
+  "level": "N4",
+  "sentence": "将来について[[考える]]。",
+  "reading": "かんがえる",
+  "meaning": "to think",
+  "type": "kun",
+  "hint": "kun reading of 考 with okurigana える — かんがえる (on is こう).",
+  "compounds": [
+   "考え (kangae) — idea",
+   "参考 (sankou) — reference"
+  ],
+  "distractors": [
+   "こうえる",
+   "かんかえる",
+   "かんがる"
+  ]
+ },
+ {
+  "kanji": "卒業",
+  "level": "N4",
+  "sentence": "三月に大学を[[卒業]]する。",
+  "reading": "そつぎょう",
+  "meaning": "graduation",
+  "type": "on",
+  "hint": "卒 (sotsu) + 業 (gyou) — 業 is ぎょう here.",
+  "compounds": [
+   "卒業式 (sotsugyoushiki) — graduation ceremony",
+   "授業 (jugyou) — class"
+  ],
+  "distractors": [
+   "そつごう",
+   "そつぎょ",
+   "しゅつぎょう"
+  ]
+ },
+ {
+  "kanji": "予約",
+  "level": "N4",
+  "sentence": "ホテルを[[予約]]する。",
+  "reading": "よやく",
+  "meaning": "reservation",
+  "type": "on",
+  "hint": "予 (yo) + 約 (yaku) — よやく.",
+  "compounds": [
+   "予定 (yotei) — schedule",
+   "約束 (yakusoku) — promise"
+  ],
+  "distractors": [
+   "よよく",
+   "ようやく",
+   "よやっく"
+  ]
+ },
+ {
+  "kanji": "影響",
+  "level": "N3",
+  "sentence": "天気が仕事に[[影響]]する。",
+  "reading": "えいきょう",
+  "meaning": "influence, effect",
+  "type": "on",
+  "hint": "影 (ei) + 響 (kyou) — long えい then きょう.",
+  "compounds": [
+   "影 (kage) — shadow",
+   "音響 (onkyou) — acoustics"
+  ],
+  "distractors": [
+   "えいごう",
+   "かげきょう",
+   "えきょう"
+  ]
+ },
+ {
+  "kanji": "経験",
+  "level": "N3",
+  "sentence": "海外での[[経験]]が役立つ。",
+  "reading": "けいけん",
+  "meaning": "experience",
+  "type": "on",
+  "hint": "経 (kei) + 験 (ken) — けいけん.",
+  "compounds": [
+   "体験 (taiken) — hands-on experience",
+   "実験 (jikken) — experiment"
+  ],
+  "distractors": [
+   "けいげん",
+   "きょうけん",
+   "けんけい"
+  ]
+ },
+ {
+  "kanji": "解決",
+  "level": "N3",
+  "sentence": "問題を[[解決]]する。",
+  "reading": "かいけつ",
+  "meaning": "resolution, solution",
+  "type": "on",
+  "hint": "解 (kai) + 決 (ketsu) — 決 is けつ here, not きめる.",
+  "compounds": [
+   "解答 (kaitou) — answer",
+   "決定 (kettei) — decision"
+  ],
+  "distractors": [
+   "かいき",
+   "げけつ",
+   "かいけっ"
+  ]
+ },
+ {
+  "kanji": "判断",
+  "level": "N3",
+  "sentence": "冷静に[[判断]]する。",
+  "reading": "はんだん",
+  "meaning": "judgment",
+  "type": "on",
+  "hint": "判 (han) + 断 (dan) — 断 voices to だん here.",
+  "compounds": [
+   "判定 (hantei) — decision",
+   "決断 (ketsudan) — resolve"
+  ],
+  "distractors": [
+   "はんたん",
+   "ばんだん",
+   "はんぎり"
+  ]
+ },
+ {
+  "kanji": "実際",
+  "level": "N3",
+  "sentence": "[[実際]]に会って話す。",
+  "reading": "じっさい",
+  "meaning": "actuality, in fact",
+  "type": "on",
+  "hint": "実 (jitsu→jis) + 際 (sai) — small っ before さい.",
+  "compounds": [
+   "実力 (jitsuryoku) — real ability",
+   "国際 (kokusai) — international"
+  ],
+  "distractors": [
+   "じつさい",
+   "じっざい",
+   "しっさい"
+  ]
+ },
+ {
+  "kanji": "表現",
+  "level": "N3",
+  "sentence": "気持ちを言葉で[[表現]]する。",
+  "reading": "ひょうげん",
+  "meaning": "expression",
+  "type": "on",
+  "hint": "表 (hyou) + 現 (gen) — 表 is ひょう, not おもて.",
+  "compounds": [
+   "表面 (hyoumen) — surface",
+   "現在 (genzai) — present"
+  ],
+  "distractors": [
+   "ひょげん",
+   "おもてげん",
+   "ひょうけん"
+  ]
+ },
+ {
+  "kanji": "評価",
+  "level": "N3",
+  "sentence": "作品を高く[[評価]]する。",
+  "reading": "ひょうか",
+  "meaning": "evaluation",
+  "type": "on",
+  "hint": "評 (hyou) + 価 (ka) — ひょうか.",
+  "compounds": [
+   "評判 (hyouban) — reputation",
+   "価格 (kakaku) — price"
+  ],
+  "distractors": [
+   "ひょうけ",
+   "ひょか",
+   "びょうか"
+  ]
+ },
+ {
+  "kanji": "状況",
+  "level": "N3",
+  "sentence": "現在の[[状況]]を説明する。",
+  "reading": "じょうきょう",
+  "meaning": "situation",
+  "type": "on",
+  "hint": "状 (jou) + 況 (kyou) — two long vowels.",
+  "compounds": [
+   "状態 (joutai) — condition",
+   "実況 (jikkyou) — live coverage"
+  ],
+  "distractors": [
+   "じょうきょ",
+   "じょきょう",
+   "しょうきょう"
+  ]
+ },
+ {
+  "kanji": "傾向",
+  "level": "N3",
+  "sentence": "値段が上がる[[傾向]]だ。",
+  "reading": "けいこう",
+  "meaning": "tendency, trend",
+  "type": "on",
+  "hint": "傾 (kei) + 向 (kou) — 向 is こう here, not むく.",
+  "compounds": [
+   "傾斜 (keisha) — slope",
+   "方向 (houkou) — direction"
+  ],
+  "distractors": [
+   "けいむき",
+   "きょうこう",
+   "けいごう"
+  ]
+ },
+ {
+  "kanji": "現象",
+  "level": "N3",
+  "sentence": "不思議な[[現象]]が起きた。",
+  "reading": "げんしょう",
+  "meaning": "phenomenon",
+  "type": "on",
+  "hint": "現 (gen) + 象 (shou) — 象 is しょう here, not ぞう.",
+  "compounds": [
+   "現実 (genjitsu) — reality",
+   "対象 (taishou) — target"
+  ],
+  "distractors": [
+   "げんぞう",
+   "げんしょ",
+   "けんしょう"
+  ]
+ },
+ {
+  "kanji": "効果",
+  "level": "N3",
+  "sentence": "薬の[[効果]]が出る。",
+  "reading": "こうか",
+  "meaning": "effect",
+  "type": "on",
+  "hint": "効 (kou) + 果 (ka) — 果 is か here, not はたす.",
+  "compounds": [
+   "有効 (yuukou) — valid",
+   "結果 (kekka) — result"
+  ],
+  "distractors": [
+   "こうはた",
+   "きょうか",
+   "こうが"
+  ]
+ },
+ {
+  "kanji": "課題",
+  "level": "N3",
+  "sentence": "難しい[[課題]]に取り組む。",
+  "reading": "かだい",
+  "meaning": "task, assignment",
+  "type": "on",
+  "hint": "課 (ka) + 題 (dai) — 題 voices to だい.",
+  "compounds": [
+   "課長 (kachou) — section chief",
+   "問題 (mondai) — problem"
+  ],
+  "distractors": [
+   "かたい",
+   "けだい",
+   "かでい"
+  ]
+ },
+ {
+  "kanji": "満足",
+  "level": "N3",
+  "sentence": "結果に[[満足]]する。",
+  "reading": "まんぞく",
+  "meaning": "satisfaction",
+  "type": "on",
+  "hint": "満 (man) + 足 (zoku) — 足 voices to ぞく here, not あし.",
+  "compounds": [
+   "満員 (manin) — full house",
+   "不足 (fusoku) — shortage"
+  ],
+  "distractors": [
+   "まんそく",
+   "まんあし",
+   "ばんぞく"
+  ]
+ },
+ {
+  "kanji": "苦労",
+  "level": "N3",
+  "sentence": "彼は[[苦労]]して成功した。",
+  "reading": "くろう",
+  "meaning": "hardship, toil",
+  "type": "on",
+  "hint": "苦 (ku) + 労 (rou) — 苦 is く here, not くるしい.",
+  "compounds": [
+   "苦手 (nigate) — weak point",
+   "労働 (roudou) — labor"
+  ],
+  "distractors": [
+   "くるろう",
+   "ころう",
+   "くろ"
+  ]
+ },
+ {
+  "kanji": "許可",
+  "level": "N3",
+  "sentence": "外出の[[許可]]をもらう。",
+  "reading": "きょか",
+  "meaning": "permission",
+  "type": "on",
+  "hint": "許 (kyo) + 可 (ka) — きょか (both short).",
+  "compounds": [
+   "許容 (kyoyou) — tolerance",
+   "可能 (kanou) — possible"
+  ],
+  "distractors": [
+   "きょうか",
+   "ゆるか",
+   "きょが"
+  ]
+ },
+ {
+  "kanji": "募集",
+  "level": "N3",
+  "sentence": "会員を[[募集]]する。",
+  "reading": "ぼしゅう",
+  "meaning": "recruitment",
+  "type": "on",
+  "hint": "募 (bo) + 集 (shuu) — 集 is しゅう here, not あつめる.",
+  "compounds": [
+   "応募 (oubo) — application",
+   "集合 (shuugou) — gathering"
+  ],
+  "distractors": [
+   "ぼあつ",
+   "もしゅう",
+   "ぼしゅ"
+  ]
+ },
+ {
+  "kanji": "延期",
+  "level": "N3",
+  "sentence": "試合が[[延期]]になった。",
+  "reading": "えんき",
+  "meaning": "postponement",
+  "type": "on",
+  "hint": "延 (en) + 期 (ki) — 延 is えん here, not のびる.",
+  "compounds": [
+   "延長 (enchou) — extension",
+   "期間 (kikan) — period"
+  ],
+  "distractors": [
+   "のびき",
+   "えんご",
+   "えんぎ"
+  ]
+ },
+ {
+  "kanji": "節約",
+  "level": "N3",
+  "sentence": "電気を[[節約]]する。",
+  "reading": "せつやく",
+  "meaning": "economizing, saving",
+  "type": "on",
+  "hint": "節 (setsu) + 約 (yaku) — せつやく.",
+  "compounds": [
+   "季節 (kisetsu) — season",
+   "約束 (yakusoku) — promise"
+  ],
+  "distractors": [
+   "せつよう",
+   "せちやく",
+   "せつわく"
+  ]
+ },
+ {
+  "kanji": "混雑",
+  "level": "N3",
+  "sentence": "駅が[[混雑]]している。",
+  "reading": "こんざつ",
+  "meaning": "congestion",
+  "type": "on",
+  "hint": "混 (kon) + 雑 (zatsu) — 雑 is ざつ here.",
+  "compounds": [
+   "混合 (kongou) — mixture",
+   "雑誌 (zasshi) — magazine"
+  ],
+  "distractors": [
+   "こんぞう",
+   "こんざっ",
+   "こんまぜ"
+  ]
+ },
+ {
+  "kanji": "訪問",
+  "level": "N3",
+  "sentence": "お客様を[[訪問]]する。",
+  "reading": "ほうもん",
+  "meaning": "visit",
+  "type": "on",
+  "hint": "訪 (hou) + 問 (mon) — 訪 is ほう here, not たずねる.",
+  "compounds": [
+   "訪日 (hounichi) — visit to Japan",
+   "質問 (shitsumon) — question"
+  ],
+  "distractors": [
+   "ほうとい",
+   "ぼうもん",
+   "ほうぶん"
+  ]
+ },
+ {
+  "kanji": "確認",
+  "level": "N3",
+  "sentence": "予約を[[確認]]する。",
+  "reading": "かくにん",
+  "meaning": "confirmation",
+  "type": "on",
+  "hint": "確 (kaku) + 認 (nin) — 認 is にん here, not みとめる.",
+  "compounds": [
+   "確実 (kakujitsu) — certain",
+   "承認 (shounin) — approval"
+  ],
+  "distractors": [
+   "かくみとめ",
+   "がくにん",
+   "かくにん く"
+  ]
+ },
+ {
+  "kanji": "過去",
+  "level": "N3",
+  "sentence": "[[過去]]の失敗から学ぶ。",
+  "reading": "かこ",
+  "meaning": "the past",
+  "type": "on",
+  "hint": "過 (ka) + 去 (ko) — かこ (both short).",
+  "compounds": [
+   "過程 (katei) — process",
+   "去年 (kyonen) — last year"
+  ],
+  "distractors": [
+   "かこう",
+   "すぎこ",
+   "かきょ"
+  ]
+ },
+ {
+  "kanji": "移動",
+  "level": "N3",
+  "sentence": "バスで[[移動]]する。",
+  "reading": "いどう",
+  "meaning": "movement, transfer",
+  "type": "on",
+  "hint": "移 (i) + 動 (dou) — 移 is い here, not うつる.",
+  "compounds": [
+   "移民 (imin) — immigrant",
+   "運動 (undou) — exercise"
+  ],
+  "distractors": [
+   "いうご",
+   "いどく",
+   "うつどう"
+  ]
+ },
+ {
+  "kanji": "増加",
+  "level": "N3",
+  "sentence": "人口が[[増加]]する。",
+  "reading": "ぞうか",
+  "meaning": "increase",
+  "type": "on",
+  "hint": "増 (zou) + 加 (ka) — 増 is ぞう here, not ふえる.",
+  "compounds": [
+   "増減 (zougen) — fluctuation",
+   "参加 (sanka) — participation"
+  ],
+  "distractors": [
+   "ふえか",
+   "そうか",
+   "ぞうが"
+  ]
+ },
+ {
+  "kanji": "減少",
+  "level": "N3",
+  "sentence": "売上が[[減少]]した。",
+  "reading": "げんしょう",
+  "meaning": "decrease",
+  "type": "on",
+  "hint": "減 (gen) + 少 (shou) — 減 is げん here, not へる.",
+  "compounds": [
+   "減量 (genryou) — weight loss",
+   "少数 (shousuu) — minority"
+  ],
+  "distractors": [
+   "げんすく",
+   "へりしょう",
+   "けんしょう"
+  ]
+ },
+ {
+  "kanji": "比較",
+  "level": "N3",
+  "sentence": "二つの案を[[比較]]する。",
+  "reading": "ひかく",
+  "meaning": "comparison",
+  "type": "on",
+  "hint": "比 (hi) + 較 (kaku) — ひかく.",
+  "compounds": [
+   "比例 (hirei) — proportion",
+   "対比 (taihi) — contrast"
+  ],
+  "distractors": [
+   "ひこう",
+   "くらかく",
+   "びかく"
+  ]
+ },
+ {
+  "kanji": "想像",
+  "level": "N3",
+  "sentence": "未来を[[想像]]する。",
+  "reading": "そうぞう",
+  "meaning": "imagination",
+  "type": "on",
+  "hint": "想 (sou) + 像 (zou) — two long vowels そうぞう.",
+  "compounds": [
+   "予想 (yosou) — prediction",
+   "画像 (gazou) — image"
+  ],
+  "distractors": [
+   "そうそう",
+   "そうしょう",
+   "しょうぞう"
+  ]
+ },
+ {
+  "kanji": "記録",
+  "level": "N3",
+  "sentence": "世界[[記録]]を破る。",
+  "reading": "きろく",
+  "meaning": "record",
+  "type": "on",
+  "hint": "記 (ki) + 録 (roku) — きろく.",
+  "compounds": [
+   "記憶 (kioku) — memory",
+   "録音 (rokuon) — recording"
+  ],
+  "distractors": [
+   "きりょく",
+   "きろっく",
+   "ぎろく"
+  ]
+ },
+ {
+  "kanji": "参加",
+  "level": "N3",
+  "sentence": "会議に[[参加]]する。",
+  "reading": "さんか",
+  "meaning": "participation",
+  "type": "on",
+  "hint": "参 (san) + 加 (ka) — さんか.",
+  "compounds": [
+   "参考 (sankou) — reference",
+   "加入 (kanyuu) — joining"
+  ],
+  "distractors": [
+   "さんが",
+   "まいか",
+   "さんくわ"
+  ]
+ },
+ {
+  "kanji": "提案",
+  "level": "N3",
+  "sentence": "新しい案を[[提案]]する。",
+  "reading": "ていあん",
+  "meaning": "proposal",
+  "type": "on",
+  "hint": "提 (tei) + 案 (an) — ていあん.",
+  "compounds": [
+   "提出 (teishutsu) — submission",
+   "案内 (annai) — guidance"
+  ],
+  "distractors": [
+   "ていあ",
+   "だいあん",
+   "ていやす"
+  ]
+ },
+ {
+  "kanji": "報告",
+  "level": "N3",
+  "sentence": "結果を[[報告]]する。",
+  "reading": "ほうこく",
+  "meaning": "report",
+  "type": "on",
+  "hint": "報 (hou) + 告 (koku) — ほうこく.",
+  "compounds": [
+   "情報 (jouhou) — information",
+   "広告 (koukoku) — advertisement"
+  ],
+  "distractors": [
+   "ほうごく",
+   "ぼうこく",
+   "ほうつげ"
+  ]
+ },
+ {
+  "kanji": "命令",
+  "level": "N3",
+  "sentence": "上司の[[命令]]に従う。",
+  "reading": "めいれい",
+  "meaning": "order, command",
+  "type": "on",
+  "hint": "命 (mei) + 令 (rei) — めいれい.",
+  "compounds": [
+   "生命 (seimei) — life",
+   "法令 (hourei) — law"
+  ],
+  "distractors": [
+   "いのちれい",
+   "めいりょう",
+   "めれい"
+  ]
+ },
+ {
+  "kanji": "職場",
+  "level": "N3",
+  "sentence": "[[職場]]の雰囲気が良い。",
+  "reading": "しょくば",
+  "meaning": "workplace",
+  "type": "on",
+  "hint": "職 (shoku) + 場 (ba) — 場 is ば here, not じょう.",
+  "compounds": [
+   "職業 (shokugyou) — occupation",
+   "現場 (genba) — site"
+  ],
+  "distractors": [
+   "しょくじょう",
+   "しきば",
+   "しょっば"
+  ]
+ },
+ {
+  "kanji": "登録",
+  "level": "N3",
+  "sentence": "会員に[[登録]]する。",
+  "reading": "とうろく",
+  "meaning": "registration",
+  "type": "on",
+  "hint": "登 (tou) + 録 (roku) — 登 is とう here, not のぼる.",
+  "compounds": [
+   "登山 (tozan) — mountain climbing",
+   "記録 (kiroku) — record"
+  ],
+  "distractors": [
+   "のぼろく",
+   "どうろく",
+   "とうりょく"
+  ]
+ },
+ {
+  "kanji": "個人",
+  "level": "N3",
+  "sentence": "[[個人]]の意見を言う。",
+  "reading": "こじん",
+  "meaning": "individual",
+  "type": "on",
+  "hint": "個 (ko) + 人 (jin) — 人 is じん here, not ひと.",
+  "compounds": [
+   "個性 (kosei) — individuality",
+   "人口 (jinkou) — population"
+  ],
+  "distractors": [
+   "こひと",
+   "こにん",
+   "ごじん"
+  ]
+ },
+ {
+  "kanji": "共通",
+  "level": "N3",
+  "sentence": "二人には[[共通]]点がある。",
+  "reading": "きょうつう",
+  "meaning": "common, shared",
+  "type": "on",
+  "hint": "共 (kyou) + 通 (tsuu) — 通 is つう here, not とおる.",
+  "compounds": [
+   "共同 (kyoudou) — cooperation",
+   "交通 (koutsuu) — traffic"
+  ],
+  "distractors": [
+   "きょうとおり",
+   "きょつう",
+   "こうつう"
+  ]
+ },
+ {
+  "kanji": "適当",
+  "level": "N3",
+  "sentence": "[[適当]]な量を入れる。",
+  "reading": "てきとう",
+  "meaning": "suitable; half-hearted",
+  "type": "on",
+  "hint": "適 (teki) + 当 (tou) — 当 is とう here, not あたる.",
+  "compounds": [
+   "適切 (tekisetsu) — appropriate",
+   "当然 (touzen) — natural"
+  ],
+  "distractors": [
+   "てきあたり",
+   "てきどう",
+   "できとう"
+  ]
+ },
+ {
+  "kanji": "積極的",
+  "level": "N3",
+  "sentence": "[[積極的]]に発言する。",
+  "reading": "せっきょくてき",
+  "meaning": "proactive, positive",
+  "type": "on",
+  "hint": "積 (seki→sek) + 極 (kyoku) + 的 (teki) — small っ before きょく.",
+  "compounds": [
+   "積極 (sekkyoku) — positiveness",
+   "消極的 (shoukyokuteki) — passive"
+  ],
+  "distractors": [
+   "せきょくてき",
+   "せっきょくまと",
+   "せっきょてき"
+  ]
+ },
+ {
+  "kanji": "経由",
+  "level": "N3",
+  "sentence": "大阪[[経由]]で行く。",
+  "reading": "けいゆ",
+  "meaning": "via, by way of",
+  "type": "on",
+  "hint": "経 (kei) + 由 (yu) — 由 is ゆ here, not よし.",
+  "compounds": [
+   "経過 (keika) — progress",
+   "自由 (jiyuu) — freedom"
+  ],
+  "distractors": [
+   "けいゆう",
+   "きょうゆ",
+   "けいよし"
+  ]
+ },
+ {
+  "kanji": "貯金",
+  "level": "N3",
+  "sentence": "毎月[[貯金]]する。",
+  "reading": "ちょきん",
+  "meaning": "savings",
+  "type": "on",
+  "hint": "貯 (cho) + 金 (kin) — 金 is きん here, not かね.",
+  "compounds": [
+   "貯蓄 (chochiku) — savings",
+   "現金 (genkin) — cash"
+  ],
+  "distractors": [
+   "ちょかね",
+   "ちょうきん",
+   "ちょぎん"
+  ]
+ },
+ {
+  "kanji": "訓練",
+  "level": "N3",
+  "sentence": "避難[[訓練]]を行う。",
+  "reading": "くんれん",
+  "meaning": "training, drill",
+  "type": "on",
+  "hint": "訓 (kun) + 練 (ren) — くんれん.",
+  "compounds": [
+   "訓読み (kunyomi) — kun reading",
+   "練習 (renshuu) — practice"
+  ],
+  "distractors": [
+   "くんねり",
+   "くんれい",
+   "こんれん"
+  ]
+ },
+ {
+  "kanji": "貿易",
+  "level": "N3",
+  "sentence": "海外と[[貿易]]する。",
+  "reading": "ぼうえき",
+  "meaning": "trade, commerce",
+  "type": "on",
+  "hint": "貿 (bou) + 易 (eki) — 易 is えき here, not やさしい.",
+  "compounds": [
+   "貿易港 (bouekikou) — trade port",
+   "交易 (koueki) — commerce"
+  ],
+  "distractors": [
+   "ぼうい",
+   "ぼえき",
+   "ぼうえい"
+  ]
+ },
+ {
+  "kanji": "含む",
+  "level": "N3",
+  "sentence": "税を[[含む]]値段だ。",
+  "reading": "ふくむ",
+  "meaning": "to include, to contain",
+  "type": "kun",
+  "hint": "kun reading of 含 with okurigana む — ふくむ (on is がん).",
+  "compounds": [
+   "含有 (ganyuu) — content",
+   "包含 (hougan) — inclusion"
+  ],
+  "distractors": [
+   "がんむ",
+   "ふくめ",
+   "ふぐむ"
+  ]
+ },
+ {
+  "kanji": "含める",
+  "level": "N3",
+  "sentence": "彼も[[含める]]。",
+  "reading": "ふくめる",
+  "meaning": "to include",
+  "type": "kun",
+  "hint": "kun reading of 含 with okurigana める — ふくめる.",
+  "compounds": [
+   "含む (fukumu) — to contain",
+   "含有 (ganyuu) — content"
+  ],
+  "distractors": [
+   "がんめる",
+   "ふくえる",
+   "ふくめ"
+  ]
+ },
+ {
+  "kanji": "断る",
+  "level": "N3",
+  "sentence": "誘いを[[断る]]。",
+  "reading": "ことわる",
+  "meaning": "to refuse, to decline",
+  "type": "kun",
+  "hint": "kun reading of 断 with okurigana る — ことわる (on is だん).",
+  "compounds": [
+   "決断 (ketsudan) — decision",
+   "判断 (handan) — judgment"
+  ],
+  "distractors": [
+   "だんる",
+   "ことばる",
+   "ことわ"
+  ]
+ },
+ {
+  "kanji": "貯める",
+  "level": "N3",
+  "sentence": "お金を[[貯める]]。",
+  "reading": "ためる",
+  "meaning": "to save up",
+  "type": "kun",
+  "hint": "kun reading of 貯 with okurigana める — ためる (on is ちょ).",
+  "compounds": [
+   "貯金 (chokin) — savings",
+   "貯蔵 (chozou) — storage"
+  ],
+  "distractors": [
+   "ちょめる",
+   "だめる",
+   "たまる"
+  ]
+ },
+ {
+  "kanji": "認める",
+  "level": "N3",
+  "sentence": "失敗を[[認める]]。",
+  "reading": "みとめる",
+  "meaning": "to acknowledge, to admit",
+  "type": "kun",
+  "hint": "kun reading of 認 with okurigana める — みとめる (on is にん).",
+  "compounds": [
+   "確認 (kakunin) — confirmation",
+   "承認 (shounin) — approval"
+  ],
+  "distractors": [
+   "にんめる",
+   "みどめる",
+   "みとる"
+  ]
+ },
+ {
+  "kanji": "招く",
+  "level": "N3",
+  "sentence": "客を家に[[招く]]。",
+  "reading": "まねく",
+  "meaning": "to invite, to bring about",
+  "type": "kun",
+  "hint": "kun reading of 招 with okurigana く — まねく (on is しょう).",
+  "compounds": [
+   "招待 (shoutai) — invitation",
+   "招致 (shouchi) — invitation to host"
+  ],
+  "distractors": [
+   "しょうく",
+   "まねぐ",
+   "まなく"
+  ]
+ },
+ {
+  "kanji": "険しい",
+  "level": "N3",
+  "sentence": "[[険しい]]山を登る。",
+  "reading": "けわしい",
+  "meaning": "steep, harsh",
+  "type": "kun",
+  "hint": "kun reading of 険 with okurigana しい — けわしい (on is けん).",
+  "compounds": [
+   "危険 (kiken) — danger",
+   "保険 (hoken) — insurance"
+  ],
+  "distractors": [
+   "けんしい",
+   "けはしい",
+   "けわい"
+  ]
+ },
+ {
+  "kanji": "提出",
+  "level": "N3",
+  "sentence": "レポートを[[提出]]する。",
+  "reading": "ていしゅつ",
+  "meaning": "submission",
+  "type": "on",
+  "hint": "提 (tei) + 出 (shutsu) — 出 is しゅつ here, not でる.",
+  "compounds": [
+   "提案 (teian) — proposal",
+   "出席 (shusseki) — attendance"
+  ],
+  "distractors": [
+   "ていで",
+   "ていしゅち",
+   "だいしゅつ"
+  ]
+ },
+ {
+  "kanji": "抽象",
+  "level": "N2",
+  "sentence": "話が[[抽象]]的すぎる。",
+  "reading": "ちゅうしょう",
+  "meaning": "abstraction",
+  "type": "on",
+  "hint": "抽 (chuu) + 象 (shou) — 象 is しょう here, not ぞう.",
+  "compounds": [
+   "抽選 (chuusen) — lottery",
+   "対象 (taishou) — target"
+  ],
+  "distractors": [
+   "ちゅうぞう",
+   "ちゅしょう",
+   "ちょうしょう"
+  ]
+ },
+ {
+  "kanji": "効率",
+  "level": "N2",
+  "sentence": "作業の[[効率]]を上げる。",
+  "reading": "こうりつ",
+  "meaning": "efficiency",
+  "type": "on",
+  "hint": "効 (kou) + 率 (ritsu) — 率 is りつ here, not ひきいる.",
+  "compounds": [
+   "効果 (kouka) — effect",
+   "確率 (kakuritsu) — probability"
+  ],
+  "distractors": [
+   "こうそつ",
+   "きょうりつ",
+   "こうりち"
+  ]
+ },
+ {
+  "kanji": "義務",
+  "level": "N2",
+  "sentence": "税金を払う[[義務]]がある。",
+  "reading": "ぎむ",
+  "meaning": "duty, obligation",
+  "type": "on",
+  "hint": "義 (gi) + 務 (mu) — ぎむ.",
+  "compounds": [
+   "義理 (giri) — obligation",
+   "事務 (jimu) — office work"
+  ],
+  "distractors": [
+   "ぎぶ",
+   "ぎむう",
+   "きむ"
+  ]
+ },
+ {
+  "kanji": "権利",
+  "level": "N2",
+  "sentence": "国民の[[権利]]を守る。",
+  "reading": "けんり",
+  "meaning": "right (entitlement)",
+  "type": "on",
+  "hint": "権 (ken) + 利 (ri) — けんり.",
+  "compounds": [
+   "権力 (kenryoku) — power",
+   "利益 (rieki) — profit"
+  ],
+  "distractors": [
+   "けんとし",
+   "ごんり",
+   "けんりつ"
+  ]
+ },
+ {
+  "kanji": "傾向",
+  "level": "N2",
+  "sentence": "都市に集まる[[傾向]]がある。",
+  "reading": "けいこう",
+  "meaning": "tendency",
+  "type": "on",
+  "hint": "傾 (kei) + 向 (kou) — 向 is こう here, not むく.",
+  "compounds": [
+   "傾斜 (keisha) — incline",
+   "方向 (houkou) — direction"
+  ],
+  "distractors": [
+   "けいむき",
+   "きょうこう",
+   "けいごう"
+  ]
+ },
+ {
+  "kanji": "維持",
+  "level": "N2",
+  "sentence": "健康を[[維持]]する。",
+  "reading": "いじ",
+  "meaning": "maintenance",
+  "type": "on",
+  "hint": "維 (i) + 持 (ji) — 持 is じ here, not もつ.",
+  "compounds": [
+   "維新 (ishin) — restoration",
+   "支持 (shiji) — support"
+  ],
+  "distractors": [
+   "いもち",
+   "いじゅ",
+   "ゆいじ"
+  ]
+ },
+ {
+  "kanji": "矛盾",
+  "level": "N2",
+  "sentence": "話に[[矛盾]]がある。",
+  "reading": "むじゅん",
+  "meaning": "contradiction",
+  "type": "on",
+  "hint": "矛 (mu) + 盾 (jun) — むじゅん.",
+  "compounds": [
+   "矛先 (hokosaki) — point of attack",
+   "後盾 (ushirodate) — backing"
+  ],
+  "distractors": [
+   "むしゅん",
+   "ぼうじゅん",
+   "むじゅ"
+  ]
+ },
+ {
+  "kanji": "促進",
+  "level": "N2",
+  "sentence": "販売を[[促進]]する。",
+  "reading": "そくしん",
+  "meaning": "promotion, acceleration",
+  "type": "on",
+  "hint": "促 (soku) + 進 (shin) — 進 is しん here, not すすむ.",
+  "compounds": [
+   "催促 (saisoku) — urging",
+   "前進 (zenshin) — advance"
+  ],
+  "distractors": [
+   "そくすす",
+   "ぞくしん",
+   "そくじん"
+  ]
+ },
+ {
+  "kanji": "根拠",
+  "level": "N2",
+  "sentence": "主張の[[根拠]]を示す。",
+  "reading": "こんきょ",
+  "meaning": "grounds, basis",
+  "type": "on",
+  "hint": "根 (kon) + 拠 (kyo) — 根 is こん here, not ね.",
+  "compounds": [
+   "根本 (konpon) — root",
+   "証拠 (shouko) — evidence"
+  ],
+  "distractors": [
+   "ねきょ",
+   "こんこ",
+   "こんきょう"
+  ]
+ },
+ {
+  "kanji": "詳細",
+  "level": "N2",
+  "sentence": "[[詳細]]は後で説明する。",
+  "reading": "しょうさい",
+  "meaning": "details",
+  "type": "on",
+  "hint": "詳 (shou) + 細 (sai) — 細 is さい here, not ほそい.",
+  "compounds": [
+   "詳報 (shouhou) — detailed report",
+   "細部 (saibu) — details"
+  ],
+  "distractors": [
+   "しょうほそ",
+   "しょさい",
+   "じょうさい"
+  ]
+ },
+ {
+  "kanji": "妨害",
+  "level": "N2",
+  "sentence": "工事が交通を[[妨害]]する。",
+  "reading": "ぼうがい",
+  "meaning": "obstruction",
+  "type": "on",
+  "hint": "妨 (bou) + 害 (gai) — 妨 is ぼう here, not さまたげる.",
+  "compounds": [
+   "被害 (higai) — damage",
+   "害虫 (gaichuu) — pest"
+  ],
+  "distractors": [
+   "ぼうかい",
+   "さまがい",
+   "ほうがい"
+  ]
+ },
+ {
+  "kanji": "承認",
+  "level": "N2",
+  "sentence": "計画が[[承認]]された。",
+  "reading": "しょうにん",
+  "meaning": "approval",
+  "type": "on",
+  "hint": "承 (shou) + 認 (nin) — 認 is にん here, not みとめる.",
+  "compounds": [
+   "承知 (shouchi) — consent",
+   "確認 (kakunin) — confirmation"
+  ],
+  "distractors": [
+   "しょうみとめ",
+   "じょうにん",
+   "しょにん"
+  ]
+ },
+ {
+  "kanji": "信頼",
+  "level": "N2",
+  "sentence": "彼を心から[[信頼]]する。",
+  "reading": "しんらい",
+  "meaning": "trust, reliance",
+  "type": "on",
+  "hint": "信 (shin) + 頼 (rai) — 頼 is らい here, not たのむ.",
+  "compounds": [
+   "信用 (shinyou) — credit",
+   "依頼 (irai) — request"
+  ],
+  "distractors": [
+   "しんたの",
+   "しんれい",
+   "しんらん"
+  ]
+ },
+ {
+  "kanji": "膨大",
+  "level": "N2",
+  "sentence": "[[膨大]]なデータを扱う。",
+  "reading": "ぼうだい",
+  "meaning": "enormous, vast",
+  "type": "on",
+  "hint": "膨 (bou) + 大 (dai) — 大 voices to だい here.",
+  "compounds": [
+   "膨張 (bouchou) — expansion",
+   "拡大 (kakudai) — enlargement"
+  ],
+  "distractors": [
+   "ぼうおお",
+   "ほうだい",
+   "ぼうたい"
+  ]
+ },
+ {
+  "kanji": "循環",
+  "level": "N2",
+  "sentence": "血液が体を[[循環]]する。",
+  "reading": "じゅんかん",
+  "meaning": "circulation",
+  "type": "on",
+  "hint": "循 (jun) + 環 (kan) — じゅんかん.",
+  "compounds": [
+   "循環器 (junkanki) — circulatory organ",
+   "環境 (kankyou) — environment"
+  ],
+  "distractors": [
+   "じゅんわ",
+   "しゅんかん",
+   "じゅんげん"
+  ]
+ },
+ {
+  "kanji": "貫徹",
+  "level": "N2",
+  "sentence": "初志を[[貫徹]]する。",
+  "reading": "かんてつ",
+  "meaning": "accomplishment, carrying through",
+  "type": "on",
+  "hint": "貫 (kan) + 徹 (tetsu) — 貫 is かん here, not つらぬく.",
+  "compounds": [
+   "貫通 (kantsuu) — penetration",
+   "徹底 (tettei) — thoroughness"
+  ],
+  "distractors": [
+   "かんてち",
+   "つらてつ",
+   "がんてつ"
+  ]
+ },
+ {
+  "kanji": "潜在",
+  "level": "N2",
+  "sentence": "[[潜在]]的な能力を持つ。",
+  "reading": "せんざい",
+  "meaning": "latent, potential",
+  "type": "on",
+  "hint": "潜 (sen) + 在 (zai) — 潜 is せん here, not もぐる.",
+  "compounds": [
+   "潜水 (sensui) — diving",
+   "存在 (sonzai) — existence"
+  ],
+  "distractors": [
+   "せんさい",
+   "もぐざい",
+   "ぜんざい"
+  ]
+ },
+ {
+  "kanji": "洗練",
+  "level": "N2",
+  "sentence": "[[洗練]]されたデザインだ。",
+  "reading": "せんれん",
+  "meaning": "refinement, polish",
+  "type": "on",
+  "hint": "洗 (sen) + 練 (ren) — 洗 is せん here, not あらう.",
+  "compounds": [
+   "洗濯 (sentaku) — laundry",
+   "練習 (renshuu) — practice"
+  ],
+  "distractors": [
+   "あられん",
+   "せんねり",
+   "せんれい"
+  ]
+ },
+ {
+  "kanji": "秩序",
+  "level": "N2",
+  "sentence": "社会の[[秩序]]を保つ。",
+  "reading": "ちつじょ",
+  "meaning": "order, discipline",
+  "type": "on",
+  "hint": "秩 (chitsu) + 序 (jo) — ちつじょ.",
+  "compounds": [
+   "無秩序 (muchitsujo) — disorder",
+   "順序 (junjo) — order"
+  ],
+  "distractors": [
+   "ちつじょう",
+   "ちっじょ",
+   "しつじょ"
+  ]
+ },
+ {
+  "kanji": "隔離",
+  "level": "N2",
+  "sentence": "患者を[[隔離]]する。",
+  "reading": "かくり",
+  "meaning": "isolation, quarantine",
+  "type": "on",
+  "hint": "隔 (kaku) + 離 (ri) — 離 is り here, not はなれる.",
+  "compounds": [
+   "間隔 (kankaku) — interval",
+   "距離 (kyori) — distance"
+  ],
+  "distractors": [
+   "かくはな",
+   "かくれい",
+   "がくり"
+  ]
+ },
+ {
+  "kanji": "妥当",
+  "level": "N2",
+  "sentence": "[[妥当]]な判断だと思う。",
+  "reading": "だとう",
+  "meaning": "valid, appropriate",
+  "type": "on",
+  "hint": "妥 (da) + 当 (tou) — 当 is とう here, not あたる.",
+  "compounds": [
+   "妥協 (dakyou) — compromise",
+   "当然 (touzen) — natural"
+  ],
+  "distractors": [
+   "だあたり",
+   "たとう",
+   "だどう"
+  ]
+ },
+ {
+  "kanji": "抑制",
+  "level": "N2",
+  "sentence": "感情を[[抑制]]する。",
+  "reading": "よくせい",
+  "meaning": "restraint, suppression",
+  "type": "on",
+  "hint": "抑 (yoku) + 制 (sei) — 抑 is よく here, not おさえる.",
+  "compounds": [
+   "抑圧 (yokuatsu) — oppression",
+   "制度 (seido) — system"
+  ],
+  "distractors": [
+   "おくせい",
+   "よくぜい",
+   "よくせ"
+  ]
+ },
+ {
+  "kanji": "披露",
+  "level": "N2",
+  "sentence": "新作を[[披露]]する。",
+  "reading": "ひろう",
+  "meaning": "unveiling, showing",
+  "type": "on",
+  "hint": "披 (hi) + 露 (rou) — 露 is ろう here, not つゆ.",
+  "compounds": [
+   "披露宴 (hirouen) — reception",
+   "暴露 (bakuro) — exposure"
+  ],
+  "distractors": [
+   "ひつゆ",
+   "ひろ",
+   "びろう"
+  ]
+ },
+ {
+  "kanji": "頑固",
+  "level": "N2",
+  "sentence": "父は[[頑固]]な人だ。",
+  "reading": "がんこ",
+  "meaning": "stubborn",
+  "type": "on",
+  "hint": "頑 (gan) + 固 (ko) — 固 is こ here, not かたい.",
+  "compounds": [
+   "頑丈 (ganjou) — sturdy",
+   "固定 (kotei) — fixation"
+  ],
+  "distractors": [
+   "がんかた",
+   "げんこ",
+   "がんこう"
+  ]
+ },
+ {
+  "kanji": "円滑",
+  "level": "N2",
+  "sentence": "仕事が[[円滑]]に進む。",
+  "reading": "えんかつ",
+  "meaning": "smooth, harmonious",
+  "type": "on",
+  "hint": "円 (en) + 滑 (katsu) — 滑 is かつ here, not すべる.",
+  "compounds": [
+   "円満 (enman) — harmony",
+   "潤滑 (junkatsu) — lubrication"
+  ],
+  "distractors": [
+   "えんすべ",
+   "えんかち",
+   "まるかつ"
+  ]
+ },
+ {
+  "kanji": "率いる",
+  "level": "N2",
+  "sentence": "チームを[[率いる]]。",
+  "reading": "ひきいる",
+  "meaning": "to lead",
+  "type": "kun",
+  "hint": "kun reading of 率 with okurigana いる — ひきいる (on is りつ/そつ).",
+  "compounds": [
+   "引率 (insotsu) — leading",
+   "統率 (tousotsu) — command"
+  ],
+  "distractors": [
+   "りついる",
+   "ひきる",
+   "ひくいる"
+  ]
+ },
+ {
+  "kanji": "怠ける",
+  "level": "N2",
+  "sentence": "仕事を[[怠ける]]。",
+  "reading": "なまける",
+  "meaning": "to be lazy",
+  "type": "kun",
+  "hint": "kun reading of 怠 with okurigana ける — なまける (on is たい).",
+  "compounds": [
+   "怠慢 (taiman) — negligence",
+   "怠惰 (taida) — laziness"
+  ],
+  "distractors": [
+   "たいける",
+   "なまるけ",
+   "おこける"
+  ]
+ },
+ {
+  "kanji": "促す",
+  "level": "N2",
+  "sentence": "注意を[[促す]]。",
+  "reading": "うながす",
+  "meaning": "to urge, to prompt",
+  "type": "kun",
+  "hint": "kun reading of 促 with okurigana す — うながす (on is そく).",
+  "compounds": [
+   "促進 (sokushin) — promotion",
+   "催促 (saisoku) — urging"
+  ],
+  "distractors": [
+   "そくす",
+   "うなかす",
+   "うながる"
+  ]
+ },
+ {
+  "kanji": "蓄える",
+  "level": "N2",
+  "sentence": "食料を[[蓄える]]。",
+  "reading": "たくわえる",
+  "meaning": "to store up",
+  "type": "kun",
+  "hint": "kun reading of 蓄 with okurigana える — たくわえる (on is ちく).",
+  "compounds": [
+   "蓄積 (chikuseki) — accumulation",
+   "貯蓄 (chochiku) — savings"
+  ],
+  "distractors": [
+   "ちくえる",
+   "たくえる",
+   "たくわる"
+  ]
+ },
+ {
+  "kanji": "唱える",
+  "level": "N2",
+  "sentence": "反対意見を[[唱える]]。",
+  "reading": "となえる",
+  "meaning": "to advocate, to chant",
+  "type": "kun",
+  "hint": "kun reading of 唱 with okurigana える — となえる (on is しょう).",
+  "compounds": [
+   "合唱 (gasshou) — chorus",
+   "提唱 (teishou) — advocacy"
+  ],
+  "distractors": [
+   "しょうえる",
+   "とねえる",
+   "となる"
+  ]
+ },
+ {
+  "kanji": "廃棄",
+  "level": "N2",
+  "sentence": "古い書類を[[廃棄]]する。",
+  "reading": "はいき",
+  "meaning": "disposal, scrapping",
+  "type": "on",
+  "hint": "廃 (hai) + 棄 (ki) — はいき.",
+  "compounds": [
+   "廃止 (haishi) — abolition",
+   "放棄 (houki) — abandonment"
+  ],
+  "distractors": [
+   "はいすて",
+   "はいぎ",
+   "はいけ"
+  ]
+ },
+ {
+  "kanji": "相互",
+  "level": "N2",
+  "sentence": "[[相互]]に助け合う。",
+  "reading": "そうご",
+  "meaning": "mutual, reciprocal",
+  "type": "on",
+  "hint": "相 (sou) + 互 (go) — 互 is ご here, not たがい.",
+  "compounds": [
+   "相談 (soudan) — consultation",
+   "互角 (gokaku) — even match"
+  ],
+  "distractors": [
+   "そうたがい",
+   "そうこ",
+   "しょうご"
+  ]
+ },
+ {
+  "kanji": "円満",
+  "level": "N2",
+  "sentence": "話し合いは[[円満]]に終わった。",
+  "reading": "えんまん",
+  "meaning": "harmonious, amicable",
+  "type": "on",
+  "hint": "円 (en) + 満 (man) — 満 is まん here, not みちる.",
+  "compounds": [
+   "円滑 (enkatsu) — smooth",
+   "満足 (manzoku) — satisfaction"
+  ],
+  "distractors": [
+   "えんみ",
+   "まるまん",
+   "えんばん"
+  ]
+ },
+ {
+  "kanji": "快適",
+  "level": "N2",
+  "sentence": "[[快適]]な部屋で過ごす。",
+  "reading": "かいてき",
+  "meaning": "comfortable, pleasant",
+  "type": "on",
+  "hint": "快 (kai) + 適 (teki) — 快 is かい here, not こころよい.",
+  "compounds": [
+   "快晴 (kaisei) — clear weather",
+   "適当 (tekitou) — suitable"
+  ],
+  "distractors": [
+   "かいちゃく",
+   "かいてっ",
+   "けいてき"
+  ]
+ },
+ {
+  "kanji": "貴重",
+  "level": "N2",
+  "sentence": "[[貴重]]な意見をもらう。",
+  "reading": "きちょう",
+  "meaning": "precious, valuable",
+  "type": "on",
+  "hint": "貴 (ki) + 重 (chou) — 重 is ちょう here, not おもい.",
+  "compounds": [
+   "貴族 (kizoku) — nobility",
+   "重要 (juuyou) — important"
+  ],
+  "distractors": [
+   "きじゅう",
+   "きおも",
+   "ぎちょう"
+  ]
+ },
+ {
+  "kanji": "講義",
+  "level": "N2",
+  "sentence": "大学で[[講義]]を受ける。",
+  "reading": "こうぎ",
+  "meaning": "lecture",
+  "type": "on",
+  "hint": "講 (kou) + 義 (gi) — こうぎ.",
+  "compounds": [
+   "講演 (kouen) — lecture/talk",
+   "義務 (gimu) — duty"
+  ],
+  "distractors": [
+   "こうぎゅう",
+   "こうき",
+   "ごうぎ"
+  ]
+ },
+ {
+  "kanji": "恐怖",
+  "level": "N2",
+  "sentence": "暗闇に[[恐怖]]を感じる。",
+  "reading": "きょうふ",
+  "meaning": "fear, terror",
+  "type": "on",
+  "hint": "恐 (kyou) + 怖 (fu) — 恐 is きょう here, not おそれる.",
+  "compounds": [
+   "恐縮 (kyoushuku) — feeling obliged",
+   "恐竜 (kyouryuu) — dinosaur"
+  ],
+  "distractors": [
+   "おそふ",
+   "きょうぶ",
+   "こうふ"
+  ]
+ },
+ {
+  "kanji": "我慢",
+  "level": "N2",
+  "sentence": "痛みを[[我慢]]する。",
+  "reading": "がまん",
+  "meaning": "patience, endurance",
+  "type": "on",
+  "hint": "我 (ga) + 慢 (man) — がまん.",
+  "compounds": [
+   "自慢 (jiman) — boasting",
+   "慢性 (mansei) — chronic"
+  ],
+  "distractors": [
+   "があん",
+   "がまい",
+   "われまん"
+  ]
+ },
+ {
+  "kanji": "油断",
+  "level": "N2",
+  "sentence": "最後まで[[油断]]するな。",
+  "reading": "ゆだん",
+  "meaning": "carelessness, negligence",
+  "type": "on",
+  "hint": "油 (yu) + 断 (dan) — 油 is ゆ here, not あぶら.",
+  "compounds": [
+   "石油 (sekiyu) — petroleum",
+   "判断 (handan) — judgment"
+  ],
+  "distractors": [
+   "あぶらだん",
+   "ゆうだん",
+   "ゆたん"
+  ]
+ },
+ {
+  "kanji": "迷惑",
+  "level": "N2",
+  "sentence": "人に[[迷惑]]をかける。",
+  "reading": "めいわく",
+  "meaning": "trouble, nuisance",
+  "type": "on",
+  "hint": "迷 (mei) + 惑 (waku) — 迷 is めい here, not まよう.",
+  "compounds": [
+   "迷路 (meiro) — maze",
+   "惑星 (wakusei) — planet"
+  ],
+  "distractors": [
+   "まよわく",
+   "めいまく",
+   "めいわっ"
+  ]
+ },
+ {
+  "kanji": "単純",
+  "level": "N2",
+  "sentence": "[[単純]]な仕組みだ。",
+  "reading": "たんじゅん",
+  "meaning": "simple",
+  "type": "on",
+  "hint": "単 (tan) + 純 (jun) — たんじゅん.",
+  "compounds": [
+   "単語 (tango) — word",
+   "純粋 (junsui) — pure"
+  ],
+  "distractors": [
+   "たんじゅ",
+   "だんじゅん",
+   "たんずみ"
+  ]
+ },
+ {
+  "kanji": "複雑",
+  "level": "N2",
+  "sentence": "問題が[[複雑]]になる。",
+  "reading": "ふくざつ",
+  "meaning": "complicated",
+  "type": "on",
+  "hint": "複 (fuku) + 雑 (zatsu) — 雑 is ざつ here.",
+  "compounds": [
+   "複数 (fukusuu) — plural",
+   "混雑 (konzatsu) — congestion"
+  ],
+  "distractors": [
+   "ふくぞう",
+   "ふくざっ",
+   "ぶくざつ"
+  ]
+ },
+ {
+  "kanji": "皮肉",
+  "level": "N2",
+  "sentence": "[[皮肉]]を言われた。",
+  "reading": "ひにく",
+  "meaning": "irony, sarcasm",
+  "type": "on",
+  "hint": "皮 (hi) + 肉 (niku) — 皮 is ひ here, not かわ.",
+  "compounds": [
+   "皮膚 (hifu) — skin",
+   "筋肉 (kinniku) — muscle"
+  ],
+  "distractors": [
+   "かわにく",
+   "ひじく",
+   "ぴにく"
+  ]
+ },
+ {
+  "kanji": "検査",
+  "level": "N2",
+  "sentence": "機械を[[検査]]する。",
+  "reading": "けんさ",
+  "meaning": "inspection, examination",
+  "type": "on",
+  "hint": "検 (ken) + 査 (sa) — けんさ.",
+  "compounds": [
+   "検討 (kentou) — examination",
+   "調査 (chousa) — survey"
+  ],
+  "distractors": [
+   "けんさく",
+   "げんさ",
+   "けんざ"
+  ]
+ },
+ {
+  "kanji": "修理",
+  "level": "N2",
+  "sentence": "時計を[[修理]]する。",
+  "reading": "しゅうり",
+  "meaning": "repair",
+  "type": "on",
+  "hint": "修 (shuu) + 理 (ri) — 修 is しゅう here, not おさめる.",
+  "compounds": [
+   "修正 (shuusei) — correction",
+   "理由 (riyuu) — reason"
+  ],
+  "distractors": [
+   "しゅり",
+   "しゅうじ",
+   "しゅうり く"
+  ]
+ },
+ {
+  "kanji": "保存",
+  "level": "N2",
+  "sentence": "データを[[保存]]する。",
+  "reading": "ほぞん",
+  "meaning": "preservation, saving",
+  "type": "on",
+  "hint": "保 (ho) + 存 (zon) — 存 is ぞん here.",
+  "compounds": [
+   "保護 (hogo) — protection",
+   "存在 (sonzai) — existence"
+  ],
+  "distractors": [
+   "ほそん",
+   "ほうぞん",
+   "ほぞ"
+  ]
+ },
+ {
+  "kanji": "詳しい",
+  "level": "N2",
+  "sentence": "事情に[[詳しい]]人だ。",
+  "reading": "くわしい",
+  "meaning": "detailed, familiar with",
+  "type": "kun",
+  "hint": "kun reading of 詳 with okurigana しい — くわしい (on is しょう).",
+  "compounds": [
+   "詳細 (shousai) — details",
+   "未詳 (mishou) — unknown"
+  ],
+  "distractors": [
+   "しょうしい",
+   "くはしい",
+   "くわい"
+  ]
+ },
+ {
+  "kanji": "貧しい",
+  "level": "N2",
+  "sentence": "[[貧しい]]生活を送る。",
+  "reading": "まずしい",
+  "meaning": "poor",
+  "type": "kun",
+  "hint": "kun reading of 貧 with okurigana しい — まずしい (on is ひん).",
+  "compounds": [
+   "貧困 (hinkon) — poverty",
+   "貧血 (hinketsu) — anemia"
+  ],
+  "distractors": [
+   "ひんしい",
+   "まづしい",
+   "まずい"
+  ]
+ },
+ {
+  "kanji": "縮む",
+  "level": "N2",
+  "sentence": "洗ったら服が[[縮む]]。",
+  "reading": "ちぢむ",
+  "meaning": "to shrink",
+  "type": "kun",
+  "hint": "kun reading of 縮 with okurigana む — ちぢむ (on is しゅく).",
+  "compounds": [
+   "縮小 (shukushou) — reduction",
+   "短縮 (tanshuku) — shortening"
+  ],
+  "distractors": [
+   "しゅくむ",
+   "ちじむ",
+   "ちぢる"
+  ]
+ },
+ {
+  "kanji": "豊か",
+  "level": "N2",
+  "sentence": "自然が[[豊か]]な土地。",
+  "reading": "ゆたか",
+  "meaning": "abundant, rich",
+  "type": "kun",
+  "hint": "kun reading of 豊 with okurigana か — ゆたか (on is ほう).",
+  "compounds": [
+   "豊富 (houfu) — abundant",
+   "豊作 (housaku) — good harvest"
+  ],
+  "distractors": [
+   "ほうか",
+   "ゆだか",
+   "ゆたが"
+  ]
+ },
+ {
+  "kanji": "憂鬱",
+  "sentence": "雨の日が続くと[[憂鬱]]になる。",
+  "reading": "ゆううつ",
+  "meaning": "melancholy, gloom",
+  "type": "on",
+  "hint": "憂 (grief) + 鬱 (gloom) — both kanji press down heavily; long ゆう then うつ.",
+  "compounds": [
+   "憂慮 (yuuryo) — concern",
+   "鬱病 (utsubyou) — depression"
+  ],
+  "distractors": [
+   "ゆうこつ",
+   "うつゆう",
+   "ゆううく"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "顕著",
+  "sentence": "効果の差が[[顕著]]に現れた。",
+  "reading": "けんちょ",
+  "meaning": "remarkable, striking",
+  "type": "on",
+  "hint": "顕 = けん as in 顕微鏡; 著 here is short ちょ, not ちょう.",
+  "compounds": [
+   "顕在 (kenzai) — manifest",
+   "著名 (chomei) — famous"
+  ],
+  "distractors": [
+   "けんちょう",
+   "げんちょ",
+   "けんしょ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "妨げる",
+  "sentence": "騒音が集中を[[妨げる]]。",
+  "reading": "さまたげる",
+  "meaning": "to hinder, obstruct",
+  "type": "kun",
+  "hint": "Think さまたげる = putting something 'in the way'; on-reading ぼう appears in 妨害.",
+  "compounds": [
+   "妨害 (bougai) — obstruction",
+   "邪魔 (jama) — hindrance"
+  ],
+  "distractors": [
+   "ふせげる",
+   "またげる",
+   "さえぎる"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "覆す",
+  "sentence": "その判決を[[覆す]]のは難しい。",
+  "reading": "くつがえす",
+  "meaning": "to overturn, reverse",
+  "type": "kun",
+  "hint": "覆 also reads おおう (to cover) — flipping the cover upside down = くつがえす.",
+  "compounds": [
+   "転覆 (tenpuku) — capsizing",
+   "覆面 (fukumen) — mask"
+  ],
+  "distractors": [
+   "ひるがえす",
+   "おおいかえす",
+   "くつがす"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "斬新",
+  "sentence": "[[斬新]]なデザインが目を引く。",
+  "reading": "ざんしん",
+  "meaning": "novel, innovative",
+  "type": "on",
+  "hint": "斬 (slash) + 新 (new) — slashing through the old; ざん like 斬る (きる).",
+  "compounds": [
+   "斬撃 (zangeki) — slash",
+   "革新 (kakushin) — innovation"
+  ],
+  "distractors": [
+   "さんしん",
+   "ざんじん",
+   "ぜんしん"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "滞る",
+  "sentence": "支払いが[[滞る]]と信用を失う。",
+  "reading": "とどこおる",
+  "meaning": "to be delayed, stagnate",
+  "type": "kun",
+  "hint": "Long reading とどこおる mirrors how drawn-out a delay feels; on-reading たい in 停滞.",
+  "compounds": [
+   "停滞 (teitai) — stagnation",
+   "滞在 (taizai) — stay"
+  ],
+  "distractors": [
+   "とどおる",
+   "とどこる",
+   "こだわる"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "惨敗",
+  "sentence": "決勝で[[惨敗]]を喫した。",
+  "reading": "ざんぱい",
+  "meaning": "crushing defeat",
+  "type": "on",
+  "hint": "惨 = ざん (miserable); 敗 becomes ぱい after ん.",
+  "compounds": [
+   "悲惨 (hisan) — tragic",
+   "惨事 (sanji) — disaster"
+  ],
+  "distractors": [
+   "さんぱい",
+   "ざんはい",
+   "ざんばい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "賄う",
+  "sentence": "家賃はバイト代で[[賄う]]。",
+  "reading": "まかなう",
+  "meaning": "to cover (costs), provide",
+  "type": "kun",
+  "hint": "賄 has 貝 (money) — まかなう is stretching money to cover needs.",
+  "compounds": [
+   "賄賂 (wairo) — bribe",
+   "給与 (kyuuyo) — salary"
+  ],
+  "distractors": [
+   "やしなう",
+   "ともなう",
+   "つくろう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "培う",
+  "sentence": "読書で思考力を[[培う]]。",
+  "reading": "つちかう",
+  "meaning": "to cultivate, foster",
+  "type": "kun",
+  "hint": "Contains 土 (つち, soil) — nurturing from the ground up.",
+  "compounds": [
+   "培養 (baiyou) — cultivation",
+   "栽培 (saibai) — growing"
+  ],
+  "distractors": [
+   "やしなう",
+   "つくろう",
+   "たがやす"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "享受",
+  "sentence": "自由を[[享受]]できる社会。",
+  "reading": "きょうじゅ",
+  "meaning": "to enjoy, be given",
+  "type": "on",
+  "hint": "享 = きょう (receive); same sound as 教授 but different kanji — watch the trap.",
+  "compounds": [
+   "享楽 (kyouraku) — pleasure",
+   "受容 (juyou) — acceptance"
+  ],
+  "distractors": [
+   "こうじゅ",
+   "きょうじ",
+   "くじゅ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "携わる",
+  "sentence": "教育に[[携わる]]仕事がしたい。",
+  "reading": "たずさわる",
+  "meaning": "to engage in, be involved",
+  "type": "kun",
+  "hint": "携 = carry in hand (携帯) — たずさわる is having a hand in the work.",
+  "compounds": [
+   "携帯 (keitai) — carrying/mobile",
+   "連携 (renkei) — cooperation"
+  ],
+  "distractors": [
+   "かかわる",
+   "さずかる",
+   "たずねる"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "慎重",
+  "sentence": "[[慎重]]に判断すべき問題だ。",
+  "reading": "しんちょう",
+  "meaning": "careful, cautious",
+  "type": "on",
+  "hint": "慎 = しん (to be careful, 慎む); 重 reads ちょう here as in 貴重.",
+  "compounds": [
+   "慎む (tsutsushimu) — to refrain",
+   "丁重 (teichou) — courteous"
+  ],
+  "distractors": [
+   "しんじゅう",
+   "じんちょう",
+   "しんちゅう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "憤慨",
+  "sentence": "不当な扱いに[[憤慨]]した。",
+  "reading": "ふんがい",
+  "meaning": "indignation, resentment",
+  "type": "on",
+  "hint": "憤 = ふん (anger boiling up, 憤り); 慨 = がい as in 感慨.",
+  "compounds": [
+   "憤り (ikidoori) — anger",
+   "慨嘆 (gaitan) — lamenting"
+  ],
+  "distractors": [
+   "ふんかい",
+   "ふけがい",
+   "ぷんがい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "逸脱",
+  "sentence": "規則から[[逸脱]]した行為。",
+  "reading": "いつだつ",
+  "meaning": "deviation, departure",
+  "type": "on",
+  "hint": "逸 = いつ (to stray, 逸れる); 脱 = だつ (escape).",
+  "compounds": [
+   "逸話 (itsuwa) — anecdote",
+   "脱線 (dassen) — derailment"
+  ],
+  "distractors": [
+   "いちだつ",
+   "いつでつ",
+   "えつだつ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "懸念",
+  "sentence": "景気の先行きに[[懸念]]が残る。",
+  "reading": "けねん",
+  "meaning": "concern, worry",
+  "type": "on",
+  "hint": "懸 drops the ん here — short け, not けん. Worries 'hang' (懸かる) over you.",
+  "compounds": [
+   "懸案 (kenan) — pending issue",
+   "懸命 (kenmei) — earnest"
+  ],
+  "distractors": [
+   "けんねん",
+   "かねん",
+   "けんえん"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "払拭",
+  "sentence": "不安を[[払拭]]するのは難しい。",
+  "reading": "ふっしょく",
+  "meaning": "wiping away, dispelling",
+  "type": "on",
+  "hint": "払 (sweep) + 拭 (wipe, 拭く) — ふつ + しょく contracts to ふっしょく.",
+  "compounds": [
+   "拭く (fuku) — to wipe",
+   "一掃 (issou) — sweep away"
+  ],
+  "distractors": [
+   "はらしょく",
+   "ふっしき",
+   "ふつぬぐ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "翻弄",
+  "sentence": "運命に[[翻弄]]される主人公。",
+  "reading": "ほんろう",
+  "meaning": "to toss about, toy with",
+  "type": "on",
+  "hint": "翻 = ほん (flip, 翻訳); 弄 = ろう (toy with) — tossed like a leaf in wind.",
+  "compounds": [
+   "翻訳 (honyaku) — translation",
+   "愚弄 (gurou) — mockery"
+  ],
+  "distractors": [
+   "はんろう",
+   "ほんもう",
+   "ぼんろう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "脆弱",
+  "sentence": "[[脆弱]]な体制を立て直す。",
+  "reading": "ぜいじゃく",
+  "meaning": "fragile, vulnerable",
+  "type": "on",
+  "hint": "脆い (もろい) = brittle; on-reading ぜい — not き (危 trap).",
+  "compounds": [
+   "脆弱性 (zeijakusei) — vulnerability",
+   "脆い (moroi) — brittle"
+  ],
+  "distractors": [
+   "きじゃく",
+   "ぜいにゃく",
+   "せいじゃく"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "奔走",
+  "sentence": "資金集めに[[奔走]]する。",
+  "reading": "ほんそう",
+  "meaning": "running about, busying oneself",
+  "type": "on",
+  "hint": "奔 = ほん (rush, 奔放) + 走 (run) — running in all directions.",
+  "compounds": [
+   "奔放 (honpou) — uninhibited",
+   "走行 (soukou) — running"
+  ],
+  "distractors": [
+   "はんそう",
+   "ほんぞう",
+   "ぼんそう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "疎外",
+  "sentence": "集団から[[疎外]]感を覚える。",
+  "reading": "そがい",
+  "meaning": "alienation, estrangement",
+  "type": "on",
+  "hint": "疎 = そ (distant, 疎い); paired with 外 = pushed to the outside.",
+  "compounds": [
+   "疎遠 (soen) — estrangement",
+   "阻害 (sogai) — obstruction (homophone!)"
+  ],
+  "distractors": [
+   "しょがい",
+   "そげ",
+   "すがい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "克服",
+  "sentence": "苦手意識を[[克服]]した。",
+  "reading": "こくふく",
+  "meaning": "overcoming, conquering",
+  "type": "on",
+  "hint": "克 = こく (to overcome); sounds like 'conquer' + 服 (submit).",
+  "compounds": [
+   "克明 (kokumei) — detailed",
+   "征服 (seifuku) — conquest"
+  ],
+  "distractors": [
+   "かつふく",
+   "こくぶく",
+   "きょくふく"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "傍聴",
+  "sentence": "裁判を[[傍聴]]する市民。",
+  "reading": "ぼうちょう",
+  "meaning": "attendance (as observer), sitting in",
+  "type": "on",
+  "hint": "傍 = ぼう (beside, 傍ら) + 聴 (listen) — listening from the side.",
+  "compounds": [
+   "傍観 (boukan) — looking on",
+   "聴衆 (choushuu) — audience"
+  ],
+  "distractors": [
+   "ほうちょう",
+   "ぼうてい",
+   "ぼうしょう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "隔絶",
+  "sentence": "外界から[[隔絶]]された村。",
+  "reading": "かくぜつ",
+  "meaning": "isolation, separation",
+  "type": "on",
+  "hint": "隔 = かく (separate, 隔てる) + 絶 (cut off) — completely cut apart.",
+  "compounds": [
+   "隔離 (kakuri) — quarantine",
+   "断絶 (danzetsu) — severance"
+  ],
+  "distractors": [
+   "かくぜち",
+   "へだぜつ",
+   "かくせつ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "抹消",
+  "sentence": "名簿から名前を[[抹消]]する。",
+  "reading": "まっしょう",
+  "meaning": "erasure, deletion",
+  "type": "on",
+  "hint": "抹 = まつ (rub out, as in 抹茶 ground tea) — contracts to まっしょう.",
+  "compounds": [
+   "抹茶 (matcha) — powdered tea",
+   "消去 (shoukyo) — deletion"
+  ],
+  "distractors": [
+   "ばっしょう",
+   "まつけし",
+   "まっさつ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "蔑視",
+  "sentence": "他人を[[蔑視]]する態度は醜い。",
+  "reading": "べっし",
+  "meaning": "contempt, scorn",
+  "type": "on",
+  "hint": "蔑む (さげすむ) = to despise; on-reading べつ contracts before し.",
+  "compounds": [
+   "軽蔑 (keibetsu) — contempt",
+   "蔑む (sagesumu) — to look down on"
+  ],
+  "distractors": [
+   "めっし",
+   "べつみ",
+   "へいし"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "慕う",
+  "sentence": "生徒たちは先生を[[慕う]]。",
+  "reading": "したう",
+  "meaning": "to adore, look up to",
+  "type": "kun",
+  "hint": "慕 has 心 at the bottom — the heart follows (したう) someone admired.",
+  "compounds": [
+   "思慕 (shibo) — yearning",
+   "慕情 (bojou) — longing"
+  ],
+  "distractors": [
+   "うやまう",
+   "ねがう",
+   "とむらう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "歪む",
+  "sentence": "衝撃でフレームが[[歪む]]。",
+  "reading": "ゆがむ",
+  "meaning": "to warp, distort",
+  "type": "kun",
+  "hint": "不 + 正 stacked = 'not straight' — ゆがむ.",
+  "compounds": [
+   "歪曲 (waikyoku) — distortion",
+   "歪み (yugami) — warp"
+  ],
+  "distractors": [
+   "ひずむ",
+   "いがむ",
+   "たわむ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "潤う",
+  "sentence": "雨で大地が[[潤う]]。",
+  "reading": "うるおう",
+  "meaning": "to be moistened, enriched",
+  "type": "kun",
+  "hint": "氵 (water) + 閏 — moisture spreading; うるおう like うるうる eyes.",
+  "compounds": [
+   "潤沢 (juntaku) — abundant",
+   "湿潤 (shitsujun) — humid"
+  ],
+  "distractors": [
+   "ういおう",
+   "うるむ",
+   "ぬれおう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "募る",
+  "sentence": "参加者を広く[[募る]]。",
+  "reading": "つのる",
+  "meaning": "to recruit; to intensify",
+  "type": "kun",
+  "hint": "募集の募 — つのる also means feelings 'growing stronger' (不安が募る).",
+  "compounds": [
+   "募集 (boshuu) — recruitment",
+   "応募 (oubo) — application"
+  ],
+  "distractors": [
+   "あつる",
+   "つどる",
+   "もどる"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "和らぐ",
+  "sentence": "薬で痛みが[[和らぐ]]。",
+  "reading": "やわらぐ",
+  "meaning": "to soften, ease",
+  "type": "kun",
+  "hint": "和 = harmony; やわらかい (soft) shares the root やわ.",
+  "compounds": [
+   "緩和 (kanwa) — relaxation",
+   "柔らかい (yawarakai) — soft"
+  ],
+  "distractors": [
+   "なごらぐ",
+   "わらぐ",
+   "やすらぐ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "澄む",
+  "sentence": "冬は川の水がよく[[澄む]]。",
+  "reading": "すむ",
+  "meaning": "to become clear",
+  "type": "kun",
+  "hint": "氵 + 登 — water so clear you see the bottom; same sound as 住む/済む.",
+  "compounds": [
+   "澄明 (choumei) — clarity",
+   "清澄 (seichou) — limpid"
+  ],
+  "distractors": [
+   "とむ",
+   "さえむ",
+   "しずむ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "揺らぐ",
+  "sentence": "決意は少しも[[揺らぐ]]ことがない。",
+  "reading": "ゆらぐ",
+  "meaning": "to sway, waver",
+  "type": "kun",
+  "hint": "揺れる (ゆれる) family — ゆら like a flame flickering (ゆらゆら).",
+  "compounds": [
+   "動揺 (douyou) — agitation",
+   "揺れる (yureru) — to shake"
+  ],
+  "distractors": [
+   "ぐらぐ",
+   "ゆるらぐ",
+   "たじらぐ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "佇む",
+  "sentence": "彼は湖畔に一人[[佇む]]。",
+  "reading": "たたずむ",
+  "meaning": "to stand still, linger",
+  "type": "kun",
+  "hint": "亻 (person) + 宁 — a person standing quietly in place: たたずむ.",
+  "compounds": [
+   "佇まい (tatazumai) — appearance/air",
+   "立つ (tatsu) — to stand"
+  ],
+  "distractors": [
+   "やすむ",
+   "たたむ",
+   "とどむ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "滲む",
+  "sentence": "インクが紙に[[滲む]]。",
+  "reading": "にじむ",
+  "meaning": "to blur, ooze",
+  "type": "kun",
+  "hint": "氵 (water) seeping — にじむ like 虹 (にじ) colors bleeding.",
+  "compounds": [
+   "浸透 (shintou) — permeation",
+   "滲み (nijimi) — blot"
+  ],
+  "distractors": [
+   "しみむ",
+   "そまる",
+   "ふちむ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "曖昧",
+  "sentence": "[[曖昧]]な返事でごまかした。",
+  "reading": "あいまい",
+  "meaning": "vague, ambiguous",
+  "type": "on",
+  "hint": "Both kanji have 日 obscured — dim and unclear; あい + まい rhyme.",
+  "compounds": [
+   "曖昧さ (aimaisa) — vagueness",
+   "不明瞭 (fumeiryou) — indistinct"
+  ],
+  "distractors": [
+   "あいみ",
+   "あんまい",
+   "おうまい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "該当",
+  "sentence": "[[該当]]する項目に印を付ける。",
+  "reading": "がいとう",
+  "meaning": "corresponding, applicable",
+  "type": "on",
+  "hint": "該 = がい (that/said item); same sound as 街灯・街頭 — context decides.",
+  "compounds": [
+   "該博 (gaihaku) — profound (knowledge)",
+   "当該 (tougai) — the said"
+  ],
+  "distractors": [
+   "かくとう",
+   "がいどう",
+   "きとう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "陥る",
+  "sentence": "経営難に[[陥る]]企業が増えた。",
+  "reading": "おちいる",
+  "meaning": "to fall into (a bad state)",
+  "type": "kun",
+  "hint": "落ちて入る → おち+いる = おちいる; on-reading かん in 陥没.",
+  "compounds": [
+   "陥没 (kanbotsu) — cave-in",
+   "欠陥 (kekkan) — defect"
+  ],
+  "distractors": [
+   "おとしいる",
+   "はまる",
+   "おちる"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "顧みる",
+  "sentence": "過去を[[顧みる]]余裕もない。",
+  "reading": "かえりみる",
+  "meaning": "to look back on, reflect",
+  "type": "kun",
+  "hint": "顧 = turn the head back — 帰り見る = かえりみる; 省みる is the intro-spective twin.",
+  "compounds": [
+   "顧客 (kokyaku) — customer",
+   "回顧 (kaiko) — retrospection"
+  ],
+  "distractors": [
+   "こころみる",
+   "かんがみる",
+   "もどりみる"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "遮る",
+  "sentence": "カーテンで日光を[[遮る]]。",
+  "reading": "さえぎる",
+  "meaning": "to block, interrupt",
+  "type": "kun",
+  "hint": "遮断機 (しゃだんき) blocks the crossing — kun reading さえぎる.",
+  "compounds": [
+   "遮断 (shadan) — blocking",
+   "遮蔽 (shahei) — shielding"
+  ],
+  "distractors": [
+   "はばむ",
+   "くぎる",
+   "ふさぐ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "廃れる",
+  "sentence": "その流行はすぐに[[廃れる]]。",
+  "reading": "すたれる",
+  "meaning": "to go out of use, decline",
+  "type": "kun",
+  "hint": "廃 = discard (廃止) — things thrown away すたれる (fade out).",
+  "compounds": [
+   "廃止 (haishi) — abolition",
+   "荒廃 (kouhai) — devastation"
+  ],
+  "distractors": [
+   "さびれる",
+   "つぶれる",
+   "はいれる"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "蘇る",
+  "sentence": "当時の記憶が[[蘇る]]。",
+  "reading": "よみがえる",
+  "meaning": "to revive, be restored",
+  "type": "kun",
+  "hint": "黄泉 (よみ, the underworld) から帰る → よみがえる — back from the dead.",
+  "compounds": [
+   "蘇生 (sosei) — resuscitation",
+   "復活 (fukkatsu) — revival"
+  ],
+  "distractors": [
+   "ようみがえる",
+   "めざめる",
+   "いきかえる"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "憧れる",
+  "sentence": "都会の生活に[[憧れる]]。",
+  "reading": "あこがれる",
+  "meaning": "to yearn for, admire",
+  "type": "kun",
+  "hint": "忄 (heart) + 童 (child) — a childlike longing: あこがれる.",
+  "compounds": [
+   "憧憬 (shoukei) — longing",
+   "理想 (risou) — ideal"
+  ],
+  "distractors": [
+   "あがめる",
+   "こがれる",
+   "あくがれる"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "慰める",
+  "sentence": "落ち込む友人を[[慰める]]。",
+  "reading": "なぐさめる",
+  "meaning": "to comfort, console",
+  "type": "kun",
+  "hint": "慰安・慰労の慰 — soothing the heart (心): なぐさめる.",
+  "compounds": [
+   "慰労 (irou) — appreciation of efforts",
+   "慰謝料 (isharyou) — consolation money"
+  ],
+  "distractors": [
+   "いさめる",
+   "なだめる",
+   "おさめる"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "拒む",
+  "sentence": "面会を[[拒む]]理由はない。",
+  "reading": "こばむ",
+  "meaning": "to refuse, reject",
+  "type": "kun",
+  "hint": "拒否 (きょひ) の拒 — kun reading こばむ; hand (扌) pushing away.",
+  "compounds": [
+   "拒否 (kyohi) — refusal",
+   "拒絶 (kyozetsu) — rejection"
+  ],
+  "distractors": [
+   "はばむ",
+   "こぼむ",
+   "ふせぐ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "阻む",
+  "sentence": "悪天候が登頂を[[阻む]]。",
+  "reading": "はばむ",
+  "meaning": "to block, thwart",
+  "type": "kun",
+  "hint": "阻止 (そし) の阻 — はばむ blocks the width (はば) of the path.",
+  "compounds": [
+   "阻止 (soshi) — prevention",
+   "阻害 (sogai) — impediment"
+  ],
+  "distractors": [
+   "こばむ",
+   "さえぎる",
+   "のぞむ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "償う",
+  "sentence": "罪を[[償う]]には長い年月が要る。",
+  "reading": "つぐなう",
+  "meaning": "to atone, compensate",
+  "type": "kun",
+  "hint": "賠償 (ばいしょう) の償 — 貝 (money) used to make amends: つぐなう.",
+  "compounds": [
+   "賠償 (baishou) — compensation",
+   "弁償 (benshou) — reimbursement"
+  ],
+  "distractors": [
+   "やしなう",
+   "あがなう",
+   "おぎなう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "挑む",
+  "sentence": "世界記録に[[挑む]]選手。",
+  "reading": "いどむ",
+  "meaning": "to challenge, attempt",
+  "type": "kun",
+  "hint": "挑戦 (ちょうせん) の挑 — kun reading いどむ.",
+  "compounds": [
+   "挑戦 (chousen) — challenge",
+   "挑発 (chouhatsu) — provocation"
+  ],
+  "distractors": [
+   "のぞむ",
+   "はげむ",
+   "つかむ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "施す",
+  "sentence": "壁に装飾を[[施す]]。",
+  "reading": "ほどこす",
+  "meaning": "to apply, give, perform",
+  "type": "kun",
+  "hint": "施設 (しせつ) の施 — ほどこす is giving out or applying something.",
+  "compounds": [
+   "施設 (shisetsu) — facility",
+   "実施 (jisshi) — implementation"
+  ],
+  "distractors": [
+   "もよおす",
+   "ほどす",
+   "おろす"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "貫く",
+  "sentence": "初志を最後まで[[貫く]]。",
+  "reading": "つらぬく",
+  "meaning": "to pierce; carry through",
+  "type": "kun",
+  "hint": "貫通 (かんつう) の貫 — a rod passing straight through: つらぬく.",
+  "compounds": [
+   "貫通 (kantsuu) — penetration",
+   "一貫 (ikkan) — consistency"
+  ],
+  "distractors": [
+   "みちびく",
+   "ぬらつく",
+   "つなぐ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "免れる",
+  "sentence": "辛うじて処分を[[免れる]]。",
+  "reading": "まぬかれる",
+  "meaning": "to escape, avoid",
+  "type": "kun",
+  "hint": "免除 (めんじょ) の免 — まぬかれる (also read まぬがれる).",
+  "compounds": [
+   "免除 (menjo) — exemption",
+   "免疫 (men'eki) — immunity"
+  ],
+  "distractors": [
+   "のがれる",
+   "めんれる",
+   "まねかれる"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "蓄積",
+  "sentence": "疲労が[[蓄積]]している。",
+  "reading": "ちくせき",
+  "meaning": "accumulation",
+  "type": "on",
+  "hint": "蓄える (たくわえる) の蓄 = ちく; 積 = せき (pile up, 積む).",
+  "compounds": [
+   "貯蓄 (chochiku) — savings",
+   "積載 (sekisai) — loading"
+  ],
+  "distractors": [
+   "ちくしゃく",
+   "たいせき",
+   "ちっせき"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "頻繁",
+  "sentence": "[[頻繁]]に連絡を取り合う。",
+  "reading": "ひんぱん",
+  "meaning": "frequent",
+  "type": "on",
+  "hint": "頻 = ひん (frequency, 頻度); 繁 becomes ぱん after ん.",
+  "compounds": [
+   "頻度 (hindo) — frequency",
+   "繁忙 (hanbou) — busyness"
+  ],
+  "distractors": [
+   "ひんはん",
+   "びんぱん",
+   "ひんばん"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "均衡",
+  "sentence": "需要と供給の[[均衡]]を保つ。",
+  "reading": "きんこう",
+  "meaning": "balance, equilibrium",
+  "type": "on",
+  "hint": "均 = きん (equal, 平均); 衡 = こう (scales) — balanced scales.",
+  "compounds": [
+   "平均 (heikin) — average",
+   "均等 (kintou) — uniform"
+  ],
+  "distractors": [
+   "きんしょう",
+   "ぎんこう",
+   "きんごう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "貢献",
+  "sentence": "地域社会に[[貢献]]する。",
+  "reading": "こうけん",
+  "meaning": "contribution",
+  "type": "on",
+  "hint": "貢 = こう (tribute, 貝 = goods offered); 献 = けん (offer, 献血).",
+  "compounds": [
+   "貢ぐ (mitsugu) — to pay tribute",
+   "献身 (kenshin) — devotion"
+  ],
+  "distractors": [
+   "くけん",
+   "こうこん",
+   "こうげん"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "妥協",
+  "sentence": "安易な[[妥協]]は後悔のもとだ。",
+  "reading": "だきょう",
+  "meaning": "compromise",
+  "type": "on",
+  "hint": "妥 = だ (settle, 妥当); 協 = きょう (cooperate) — settling together.",
+  "compounds": [
+   "妥当 (datou) — appropriate",
+   "協調 (kyouchou) — cooperation"
+  ],
+  "distractors": [
+   "たきょう",
+   "だこう",
+   "だっきょう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "把握",
+  "sentence": "現状を正確に[[把握]]する。",
+  "reading": "はあく",
+  "meaning": "grasp, understanding",
+  "type": "on",
+  "hint": "把 = は (grip) + 握 = あく (握る, to grasp) — gripping the facts.",
+  "compounds": [
+   "握手 (akushu) — handshake",
+   "掌握 (shouaku) — control"
+  ],
+  "distractors": [
+   "はおく",
+   "わあく",
+   "はにぎ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "遂行",
+  "sentence": "任務を確実に[[遂行]]する。",
+  "reading": "すいこう",
+  "meaning": "execution, accomplishment",
+  "type": "on",
+  "hint": "遂 = すい (accomplish, 遂げる); NOT つい — 遂に (finally) is the kun side.",
+  "compounds": [
+   "遂げる (togeru) — to achieve",
+   "完遂 (kansui) — completion"
+  ],
+  "distractors": [
+   "ついこう",
+   "すいぎょう",
+   "そうこう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "網羅",
+  "sentence": "全分野を[[網羅]]した辞典。",
+  "reading": "もうら",
+  "meaning": "covering everything, comprehensive",
+  "type": "on",
+  "hint": "網 (net) + 羅 (spread out) — casting a net over everything: もうら.",
+  "compounds": [
+   "網 (ami) — net",
+   "羅列 (raretsu) — enumeration"
+  ],
+  "distractors": [
+   "あみら",
+   "もら",
+   "ぼうら"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "匿名",
+  "sentence": "[[匿名]]で通報が寄せられた。",
+  "reading": "とくめい",
+  "meaning": "anonymity",
+  "type": "on",
+  "hint": "匿 = とく (hide, 隠匿) — hiding the 名 (name).",
+  "compounds": [
+   "隠匿 (intoku) — concealment",
+   "匿う (kakumau) — to shelter"
+  ],
+  "distractors": [
+   "どくめい",
+   "のくめい",
+   "とくみょう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "暴露",
+  "sentence": "内部事情を[[暴露]]する記事。",
+  "reading": "ばくろ",
+  "meaning": "exposure, disclosure",
+  "type": "on",
+  "hint": "暴 usually reads ぼう (暴力) but here it's ばく — 暴露 is a classic exception.",
+  "compounds": [
+   "暴く (abaku) — to expose",
+   "披露 (hirou) — announcement"
+  ],
+  "distractors": [
+   "ぼうろ",
+   "ばくろう",
+   "ぼうろう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "冒頭",
+  "sentence": "[[冒頭]]で結論を述べる。",
+  "reading": "ぼうとう",
+  "meaning": "opening, beginning",
+  "type": "on",
+  "hint": "冒 = ぼう (to push forward, 冒険) + 頭 (head) — the very head of a text.",
+  "compounds": [
+   "冒険 (bouken) — adventure",
+   "先頭 (sentou) — front"
+  ],
+  "distractors": [
+   "もうとう",
+   "ぼうず",
+   "ぼうがしら"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "折衷",
+  "sentence": "和洋[[折衷]]の家に住む。",
+  "reading": "せっちゅう",
+  "meaning": "compromise, blending",
+  "type": "on",
+  "hint": "折 = せつ (fold) + 衷 = ちゅう (inner heart) — folding two styles into one.",
+  "compounds": [
+   "折衝 (sesshou) — negotiation",
+   "衷心 (chuushin) — heartfelt"
+  ],
+  "distractors": [
+   "せつちゅう",
+   "おりちゅう",
+   "せっしょう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "拮抗",
+  "sentence": "両者の実力は[[拮抗]]している。",
+  "reading": "きっこう",
+  "meaning": "rivalry, being evenly matched",
+  "type": "on",
+  "hint": "拮 = きつ + 抗 = こう (resist) — きつこう contracts to きっこう.",
+  "compounds": [
+   "対抗 (taikou) — opposition",
+   "抗争 (kousou) — conflict"
+  ],
+  "distractors": [
+   "けっこう",
+   "きつこう",
+   "きっとう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "葛藤",
+  "sentence": "心の中で[[葛藤]]が続いた。",
+  "reading": "かっとう",
+  "meaning": "conflict (inner), discord",
+  "type": "on",
+  "hint": "葛 (kudzu vine) + 藤 (wisteria) — two vines tangling: かっとう.",
+  "compounds": [
+   "葛湯 (kuzuyu) — kudzu drink",
+   "藤色 (fujiiro) — light purple"
+  ],
+  "distractors": [
+   "かつどう",
+   "くずふじ",
+   "がっとう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "危惧",
+  "sentence": "絶滅が[[危惧]]される動物。",
+  "reading": "きぐ",
+  "meaning": "fear, apprehension",
+  "type": "on",
+  "hint": "惧 = ぐ (fear) — short and sharp: きぐ, not きく.",
+  "compounds": [
+   "危機 (kiki) — crisis",
+   "懸念 (kenen) — concern"
+  ],
+  "distractors": [
+   "きく",
+   "きご",
+   "あやぐ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "示唆",
+  "sentence": "今後の方向性を[[示唆]]する発言。",
+  "reading": "しさ",
+  "meaning": "suggestion, hint",
+  "type": "on",
+  "hint": "唆 = さ (唆す, to instigate) — し+さ, both short vowels.",
+  "compounds": [
+   "唆す (sosonokasu) — to incite",
+   "暗示 (anji) — hint"
+  ],
+  "distractors": [
+   "じさ",
+   "しし",
+   "しゅんさ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "誇張",
+  "sentence": "[[誇張]]した表現は信頼を損なう。",
+  "reading": "こちょう",
+  "meaning": "exaggeration",
+  "type": "on",
+  "hint": "誇る (ほこる) の誇 = こ; 張 (stretch) — stretching the truth.",
+  "compounds": [
+   "誇り (hokori) — pride",
+   "主張 (shuchou) — assertion"
+  ],
+  "distractors": [
+   "かちょう",
+   "こっちょう",
+   "ごちょう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "緻密",
+  "sentence": "[[緻密]]な計画を立てる。",
+  "reading": "ちみつ",
+  "meaning": "precise, elaborate",
+  "type": "on",
+  "hint": "緻 = ち (fine, detailed — 糸 thread-fine) + 密 (dense).",
+  "compounds": [
+   "精緻 (seichi) — exquisite",
+   "綿密 (menmitsu) — meticulous"
+  ],
+  "distractors": [
+   "しみつ",
+   "ちみち",
+   "きみつ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "錯覚",
+  "sentence": "目の[[錯覚]]を利用した絵。",
+  "reading": "さっかく",
+  "meaning": "illusion, misconception",
+  "type": "on",
+  "hint": "錯 = さく (mixed up, 錯乱) — さく+かく contracts to さっかく.",
+  "compounds": [
+   "錯乱 (sakuran) — derangement",
+   "感覚 (kankaku) — sense"
+  ],
+  "distractors": [
+   "さくかく",
+   "しゃっかく",
+   "そっかく"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "露骨",
+  "sentence": "[[露骨]]に嫌な顔をされた。",
+  "reading": "ろこつ",
+  "meaning": "blatant, undisguised",
+  "type": "on",
+  "hint": "露 (exposed) + 骨 (bone) — baring it to the bone: ろこつ.",
+  "compounds": [
+   "露出 (roshutsu) — exposure",
+   "骨子 (kosshi) — framework"
+  ],
+  "distractors": [
+   "ろうこつ",
+   "ろほね",
+   "ろっこつ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "貪欲",
+  "sentence": "[[貪欲]]に知識を吸収する。",
+  "reading": "どんよく",
+  "meaning": "greedy, voracious",
+  "type": "on",
+  "hint": "貪る (むさぼる) の貪 = どん — devouring desire.",
+  "compounds": [
+   "貪る (musaboru) — to devour",
+   "強欲 (gouyoku) — avarice"
+  ],
+  "distractors": [
+   "たんよく",
+   "どんおく",
+   "とんよく"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "憶測",
+  "sentence": "[[憶測]]で物を言うべきではない。",
+  "reading": "おくそく",
+  "meaning": "speculation, guesswork",
+  "type": "on",
+  "hint": "憶 = おく (remember/think, 記憶) + 測 (measure) — measuring by guess.",
+  "compounds": [
+   "記憶 (kioku) — memory",
+   "推測 (suisoku) — inference"
+  ],
+  "distractors": [
+   "いそく",
+   "おくしょく",
+   "よくそく"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "便宜",
+  "sentence": "[[便宜]]を図ってもらった。",
+  "reading": "べんぎ",
+  "meaning": "convenience, accommodation",
+  "type": "on",
+  "hint": "便 = べん (convenience) + 宜 = ぎ (suitable, 適宜) — voiced ぎ.",
+  "compounds": [
+   "適宜 (tekigi) — as appropriate",
+   "便利 (benri) — convenient"
+  ],
+  "distractors": [
+   "べんせん",
+   "びんぎ",
+   "べんき"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "罷免",
+  "sentence": "大臣が[[罷免]]された。",
+  "reading": "ひめん",
+  "meaning": "dismissal (from office)",
+  "type": "on",
+  "hint": "罷 = ひ (to quit) + 免 (release) — released from duty.",
+  "compounds": [
+   "免職 (menshoku) — discharge",
+   "解任 (kainin) — dismissal"
+  ],
+  "distractors": [
+   "ばめん",
+   "ひまん",
+   "はめん"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "頒布",
+  "sentence": "資料を無料で[[頒布]]する。",
+  "reading": "はんぷ",
+  "meaning": "distribution, circulation",
+  "type": "on",
+  "hint": "頒 = はん (distribute); 布 becomes ぷ after ん.",
+  "compounds": [
+   "配布 (haifu) — handout",
+   "布教 (fukyou) — propagation"
+  ],
+  "distractors": [
+   "ひんぷ",
+   "はんふ",
+   "ばんぷ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "逝去",
+  "sentence": "恩師の[[逝去]]を悼む。",
+  "reading": "せいきょ",
+  "meaning": "death, passing (honorific)",
+  "type": "on",
+  "hint": "逝 = せい (to pass away, 逝く); 去 = きょ (leave) — departed.",
+  "compounds": [
+   "逝く (yuku) — to pass away",
+   "死去 (shikyo) — death"
+  ],
+  "distractors": [
+   "せっきょ",
+   "しきょ",
+   "せいこ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "遭遇",
+  "sentence": "思わぬ事態に[[遭遇]]した。",
+  "reading": "そうぐう",
+  "meaning": "encounter",
+  "type": "on",
+  "hint": "遭う (あう, meet with misfortune) + 遇 = ぐう (treatment, 待遇).",
+  "compounds": [
+   "遭難 (sounan) — disaster/distress",
+   "待遇 (taiguu) — treatment"
+  ],
+  "distractors": [
+   "そうごう",
+   "ぞうぐう",
+   "そぐう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "傲慢",
+  "sentence": "[[傲慢]]な態度が反感を買う。",
+  "reading": "ごうまん",
+  "meaning": "arrogant, haughty",
+  "type": "on",
+  "hint": "傲 = ごう (pride) + 慢 (conceit, 自慢) — a proud heart run wild.",
+  "compounds": [
+   "傲然 (gouzen) — haughtily",
+   "自慢 (jiman) — boasting"
+  ],
+  "distractors": [
+   "きょうまん",
+   "ごうめん",
+   "こうまん"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "謙虚",
+  "sentence": "[[謙虚]]な姿勢で学び続ける。",
+  "reading": "けんきょ",
+  "meaning": "humble, modest",
+  "type": "on",
+  "hint": "謙 = けん (modesty, 謙遜) + 虚 = きょ (empty) — emptying one's ego.",
+  "compounds": [
+   "謙遜 (kenson) — humility",
+   "虚心 (kyoshin) — open mind"
+  ],
+  "distractors": [
+   "けんそん",
+   "げんきょ",
+   "けんこ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "陳腐",
+  "sentence": "[[陳腐]]な決まり文句を並べる。",
+  "reading": "ちんぷ",
+  "meaning": "stale, clichéd",
+  "type": "on",
+  "hint": "陳 = ちん (old, 陳列 displayed too long) + 腐 (rot) — gone stale.",
+  "compounds": [
+   "陳列 (chinretsu) — display",
+   "腐敗 (fuhai) — decay"
+  ],
+  "distractors": [
+   "ちんふ",
+   "じんぷ",
+   "ちんぶ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "廉価",
+  "sentence": "[[廉価]]版が発売された。",
+  "reading": "れんか",
+  "meaning": "low price, cheap",
+  "type": "on",
+  "hint": "廉 = れん (cheap/honest, 清廉) + 価 (price).",
+  "compounds": [
+   "清廉 (seiren) — integrity",
+   "安価 (anka) — inexpensive"
+  ],
+  "distractors": [
+   "けんか",
+   "れんけ",
+   "やすか"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "暫定",
+  "sentence": "[[暫定]]的な措置に過ぎない。",
+  "reading": "ざんてい",
+  "meaning": "provisional, tentative",
+  "type": "on",
+  "hint": "暫 = ざん (for a while, 暫く/しばらく) + 定 (fix) — fixed only for now.",
+  "compounds": [
+   "暫く (shibaraku) — for a while",
+   "仮定 (katei) — assumption"
+  ],
+  "distractors": [
+   "ぜんてい",
+   "ざんじょう",
+   "さんてい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "猶予",
+  "sentence": "支払いの[[猶予]]を求める。",
+  "reading": "ゆうよ",
+  "meaning": "postponement, grace period",
+  "type": "on",
+  "hint": "猶 = ゆう + 予 = よ (beforehand) — extra time granted in advance.",
+  "compounds": [
+   "執行猶予 (shikkou yuuyo) — suspended sentence",
+   "予定 (yotei) — schedule"
+  ],
+  "distractors": [
+   "ゆよ",
+   "ゆうやく",
+   "ようよ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "融通",
+  "sentence": "[[融通]]の利かない性格だ。",
+  "reading": "ゆうずう",
+  "meaning": "flexibility; financing",
+  "type": "on",
+  "hint": "通 reads ずう here (irregular!) — ゆうつう is the classic wrong answer.",
+  "compounds": [
+   "金融 (kinyuu) — finance",
+   "融合 (yuugou) — fusion"
+  ],
+  "distractors": [
+   "ゆうつう",
+   "ゆうどおり",
+   "ゆうづ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "会釈",
+  "sentence": "軽く[[会釈]]して通り過ぎた。",
+  "reading": "えしゃく",
+  "meaning": "slight bow, nod",
+  "type": "on",
+  "hint": "会 reads え here (呉音, as in 会得) — えしゃく, not かいしゃく.",
+  "compounds": [
+   "会得 (etoku) — mastery",
+   "釈明 (shakumei) — explanation"
+  ],
+  "distractors": [
+   "かいしゃく",
+   "えせき",
+   "あいしゃく"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "相殺",
+  "sentence": "損益が[[相殺]]される。",
+  "reading": "そうさい",
+  "meaning": "offsetting, cancelling out",
+  "type": "on",
+  "hint": "殺 reads さい here (not さつ!) — mutual cancelling, a famous exception.",
+  "compounds": [
+   "殺到 (sattou) — rush",
+   "減殺 (gensai) — reduction"
+  ],
+  "distractors": [
+   "そうさつ",
+   "あいさつ",
+   "そうせつ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "建立",
+  "sentence": "寺院を[[建立]]した武将。",
+  "reading": "こんりゅう",
+  "meaning": "erection (of temple/monument)",
+  "type": "on",
+  "hint": "Buddhist reading: 建 = こん, 立 = りゅう — けんりつ is the trap.",
+  "compounds": [
+   "建築 (kenchiku) — architecture",
+   "立像 (ryuuzou) — standing statue"
+  ],
+  "distractors": [
+   "けんりつ",
+   "こんりつ",
+   "けんりゅう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "精進",
+  "sentence": "芸の道に[[精進]]する。",
+  "reading": "しょうじん",
+  "meaning": "devotion, diligence",
+  "type": "on",
+  "hint": "Buddhist reading: 精 = しょう (not せい) — purifying effort.",
+  "compounds": [
+   "精進料理 (shoujin ryouri) — vegetarian cuisine",
+   "進歩 (shinpo) — progress"
+  ],
+  "distractors": [
+   "せいしん",
+   "しょうしん",
+   "せいじん"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "成就",
+  "sentence": "長年の夢が[[成就]]した。",
+  "reading": "じょうじゅ",
+  "meaning": "fulfillment, attainment",
+  "type": "on",
+  "hint": "Buddhist reading: 成 = じょう, 就 = じゅ — せいしゅう is the trap.",
+  "compounds": [
+   "就任 (shuunin) — inauguration",
+   "達成 (tassei) — achievement"
+  ],
+  "distractors": [
+   "せいじゅ",
+   "じょうしゅう",
+   "せいしゅう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "執着",
+  "sentence": "過去に[[執着]]しない生き方。",
+  "reading": "しゅうちゃく",
+  "meaning": "attachment, obsession",
+  "type": "on",
+  "hint": "執 reads しゅう here (not しつ) — the mind clinging on.",
+  "compounds": [
+   "執念 (shuunen) — tenacity",
+   "執筆 (shippitsu) — writing"
+  ],
+  "distractors": [
+   "しっちゃく",
+   "しゅちゃく",
+   "しゅうじゃく"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "風情",
+  "sentence": "古い町並みに[[風情]]がある。",
+  "reading": "ふぜい",
+  "meaning": "charm, elegance, air",
+  "type": "on",
+  "hint": "情 reads ぜい here (irregular) — ふうじょう is the trap.",
+  "compounds": [
+   "情緒 (joucho) — atmosphere/emotion",
+   "風流 (fuuryuu) — refined taste"
+  ],
+  "distractors": [
+   "ふうじょう",
+   "ふじょう",
+   "かぜなさけ"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "名残",
+  "sentence": "夏の[[名残]]を惜しむ。",
+  "reading": "なごり",
+  "meaning": "remnants, lingering traces",
+  "type": "kun",
+  "hint": "Jukujikun — from 波残り (what waves leave behind): なごり.",
+  "compounds": [
+   "名残惜しい (nagorioshii) — reluctant to part",
+   "余韻 (yoin) — lingering note"
+  ],
+  "distractors": [
+   "めいざん",
+   "なざん",
+   "なのこり"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "生粋",
+  "sentence": "[[生粋]]の江戸っ子だ。",
+  "reading": "きっすい",
+  "meaning": "pure, genuine (born and bred)",
+  "type": "on",
+  "hint": "生 = き (pure, as in 生糸) + 粋 = すい → きっすい.",
+  "compounds": [
+   "粋 (iki) — chic",
+   "純粋 (junsui) — pure"
+  ],
+  "distractors": [
+   "せいすい",
+   "なまいき",
+   "きすい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "玄人",
+  "sentence": "[[玄人]]はだしの腕前だ。",
+  "reading": "くろうと",
+  "meaning": "expert, professional",
+  "type": "kun",
+  "hint": "玄 (dark/deep) = くろ — the 'dark-robed' master; opposite of 素人.",
+  "compounds": [
+   "玄関 (genkan) — entrance",
+   "素人 (shirouto) — amateur"
+  ],
+  "distractors": [
+   "げんじん",
+   "くろひと",
+   "くろじん"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "素人",
+  "sentence": "[[素人]]には難しい作業だ。",
+  "reading": "しろうと",
+  "meaning": "amateur, layperson",
+  "type": "kun",
+  "hint": "素 (plain/white) = しろ — the 'white-robed' novice; pair with 玄人.",
+  "compounds": [
+   "素材 (sozai) — material",
+   "玄人 (kurouto) — expert"
+  ],
+  "distractors": [
+   "そじん",
+   "しろひと",
+   "すにん"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "為替",
+  "sentence": "[[為替]]レートが変動した。",
+  "reading": "かわせ",
+  "meaning": "exchange (currency)",
+  "type": "kun",
+  "hint": "Jukujikun — from 交わす (kawasu, to exchange): かわせ.",
+  "compounds": [
+   "為替相場 (kawase souba) — exchange rate",
+   "両替 (ryougae) — money changing"
+  ],
+  "distractors": [
+   "いたい",
+   "ためがえ",
+   "かえたい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "老舗",
+  "sentence": "創業二百年の[[老舗]]旅館。",
+  "reading": "しにせ",
+  "meaning": "long-established shop",
+  "type": "kun",
+  "hint": "Jukujikun — from 仕似せる (to imitate the family trade): しにせ.",
+  "compounds": [
+   "店舗 (tenpo) — shop",
+   "老朽 (roukyuu) — decrepit"
+  ],
+  "distractors": [
+   "ろうほ",
+   "おいみせ",
+   "ろうてん"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "吹雪",
+  "sentence": "[[吹雪]]で視界が真っ白になる。",
+  "reading": "ふぶき",
+  "meaning": "blizzard",
+  "type": "kun",
+  "hint": "Jukujikun — 吹く (blow) + 雪 (snow) fuse into ふぶき.",
+  "compounds": [
+   "猛吹雪 (moufubuki) — severe blizzard",
+   "雪崩 (nadare) — avalanche"
+  ],
+  "distractors": [
+   "すいせつ",
+   "ふきゆき",
+   "ふゆき"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "日和",
+  "sentence": "絶好の行楽[[日和]]だ。",
+  "reading": "びより",
+  "meaning": "ideal weather (for something)",
+  "type": "kun",
+  "hint": "Jukujikun ひより, voiced to びより in compounds like 行楽日和.",
+  "compounds": [
+   "小春日和 (koharubiyori) — Indian summer",
+   "和む (nagomu) — to calm"
+  ],
+  "distractors": [
+   "にちわ",
+   "ひわ",
+   "はより"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "極めて",
+  "sentence": "[[極めて]]重要な課題である。",
+  "reading": "きわめて",
+  "meaning": "extremely",
+  "type": "kun",
+  "hint": "極める (きわめる) = to master/reach the extreme; on-reading きょく in 極端.",
+  "compounds": [
+   "極端 (kyokutan) — extreme",
+   "究極 (kyuukyoku) — ultimate"
+  ],
+  "distractors": [
+   "ごくめて",
+   "きょくめて",
+   "つとめて"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "著しい",
+  "sentence": "[[著しい]]進歩を遂げた。",
+  "reading": "いちじるしい",
+  "meaning": "remarkable, marked",
+  "type": "kun",
+  "hint": "著 (striking/notable) — long reading いちじるしい; ちょ in 顕著.",
+  "compounds": [
+   "顕著 (kencho) — striking",
+   "著者 (chosha) — author"
+  ],
+  "distractors": [
+   "あらわしい",
+   "いちじるしるしい",
+   "しるしい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "甚だしい",
+  "sentence": "誤解も[[甚だしい]]。",
+  "reading": "はなはだしい",
+  "meaning": "extreme, gross",
+  "type": "kun",
+  "hint": "甚 = intense; はなはだ (exceedingly) + しい; on-reading じん in 甚大.",
+  "compounds": [
+   "甚大 (jindai) — enormous",
+   "激甚 (gekijin) — severe"
+  ],
+  "distractors": [
+   "おびただしい",
+   "ひどだしい",
+   "はばただしい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "煩わしい",
+  "sentence": "[[煩わしい]]手続きを省く。",
+  "reading": "わずらわしい",
+  "meaning": "troublesome, annoying",
+  "type": "kun",
+  "hint": "煩う (わずらう, to be troubled) + しい; on-reading はん in 煩雑.",
+  "compounds": [
+   "煩雑 (hanzatsu) — complicated",
+   "面倒 (mendou) — bother"
+  ],
+  "distractors": [
+   "けがらわしい",
+   "まぎらわしい",
+   "うるさわしい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "紛らわしい",
+  "sentence": "[[紛らわしい]]名前の駅が多い。",
+  "reading": "まぎらわしい",
+  "meaning": "confusing, misleading",
+  "type": "kun",
+  "hint": "紛れる (まぎれる, to be mixed up) + らわしい; on-reading ふん in 紛争.",
+  "compounds": [
+   "紛争 (funsou) — dispute",
+   "紛失 (funshitsu) — loss"
+  ],
+  "distractors": [
+   "わずらわしい",
+   "みだらわしい",
+   "こんらわしい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "潔い",
+  "sentence": "[[潔い]]態度で謝罪した。",
+  "reading": "いさぎよい",
+  "meaning": "graceful, manly, unregretful",
+  "type": "kun",
+  "hint": "潔 (pure, 清潔) — いさぎよい is accepting defeat cleanly.",
+  "compounds": [
+   "清潔 (seiketsu) — clean",
+   "簡潔 (kanketsu) — concise"
+  ],
+  "distractors": [
+   "きよい",
+   "いさましい",
+   "こころよい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "速やか",
+  "sentence": "[[速やか]]に避難してください。",
+  "reading": "すみやか",
+  "meaning": "prompt, speedy",
+  "type": "kun",
+  "hint": "速い (はやい) but the な-adjective is すみやか — irregular kun.",
+  "compounds": [
+   "迅速 (jinsoku) — rapid",
+   "速度 (sokudo) — speed"
+  ],
+  "distractors": [
+   "はやか",
+   "そくやか",
+   "すこやか"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "芳しい",
+  "sentence": "[[芳しい]]成果は得られなかった。",
+  "reading": "かんばしい",
+  "meaning": "favorable; fragrant",
+  "type": "kun",
+  "hint": "芳 (fragrant, ほう) — かんばしい; often used in the negative (芳しくない).",
+  "compounds": [
+   "芳香 (houkou) — fragrance",
+   "芳名 (houmei) — your name (honorific)"
+  ],
+  "distractors": [
+   "こうばしい",
+   "よろしい",
+   "かぐわしい"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "拙い",
+  "sentence": "[[拙い]]文章で恐縮です。",
+  "reading": "つたない",
+  "meaning": "clumsy, unskillful",
+  "type": "kun",
+  "hint": "拙 (clumsy, 稚拙) — humble word: つたない.",
+  "compounds": [
+   "稚拙 (chisetsu) — crude",
+   "拙者 (sessha) — I (samurai)"
+  ],
+  "distractors": [
+   "まずい",
+   "せつない",
+   "つらない"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "覆う",
+  "sentence": "雲が空一面を[[覆う]]。",
+  "reading": "おおう",
+  "meaning": "to cover",
+  "type": "kun",
+  "hint": "Same kanji as 覆す (くつがえす) — おおう is the 'cover' reading.",
+  "compounds": [
+   "覆面 (fukumen) — mask",
+   "被覆 (hifuku) — coating"
+  ],
+  "distractors": [
+   "くつがえう",
+   "かばう",
+   "おそう"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "唆す",
+  "sentence": "犯行を[[唆す]]のも罪になる。",
+  "reading": "そそのかす",
+  "meaning": "to instigate, tempt",
+  "type": "kun",
+  "hint": "示唆 (しさ) の唆 — whispering someone into action: そそのかす.",
+  "compounds": [
+   "示唆 (shisa) — suggestion",
+   "教唆 (kyousa) — incitement"
+  ],
+  "distractors": [
+   "うながす",
+   "けしかす",
+   "ささやかす"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "頷く",
+  "sentence": "彼は黙って[[頷く]]だけだった。",
+  "reading": "うなずく",
+  "meaning": "to nod",
+  "type": "kun",
+  "hint": "頁 (head) radical — dropping the head forward: うなずく.",
+  "compounds": [
+   "首肯 (shukou) — assent",
+   "相槌 (aizuchi) — agreeable responses"
+  ],
+  "distractors": [
+   "うつむく",
+   "ひざまずく",
+   "うなだれく"
+  ],
+  "level": "N1"
+ },
+ {
+  "kanji": "憩い",
+  "sentence": "公園は市民の[[憩い]]の場だ。",
+  "reading": "いこい",
+  "meaning": "rest, relaxation",
+  "type": "kun",
+  "hint": "憩う (いこう) = to rest; 休憩 (きゅうけい) shares the kanji.",
+  "compounds": [
+   "休憩 (kyuukei) — break",
+   "安らぎ (yasuragi) — peace"
+  ],
+  "distractors": [
+   "やすらい",
+   "いきごい",
+   "けいい"
+  ],
+  "level": "N1"
+ }
 ]
