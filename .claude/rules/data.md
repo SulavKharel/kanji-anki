@@ -14,6 +14,13 @@ Every item in `data/bank.json` and `data/ai-cache.json` must have:
 - `hint`: non-empty string
 - `compounds`: array of 2-3 strings
 - `distractors`: exactly 3 strings, none equal to `reading`, no duplicates
+- `furigana`: required on every `bank.json` item (optional on `ai-cache.json`).
+  The sentence in aozora ruby notation `｜base《reading》`. Stripping `｜` and
+  `《…》` from it must reproduce `sentence` exactly — this keeps the two in sync
+  and is enforced by `npm test`. Don't hand-write it: run `npm run furigana`
+  after adding or editing bank sentences (it forces the target word's reading
+  to `reading` and fills context words via kuromoji). Revealed only *after* the
+  learner answers, so it never gives away the tested reading.
 
 ## D2. Custom card schema (L3 — enforced by `npm test`)
 Items in `data/custom.json`: `kanji` + `reading` (hiragana) required,

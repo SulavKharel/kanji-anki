@@ -69,6 +69,13 @@
   .kanji-big { font-family: 'Noto Serif JP', serif; font-size: 3.6rem; text-align: center; margin: 4px 0; line-height: 1.1; }
   .sentence { font-family: 'Noto Serif JP', serif; font-size: 1.06rem; text-align: center; line-height: 1.9; margin-bottom: 20px; }
   .sentence .hl { color: var(--red); font-size: 1.35rem; font-weight: 700; border-bottom: 2px solid var(--red); }
+  /* Furigana (revealed only after answering) sits above each kanji run. */
+  .sentence ruby rt {
+    font-family: 'Inter', sans-serif; font-size: 0.52em; font-weight: 500;
+    color: var(--mid); letter-spacing: 0; user-select: none;
+  }
+  .sentence .hl rt { color: var(--red); }
+  .sentence.has-furigana { line-height: 2.1; }
   .q-label { font-size: 0.86rem; color: var(--mid); text-align: center; margin-bottom: 13px; }
   .options { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
   .opt {
@@ -957,6 +964,15 @@ function hideLoading() {
   document.getElementById('quizCard').style.display = 'block';
 }
 
+// Convert the stored `｜base《reading》` furigana notation into <ruby> markup,
+// keeping the [[target]] highlight. Used only after the learner answers, so the
+// reading is never given away during the test itself.
+function sentenceToFurigana(fura) {
+  return fura
+    .replace(/｜([^《]+)《([^》]+)》/g, '<ruby>$1<rt>$2</rt></ruby>')
+    .replace(/\[\[([\s\S]+?)\]\]/g, '<span class="hl">$1</span>');
+}
+
 // ── Render question ───────────────────────────────────────────────────
 function renderQ() {
   const q = questions[current];
@@ -969,7 +985,9 @@ function renderQ() {
     (q.isRepeat ? `<span class="badge">🔁 Repeat</span>` : tagFor(q.kanji));
 
   document.getElementById('kanjiBig').textContent = q.kanji;
-  document.getElementById('sentenceEl').innerHTML =
+  const sentenceEl = document.getElementById('sentenceEl');
+  sentenceEl.classList.remove('has-furigana');
+  sentenceEl.innerHTML =
     q.sentence.replace(/\[\[(.+?)\]\]/g, `<span class="hl">$1</span>`);
 
   const grid = document.getElementById('optGrid');
@@ -995,6 +1013,15 @@ function checkAnswer(opt, btn, q) {
 
   const correct = opt === q.reading;
   recordAnswer(q.kanji, correct);
+
+  // Reveal furigana over the whole sentence so the learner can now read it.
+  // Bank questions carry a `furigana` field; custom/AI questions fall back to
+  // the plain highlighted sentence.
+  if (q.furigana) {
+    const sentenceEl = document.getElementById('sentenceEl');
+    sentenceEl.innerHTML = sentenceToFurigana(q.furigana);
+    sentenceEl.classList.add('has-furigana');
+  }
 
   document.querySelectorAll('.opt').forEach(b => {
     b.disabled = true;

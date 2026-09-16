@@ -3,7 +3,26 @@
 Agents: read this at session start; update it at session end.
 Decision log is append-only — reversals get a new entry, never an edit.
 
-## Current state (2026-09-07)
+## Current state (2026-09-16)
+
+- Implemented 2026-09-16: **Furigana revealed on answer.** Every `data/bank.json`
+  item gained a `furigana` field: the sentence in aozora ruby notation
+  `｜base《reading》`. `renderQ()` shows the plain highlighted sentence during the
+  test; the instant the learner answers, `checkAnswer()` swaps in
+  `sentenceToFurigana()` → `<ruby>` markup so they can read the whole sentence
+  (the reason for the feature: user knows the *target* reading but can't read
+  the surrounding words). Generated offline by `scripts/gen-furigana.js`
+  (`npm run furigana`) using kuromoji (new **devDependency**, never shipped —
+  static build stays public/ + data/). The target word's reading is forced to
+  the item's `reading`; only context words come from the analyzer. Validator
+  enforces `stripRuby(furigana) === sentence`. Generator is idempotent (re-run
+  reproduces byte-identical bank.json). Custom/AI questions have no furigana →
+  graceful fallback to the plain highlighted sentence. Also fixed a flaky
+  smoke test (single 1200ms fetch → poll until ready within 8s). `npm test`
+  green; verified in-browser (N5 世界/N1 該当): furigana appears only after
+  answering, target in red, resets on next question.
+
+## Previous state (2026-09-07)
 
 - Implemented 2026-09-07: **JLPT level support N5→N1.** `data/bank.json` grew
   from 112 (all N1) to 313 items, each now carrying a `level` field; N5/N4/N3/N2
@@ -125,8 +144,31 @@ Decision log is append-only — reversals get a new entry, never an edit.
   storage mechanism was added. (Why: reuse R1-safe fire-and-forget top-up
   instead of a bespoke generator.)
 
+- 2026-09-16: Furigana is stored as a per-item `furigana` field in aozora ruby
+  notation `｜base《reading》`, generated OFFLINE by scripts/gen-furigana.js and
+  shipped as data. Rejected runtime tokenization (would need a ~MB dictionary in
+  the browser — breaks R1/R5) and hand-authoring 313 sentences (error-prone).
+  (Why: keeps the runtime dependency-free — it only parses the notation — while
+  the data stays human-readable and reproducible.)
+- 2026-09-16: Added kuromoji as a **devDependency** + `npm run furigana`. This
+  is the first build/authoring tool in the repo; accepted because the SHIPPED
+  static app is still public/ + data/ only (R5 is about the shipped app, not
+  dev tooling), and reproducibility (regenerate on any sentence edit, validator
+  enforces sync) outweighs the minimalism cost. Revisit if it rots.
+- 2026-09-16: Furigana reveals ONLY after answering (not during the question).
+  (Why: showing readings up front would defeat the test; the user explicitly
+  wants to read the sentence *after* committing to an answer.)
+- 2026-09-16: Smoke test now polls /api/bank until ready (≤8s) instead of a
+  single fetch at 1200ms. (Why: the fixed early shot failed on a slower machine
+  even though the server booted fine — a false red on the release gate.)
+
 ## Known issues / watch list
 
+- 2026-09-16: context-word furigana comes from kuromoji, so it is NOT fully
+  human-reviewed (D3 is L1). Spot-check showed high quality across N5–N1 and the
+  TARGET reading is always forced correct, but a rare context word could carry
+  an off reading (e.g. kuromoji picked 日本→にっぽん; overridden to にほん via a
+  small map in gen-furigana.js). Add to that OVERRIDES map if more surface.
 - 2026-08-05: model names are DISCOVERED at runtime (`discoverModels()` calls
   ListModels, filters to generateContent + flash tiers, caches for a week in
   `n1kq_models_v1` and drops the cache whenever every model fails). The static

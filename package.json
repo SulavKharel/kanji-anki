@@ -5,11 +5,15 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node scripts/validate.js"
+    "test": "node scripts/validate.js",
+    "furigana": "node scripts/gen-furigana.js data/bank.json"
   },
   "dependencies": {
     "express": "^4.18.2",
     "node-fetch": "^2.7.0",
     "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "kuromoji": "^0.1.2"
   }
 }

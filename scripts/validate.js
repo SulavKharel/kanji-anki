@@ -16,6 +16,10 @@ function pass(msg) { console.log("  ✓ " + msg); }
 const HIRAGANA = /^[ぁ-んー]+$/;
 const LEVELS = ["N5", "N4", "N3", "N2", "N1"];
 
+// Furigana notation is ｜base《reading》; stripping the markers must reproduce
+// the original sentence exactly. This keeps furigana and sentence in sync.
+const stripRuby = s => s.replace(/｜/g, "").replace(/《[^》]*》/g, "");
+
 // ── D1: bank.json + ai-cache.json schema ─────────────────────────────
 // `seen` is a Map<level, Set<kanji>> so uniqueness is enforced PER LEVEL —
 // the same word may legitimately appear in the merged bank tagged for
@@ -36,6 +40,16 @@ function checkQuestion(q, i, src, seen) {
   }
   const marks = (q.sentence || "").match(/\[\[.+?\]\]/g) || [];
   if (marks.length !== 1) fail(`${id}: sentence must contain [[target]] exactly once (found ${marks.length})`);
+  // Furigana: required on curated bank.json items, must reduce to the sentence.
+  // ai-cache.json is machine-generated and may omit it (frontend shows the
+  // plain highlighted sentence in that case).
+  if (q.furigana !== undefined) {
+    if (typeof q.furigana !== "string") fail(`${id}: furigana must be a string`);
+    else if (stripRuby(q.furigana) !== q.sentence)
+      fail(`${id}: furigana does not reduce to sentence`);
+  } else if (src === "bank.json") {
+    fail(`${id}: missing furigana`);
+  }
   if (!HIRAGANA.test(q.reading || "")) fail(`${id}: reading must be hiragana`);
   if (!q.meaning) fail(`${id}: missing meaning`);
   if (q.type !== "on" && q.type !== "kun") fail(`${id}: type must be "on"|"kun"`);
@@ -119,18 +133,24 @@ function smokeTest() {
       ok ? pass(msg) : fail(msg);
       resolve();
     };
-    setTimeout(async () => {
+    // Poll until the server answers rather than fetching once at a fixed delay
+    // — boot time varies by machine, and a single early shot was flaky.
+    const deadline = Date.now() + 8000;
+    let lastErr = "no response";
+    (async function poll() {
+      if (done) return;
       try {
         const res = await fetch("http://localhost:3999/api/bank");
         const j = await res.json();
         if (res.ok && Array.isArray(j.questions) && j.questions.length >= 100)
-          finish(true, `offline smoke test: /api/bank serves ${j.questions.length} questions without GEMINI_API_KEY`);
-        else finish(false, `offline smoke test: unexpected response (${res.status}, ${j.questions?.length} questions)`);
+          return finish(true, `offline smoke test: /api/bank serves ${j.questions.length} questions without GEMINI_API_KEY`);
+        lastErr = `unexpected response (${res.status}, ${j.questions?.length} questions)`;
       } catch (e) {
-        finish(false, "offline smoke test: server unreachable — " + e.message);
+        lastErr = "server unreachable — " + e.message;
       }
-    }, 1200);
-    setTimeout(() => finish(false, "offline smoke test: timed out"), 8000);
+      if (Date.now() < deadline) setTimeout(poll, 300);
+      else finish(false, "offline smoke test: " + lastErr);
+    })();
   });
 }
 

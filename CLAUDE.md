@@ -38,9 +38,23 @@ background enhancer, never a dependency — rate limits must never block the qui
 easiest, N1 hardest). Schema per item: `kanji`, `level` (`"N5"`…`"N1"`),
 `sentence` (with `[[target]]` markup), `reading` (hiragana), `meaning`, `type`
 (`"on"`/`"kun"`), `hint`, `compounds` (2-3 strings), `distractors` (exactly 3
-wrong readings). Each level ships with ~50 seed questions (N1 has more, ~112);
-`kanji` is unique *within a level*, so the same word may legitimately appear at
-two levels.
+wrong readings), `furigana` (full-sentence ruby, see below). Each level ships
+with ~50 seed questions (N1 has more, ~112); `kanji` is unique *within a level*,
+so the same word may legitimately appear at two levels.
+
+**Furigana.** Each bank item carries a `furigana` field: the sentence annotated
+in aozora-style ruby `｜base《reading》`, e.g. `｜毎朝《まいあさ》[[｜学校《がっこう》]]
+まで｜歩《ある》く。`. It is revealed **only after the learner answers** (so the
+reading is never given away during the test) — `sentenceToFurigana()` converts
+it to `<ruby>` markup. Invariant (enforced by `npm test`): stripping `｜` and
+`《…》` from `furigana` must reproduce `sentence` exactly. Regenerate after
+adding/editing bank sentences with the offline authoring tool
+`scripts/gen-furigana.js` (uses kuromoji; a devDependency, never shipped — the
+runtime only parses the notation). The target word's reading is always forced
+to the item's known `reading`; only context words rely on the analyzer, so a
+new bank sentence's context furigana is worth a human skim (rule D3).
+Custom/AI questions have no `furigana` and fall back to the plain highlighted
+sentence on answer.
 
 **Levels.** The learner picks a level in the header (`n1kq_level_v1` in
 localStorage, default `N5`). The quiz is scoped to that level: `pickQuizKanji()`,
